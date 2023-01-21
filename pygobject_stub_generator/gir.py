@@ -12,16 +12,20 @@ class GirType:
     name: str
     is_array: bool
     is_self: bool
+    is_nullable: bool
 
     def __init__(self) -> None:
         self.name = ''
         self.is_array = False
         self.is_self = False
+        self.is_nullable = False
 
     def get_stub(self) -> str:
         stub = get_type(self.name)
         if self.is_array:
             stub = 'list[%s]' % stub
+        if self.is_nullable:
+            stub = '%s | None' % stub
         return stub
 
 class GirVar:

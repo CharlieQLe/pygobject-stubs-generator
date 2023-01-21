@@ -13,6 +13,20 @@ def __handle_function_includes(f: GirFunction, gir: Gir) -> None:
         if typename not in map(lambda i : i.name, gir.includes):
             gir.includes.append(GirInclude(typename, ''))
 
+def __handle_type(element: ET.Element, gtype: GirType) -> None:
+    def handle(element_source: ET.Element) -> None:
+        element_type = find_element(element_source, 'type')
+        gtype.is_nullable = 'nullable' in element.attrib and element.attrib['nullable'] == '1'
+        if element_type is not None:
+            gtype.name = element_type.attrib['name']
+            
+    element_array = find_element(element, 'array')
+    if element_array is None:
+        handle(element)
+    else:
+        gtype.is_array = True
+        handle(element_array)
+
 def handle_includes(element: ET.Element) -> GirInclude | None:
     return GirInclude(element.attrib['name'], element.attrib['version'])
     
@@ -21,7 +35,8 @@ def handle_constant(constant: ET.Element) -> GirVar | None:
     if element_type is not None:
         var = GirVar()
         var.name = fix_name(constant.attrib['name'])
-        var.gtype.name = element_type.attrib['name']
+        __handle_type(constant, var.gtype)
+        #var.gtype.name = element_type.attrib['name']
         return var
     return None
 
@@ -42,30 +57,32 @@ def handle_function(function: ET.Element) -> GirFunction:
                 continue
             var = GirVar()
             var.name = fix_name(p.attrib['name'])
-            element_array = find_element(p, 'array')
-            if element_array is None:
-                element_type = find_element(p, 'type')
-                if element_type is not None:
-                    var.gtype.name = element_type.attrib['name']
-            else:
-                var.gtype.is_array = True
-                element_type = find_element(element_array, 'type')
-                if element_type is not None:
-                    var.gtype.name = element_type.attrib['name']
+            __handle_type(p, var.gtype)
+            #element_array = find_element(p, 'array')
+            #if element_array is None:
+            #    element_type = find_element(p, 'type')
+            #    if element_type is not None:
+            #        var.gtype.name = element_type.attrib['name']
+            #else:
+            #    var.gtype.is_array = True
+            #    element_type = find_element(element_array, 'type')
+            #    if element_type is not None:
+            #        var.gtype.name = element_type.attrib['name']
             gir_function.parameters.append(var)
 
     element_return_value = find_element(function, 'return-value')
     if element_return_value is not None:
-        element_array = find_element(element_return_value, 'array')
-        if element_array is None:
-            element_type = find_element(element_return_value, 'type')
-            if element_type is not None and 'name' in element_type.attrib:
-                gir_function.return_type.name = element_type.attrib['name']
-        else:
-            gir_function.return_type.is_array = True
-            element_type = find_element(element_array, 'type')
-            if element_type is not None and 'name' in element_type.attrib:
-                gir_function.return_type.name = element_type.attrib['name']
+        __handle_type(element_return_value, gir_function.return_type)
+        #element_array = find_element(element_return_value, 'array')
+        #if element_array is None:
+        #    element_type = find_element(element_return_value, 'type')
+        #    if element_type is not None and 'name' in element_type.attrib:
+        #        gir_function.return_type.name = element_type.attrib['name']
+        #else:
+        #    gir_function.return_type.is_array = True
+        #    element_type = find_element(element_array, 'type')
+        #    if element_type is not None and 'name' in element_type.attrib:
+        #        gir_function.return_type.name = element_type.attrib['name']
     return gir_function
 
 def handle_interface(interface: ET.Element) -> GirInterface | None:
@@ -94,7 +111,8 @@ def handle_property(element_property: ET.Element) -> GirVar | None:
     if element_type is not None and 'name' in element_type.attrib:
         var = GirVar()
         var.name = element_property.attrib['name']
-        var.gtype.name = element_type.attrib['name']
+        __handle_type(element_property, var.gtype)
+        #var.gtype.name = element_type.attrib['name']
         return var
     return None
 
