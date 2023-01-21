@@ -1,0 +1,2013 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "@xmlns:glib": "http://www.gtk.org/introspection/glib/1.0",
+        "include": [
+            {
+                "@name": "GObject",
+                "@version": "2.0"
+            },
+            {
+                "@name": "Pango",
+                "@version": "1.0"
+            },
+            {
+                "@name": "PangoFT2",
+                "@version": "1.0"
+            },
+            {
+                "@name": "PangoOT",
+                "@version": "1.0"
+            },
+            {
+                "@name": "xft",
+                "@version": "2.0"
+            },
+            {
+                "@name": "xlib",
+                "@version": "2.0"
+            }
+        ],
+        "package": {
+            "@name": "pangoxft"
+        },
+        "c:include": {
+            "@name": "pango/pangoxft.h"
+        },
+        "namespace": {
+            "@name": "PangoXft",
+            "@version": "1.0",
+            "@shared-library": "libpangoxft-1.0.so.0",
+            "@c:identifier-prefixes": "PangoXft",
+            "@c:symbol-prefixes": "pango_xft",
+            "function-macro": [
+                {
+                    "@name": "FONT",
+                    "@c:identifier": "PANGO_XFT_FONT",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "122"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "FONT_MAP",
+                    "@c:identifier": "PANGO_XFT_FONT_MAP",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "63"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_FONT",
+                    "@c:identifier": "PANGO_XFT_IS_FONT",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "123"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_FONT_MAP",
+                    "@c:identifier": "PANGO_XFT_IS_FONT_MAP",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "64"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_RENDERER",
+                    "@c:identifier": "PANGO_XFT_IS_RENDERER",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "44"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_RENDERER_CLASS",
+                    "@c:identifier": "PANGO_XFT_IS_RENDERER_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "46"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "klass"
+                        }
+                    }
+                },
+                {
+                    "@name": "RENDERER",
+                    "@c:identifier": "PANGO_XFT_RENDERER",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "43"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "RENDERER_CLASS",
+                    "@c:identifier": "PANGO_XFT_RENDERER_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "45"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "klass"
+                        }
+                    }
+                },
+                {
+                    "@name": "RENDERER_GET_CLASS",
+                    "@c:identifier": "PANGO_XFT_RENDERER_GET_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "47"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                }
+            ],
+            "class": [
+                {
+                    "@name": "Font",
+                    "@c:symbol-prefix": "font",
+                    "@c:type": "PangoXftFont",
+                    "@parent": "PangoFc.Font",
+                    "@glib:type-name": "PangoXftFont",
+                    "@glib:get-type": "pango_xft_font_get_type",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "73",
+                        "#text": "`PangoXftFont` is an implementation of `PangoFcFont` using the Xft\nlibrary for rendering.  It is used in conjunction with `PangoXftFontMap`."
+                    },
+                    "function": {
+                        "@name": "get_font",
+                        "@c:identifier": "pango_xft_font_get_font",
+                        "@introspectable": "0",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangoxft-font.c",
+                            "@line": "471",
+                            "#text": "Returns the `XftFont` of a font."
+                        },
+                        "source-position": {
+                            "@filename": "pango/pangoxft.h",
+                            "@line": "139"
+                        },
+                        "return-value": {
+                            "@nullable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-font.c",
+                                "@line": "477",
+                                "#text": "the `XftFont` associated to @font"
+                            },
+                            "type": {
+                                "@name": "xft.Font",
+                                "@c:type": "XftFont*"
+                            }
+                        },
+                        "parameters": {
+                            "parameter": {
+                                "@name": "font",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-font.c",
+                                    "@line": "473",
+                                    "#text": "a `PangoFont`"
+                                },
+                                "type": {
+                                    "@name": "Pango.Font",
+                                    "@c:type": "PangoFont*"
+                                }
+                            }
+                        }
+                    },
+                    "method": [
+                        {
+                            "@name": "get_display",
+                            "@c:identifier": "pango_xft_font_get_display",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-font.c",
+                                "@line": "488",
+                                "#text": "Returns the X display of the `XftFont` of a font."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangoxft.h",
+                                "@line": "141"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-font.c",
+                                    "@line": "494",
+                                    "#text": "the X display of the XftFont associated to @font."
+                                },
+                                "type": {
+                                    "@name": "xlib.Display",
+                                    "@c:type": "Display*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "font",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "490",
+                                        "#text": "a `PangoFont`"
+                                    },
+                                    "type": {
+                                        "@name": "Font",
+                                        "@c:type": "PangoFont*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_glyph",
+                            "@c:identifier": "pango_xft_font_get_glyph",
+                            "@version": "1.2",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-font.c",
+                                "@line": "572",
+                                "#text": "Gets the glyph index for a given Unicode character\nfor @font.\n\nIf you only want to determine whether the font has\nthe glyph, use pango_xft_font_has_char().\n\nUse pango_fc_font_get_glyph() instead."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangoxft.h",
+                                "@line": "147"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-font.c",
+                                    "@line": "585",
+                                    "#text": "the glyph index, or 0, if the Unicode\n character does not exist in the font."
+                                },
+                                "type": {
+                                    "@name": "guint",
+                                    "@c:type": "guint"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "font",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "574",
+                                        "#text": "a `PangoFont` for the Xft backend"
+                                    },
+                                    "type": {
+                                        "@name": "Font",
+                                        "@c:type": "PangoFont*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "wc",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "575",
+                                        "#text": "Unicode codepoint to look up"
+                                    },
+                                    "type": {
+                                        "@name": "gunichar",
+                                        "@c:type": "gunichar"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_unknown_glyph",
+                            "@c:identifier": "pango_xft_font_get_unknown_glyph",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-font.c",
+                                "@line": "510",
+                                "#text": "Returns the index of a glyph suitable for drawing @wc as an\nunknown character.\n\nUse PANGO_GET_UNKNOWN_GLYPH() instead."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangoxft.h",
+                                "@line": "153"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-font.c",
+                                    "@line": "520",
+                                    "#text": "a glyph index into @font."
+                                },
+                                "type": {
+                                    "@name": "Pango.Glyph",
+                                    "@c:type": "PangoGlyph"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "font",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "512",
+                                        "#text": "a `PangoFont`"
+                                    },
+                                    "type": {
+                                        "@name": "Font",
+                                        "@c:type": "PangoFont*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "wc",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "513",
+                                        "#text": "the Unicode character for which a glyph is needed."
+                                    },
+                                    "type": {
+                                        "@name": "gunichar",
+                                        "@c:type": "gunichar"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "has_char",
+                            "@c:identifier": "pango_xft_font_has_char",
+                            "@version": "1.2",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-font.c",
+                                "@line": "599",
+                                "#text": "Determines whether @font has a glyph for the codepoint @wc.\n\nUse pango_fc_font_has_char() instead."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangoxft.h",
+                                "@line": "150"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-font.c",
+                                    "@line": "608",
+                                    "#text": "%TRUE if @font has the requested codepoint."
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "font",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "601",
+                                        "#text": "a `PangoFont` for the Xft backend"
+                                    },
+                                    "type": {
+                                        "@name": "Font",
+                                        "@c:type": "PangoFont*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "wc",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "602",
+                                        "#text": "Unicode codepoint to look up"
+                                    },
+                                    "type": {
+                                        "@name": "gunichar",
+                                        "@c:type": "gunichar"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "lock_face",
+                            "@c:identifier": "pango_xft_font_lock_face",
+                            "@version": "1.2",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-font.c",
+                                "@line": "531",
+                                "#text": "Gets the FreeType `FT_Face` associated with a font.\n\nThis face will be kept around until you call pango_xft_font_unlock_face().\n\nUse pango_fc_font_lock_face() instead."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangoxft.h",
+                                "@line": "143"
+                            },
+                            "return-value": {
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-font.c",
+                                    "@line": "541",
+                                    "#text": "the FreeType `FT_Face` associated with @font."
+                                },
+                                "type": {
+                                    "@name": "freetype2.Face",
+                                    "@c:type": "FT_Face"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "font",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "533",
+                                        "#text": "a `PangoFont`"
+                                    },
+                                    "type": {
+                                        "@name": "Font",
+                                        "@c:type": "PangoFont*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "unlock_face",
+                            "@c:identifier": "pango_xft_font_unlock_face",
+                            "@version": "1.2",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-font.c",
+                                "@line": "553",
+                                "#text": "Releases a font previously obtained with\npango_xft_font_lock_face().\n\nUse pango_fc_font_unlock_face() instead."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangoxft.h",
+                                "@line": "145"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "font",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-font.c",
+                                        "@line": "555",
+                                        "#text": "a `PangoFont`"
+                                    },
+                                    "type": {
+                                        "@name": "Font",
+                                        "@c:type": "PangoFont*"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "FontMap",
+                    "@c:symbol-prefix": "font_map",
+                    "@c:type": "PangoXftFontMap",
+                    "@parent": "PangoFc.FontMap",
+                    "@glib:type-name": "PangoXftFontMap",
+                    "@glib:get-type": "pango_xft_font_map_get_type",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "49",
+                        "#text": "`PangoXftFontMap` is an implementation of `PangoFcFontMap` suitable for\nthe Xft library as the renderer.  It is used in to create fonts of\ntype `PangoXftFont`."
+                    },
+                    "implements": {
+                        "@name": "Gio.ListModel"
+                    }
+                },
+                {
+                    "@name": "Renderer",
+                    "@c:symbol-prefix": "renderer",
+                    "@c:type": "PangoXftRenderer",
+                    "@version": "1.8",
+                    "@parent": "Pango.Renderer",
+                    "@glib:type-name": "PangoXftRenderer",
+                    "@glib:get-type": "pango_xft_renderer_get_type",
+                    "@glib:type-struct": "RendererClass",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "57",
+                        "#text": "`PangoXftRenderer` is a subclass of `PangoRenderer` used for rendering\nwith Pango's Xft backend. It can be used directly, or it can be\nfurther subclassed to modify exactly how drawing of individual\nelements occurs."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "105"
+                    },
+                    "constructor": {
+                        "@name": "new",
+                        "@c:identifier": "pango_xft_renderer_new",
+                        "@version": "1.8",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangoxft-render.c",
+                            "@line": "901",
+                            "#text": "Create a new `PangoXftRenderer` to allow rendering Pango objects\nwith the Xft library.\n\nYou must call pango_xft_renderer_set_draw() before\nusing the renderer."
+                        },
+                        "source-position": {
+                            "@filename": "pango/pangoxft-render.h",
+                            "@line": "111"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "full",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-render.c",
+                                "@line": "912",
+                                "#text": "the newly created `PangoXftRenderer`"
+                            },
+                            "type": {
+                                "@name": "Pango.Renderer",
+                                "@c:type": "PangoRenderer*"
+                            }
+                        },
+                        "parameters": {
+                            "parameter": [
+                                {
+                                    "@name": "display",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-render.c",
+                                        "@line": "903",
+                                        "#text": "an X display"
+                                    },
+                                    "type": {
+                                        "@name": "xlib.Display",
+                                        "@c:type": "Display*"
+                                    }
+                                },
+                                {
+                                    "@name": "screen",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-render.c",
+                                        "@line": "904",
+                                        "#text": "the index of the screen for @display to which rendering will be done"
+                                    },
+                                    "type": {
+                                        "@name": "gint",
+                                        "@c:type": "int"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "virtual-method": [
+                        {
+                            "@name": "composite_glyphs",
+                            "source-position": {
+                                "@filename": "pango/pangoxft-render.h",
+                                "@line": "101"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "xftrenderer",
+                                    "@transfer-ownership": "none",
+                                    "type": {
+                                        "@name": "Renderer",
+                                        "@c:type": "PangoXftRenderer*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "xft_font",
+                                        "@transfer-ownership": "none",
+                                        "type": {
+                                            "@name": "xft.Font",
+                                            "@c:type": "XftFont*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "glyphs",
+                                        "@transfer-ownership": "none",
+                                        "type": {
+                                            "@name": "xft.GlyphSpec",
+                                            "@c:type": "XftGlyphSpec*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "n_glyphs",
+                                        "@transfer-ownership": "none",
+                                        "type": {
+                                            "@name": "gint",
+                                            "@c:type": "int"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "composite_trapezoids",
+                            "source-position": {
+                                "@filename": "pango/pangoxft-render.h",
+                                "@line": "97"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "xftrenderer",
+                                    "@transfer-ownership": "none",
+                                    "type": {
+                                        "@name": "Renderer",
+                                        "@c:type": "PangoXftRenderer*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "part",
+                                        "@transfer-ownership": "none",
+                                        "type": {
+                                            "@name": "Pango.RenderPart",
+                                            "@c:type": "PangoRenderPart"
+                                        }
+                                    },
+                                    {
+                                        "@name": "trapezoids",
+                                        "@transfer-ownership": "none",
+                                        "type": {
+                                            "@name": "xlib.XTrapezoid",
+                                            "@c:type": "XTrapezoid*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "n_trapezoids",
+                                        "@transfer-ownership": "none",
+                                        "type": {
+                                            "@name": "gint",
+                                            "@c:type": "int"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "method": [
+                        {
+                            "@name": "set_default_color",
+                            "@c:identifier": "pango_xft_renderer_set_default_color",
+                            "@version": "1.8",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-render.c",
+                                "@line": "949",
+                                "#text": "Sets the default foreground color for a XftRenderer."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangoxft-render.h",
+                                "@line": "117"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "xftrenderer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-render.c",
+                                        "@line": "951",
+                                        "#text": "a XftRenderer"
+                                    },
+                                    "type": {
+                                        "@name": "Renderer",
+                                        "@c:type": "PangoXftRenderer*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "default_color",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-render.c",
+                                        "@line": "952",
+                                        "#text": "the default foreground color"
+                                    },
+                                    "type": {
+                                        "@name": "Pango.Color",
+                                        "@c:type": "PangoColor*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "set_draw",
+                            "@c:identifier": "pango_xft_renderer_set_draw",
+                            "@version": "1.8",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft-render.c",
+                                "@line": "930",
+                                "#text": "Sets the XftDraw object that the renderer is drawing to.\nThe renderer must not be currently active."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangoxft-render.h",
+                                "@line": "114"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "xftrenderer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-render.c",
+                                        "@line": "932",
+                                        "#text": "a `PangoXftRenderer`"
+                                    },
+                                    "type": {
+                                        "@name": "Renderer",
+                                        "@c:type": "PangoXftRenderer*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "draw",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangoxft-render.c",
+                                        "@line": "933",
+                                        "#text": "a XftDraw"
+                                    },
+                                    "type": {
+                                        "@name": "xft.Draw",
+                                        "@c:type": "XftDraw*"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "property": [
+                        {
+                            "@name": "display",
+                            "@readable": "0",
+                            "@writable": "1",
+                            "@construct-only": "1",
+                            "@transfer-ownership": "none",
+                            "type": {
+                                "@name": "gpointer",
+                                "@c:type": "gpointer"
+                            }
+                        },
+                        {
+                            "@name": "screen",
+                            "@readable": "0",
+                            "@writable": "1",
+                            "@construct-only": "1",
+                            "@transfer-ownership": "none",
+                            "type": {
+                                "@name": "gint",
+                                "@c:type": "gint"
+                            }
+                        }
+                    ],
+                    "field": [
+                        {
+                            "@name": "parent_instance",
+                            "@readable": "0",
+                            "@private": "1",
+                            "type": {
+                                "@name": "Pango.Renderer",
+                                "@c:type": "PangoRenderer"
+                            }
+                        },
+                        {
+                            "@name": "display",
+                            "@readable": "0",
+                            "@private": "1",
+                            "type": {
+                                "@name": "xlib.Display",
+                                "@c:type": "Display*"
+                            }
+                        },
+                        {
+                            "@name": "screen",
+                            "@readable": "0",
+                            "@private": "1",
+                            "type": {
+                                "@name": "gint",
+                                "@c:type": "int"
+                            }
+                        },
+                        {
+                            "@name": "draw",
+                            "@readable": "0",
+                            "@private": "1",
+                            "type": {
+                                "@name": "xft.Draw",
+                                "@c:type": "XftDraw*"
+                            }
+                        },
+                        {
+                            "@name": "priv",
+                            "@readable": "0",
+                            "@private": "1",
+                            "type": {
+                                "@name": "RendererPrivate",
+                                "@c:type": "PangoXftRendererPrivate*"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "record": [
+                {
+                    "@name": "RendererClass",
+                    "@c:type": "PangoXftRendererClass",
+                    "@glib:is-gtype-struct-for": "Renderer",
+                    "@version": "1.8",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "79",
+                        "#text": "The class structure for `PangoXftRenderer`"
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "105"
+                    },
+                    "field": [
+                        {
+                            "@name": "parent_class",
+                            "@readable": "0",
+                            "@private": "1",
+                            "type": {
+                                "@name": "Pango.RendererClass",
+                                "@c:type": "PangoRendererClass"
+                            }
+                        },
+                        {
+                            "@name": "composite_trapezoids",
+                            "callback": {
+                                "@name": "composite_trapezoids",
+                                "source-position": {
+                                    "@filename": "pango/pangoxft-render.h",
+                                    "@line": "97"
+                                },
+                                "return-value": {
+                                    "@transfer-ownership": "none",
+                                    "type": {
+                                        "@name": "none",
+                                        "@c:type": "void"
+                                    }
+                                },
+                                "parameters": {
+                                    "parameter": [
+                                        {
+                                            "@name": "xftrenderer",
+                                            "@transfer-ownership": "none",
+                                            "type": {
+                                                "@name": "Renderer",
+                                                "@c:type": "PangoXftRenderer*"
+                                            }
+                                        },
+                                        {
+                                            "@name": "part",
+                                            "@transfer-ownership": "none",
+                                            "type": {
+                                                "@name": "Pango.RenderPart",
+                                                "@c:type": "PangoRenderPart"
+                                            }
+                                        },
+                                        {
+                                            "@name": "trapezoids",
+                                            "@transfer-ownership": "none",
+                                            "type": {
+                                                "@name": "xlib.XTrapezoid",
+                                                "@c:type": "XTrapezoid*"
+                                            }
+                                        },
+                                        {
+                                            "@name": "n_trapezoids",
+                                            "@transfer-ownership": "none",
+                                            "type": {
+                                                "@name": "gint",
+                                                "@c:type": "int"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "@name": "composite_glyphs",
+                            "callback": {
+                                "@name": "composite_glyphs",
+                                "source-position": {
+                                    "@filename": "pango/pangoxft-render.h",
+                                    "@line": "101"
+                                },
+                                "return-value": {
+                                    "@transfer-ownership": "none",
+                                    "type": {
+                                        "@name": "none",
+                                        "@c:type": "void"
+                                    }
+                                },
+                                "parameters": {
+                                    "parameter": [
+                                        {
+                                            "@name": "xftrenderer",
+                                            "@transfer-ownership": "none",
+                                            "type": {
+                                                "@name": "Renderer",
+                                                "@c:type": "PangoXftRenderer*"
+                                            }
+                                        },
+                                        {
+                                            "@name": "xft_font",
+                                            "@transfer-ownership": "none",
+                                            "type": {
+                                                "@name": "xft.Font",
+                                                "@c:type": "XftFont*"
+                                            }
+                                        },
+                                        {
+                                            "@name": "glyphs",
+                                            "@transfer-ownership": "none",
+                                            "type": {
+                                                "@name": "xft.GlyphSpec",
+                                                "@c:type": "XftGlyphSpec*"
+                                            }
+                                        },
+                                        {
+                                            "@name": "n_glyphs",
+                                            "@transfer-ownership": "none",
+                                            "type": {
+                                                "@name": "gint",
+                                                "@c:type": "int"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "RendererPrivate",
+                    "@c:type": "PangoXftRendererPrivate",
+                    "@disguised": "1",
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "39"
+                    }
+                }
+            ],
+            "callback": {
+                "@name": "SubstituteFunc",
+                "@c:type": "PangoXftSubstituteFunc",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "pango/pangoxft.h",
+                    "@line": "81",
+                    "#text": "Function type for doing final config tweaking on prepared FcPatterns."
+                },
+                "source-position": {
+                    "@filename": "pango/pangoxft.h",
+                    "@line": "88"
+                },
+                "return-value": {
+                    "@transfer-ownership": "none",
+                    "type": {
+                        "@name": "none",
+                        "@c:type": "void"
+                    }
+                },
+                "parameters": {
+                    "parameter": [
+                        {
+                            "@name": "pattern",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft.h",
+                                "@line": "83",
+                                "#text": "the FcPattern to tweak."
+                            },
+                            "type": {
+                                "@name": "fontconfig.Pattern",
+                                "@c:type": "FcPattern*"
+                            }
+                        },
+                        {
+                            "@name": "data",
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "@allow-none": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangoxft.h",
+                                "@line": "84",
+                                "#text": "user data."
+                            },
+                            "type": {
+                                "@name": "gpointer",
+                                "@c:type": "gpointer"
+                            }
+                        }
+                    ]
+                }
+            },
+            "function": [
+                {
+                    "@name": "get_context",
+                    "@c:identifier": "pango_xft_get_context",
+                    "@introspectable": "0",
+                    "@deprecated": "1",
+                    "@deprecated-version": "1.22",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-fontmap.c",
+                        "@line": "346",
+                        "#text": "Retrieves a `PangoContext` appropriate for rendering with\nXft fonts on the given screen of the given display."
+                    },
+                    "doc-deprecated": {
+                        "@xml:space": "preserve",
+                        "#text": "Use pango_xft_get_font_map() followed by\npango_font_map_create_context() instead."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "98"
+                    },
+                    "return-value": {
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangoxft-fontmap.c",
+                            "@line": "354",
+                            "#text": "the new `PangoContext`."
+                        },
+                        "type": {
+                            "@name": "Pango.Context",
+                            "@c:type": "PangoContext*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "display",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "348",
+                                    "#text": "an X display."
+                                },
+                                "type": {
+                                    "@name": "xlib.Display",
+                                    "@c:type": "Display*"
+                                }
+                            },
+                            {
+                                "@name": "screen",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "349",
+                                    "#text": "an X screen."
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "get_font_map",
+                    "@c:identifier": "pango_xft_get_font_map",
+                    "@version": "1.2",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-fontmap.c",
+                        "@line": "201",
+                        "#text": "Returns the `PangoXftFontMap` for the given display and screen.\nThe fontmap is owned by Pango and will be valid until\nthe display is closed."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "94"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangoxft-fontmap.c",
+                            "@line": "210",
+                            "#text": "a `PangoFontMap` object, owned by Pango."
+                        },
+                        "type": {
+                            "@name": "Pango.FontMap",
+                            "@c:type": "PangoFontMap*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "display",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "203",
+                                    "#text": "an X display"
+                                },
+                                "type": {
+                                    "@name": "xlib.Display",
+                                    "@c:type": "Display*"
+                                }
+                            },
+                            {
+                                "@name": "screen",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "204",
+                                    "#text": "the screen number of a screen within @display"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "picture_render",
+                    "@c:identifier": "pango_xft_picture_render",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-render.c",
+                        "@line": "858",
+                        "#text": "Renders a `PangoGlyphString` onto an Xrender Picture object."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "128"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "display",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "860",
+                                    "#text": "an X display"
+                                },
+                                "type": {
+                                    "@name": "xlib.Display",
+                                    "@c:type": "Display*"
+                                }
+                            },
+                            {
+                                "@name": "src_picture",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "861",
+                                    "#text": "the source picture to draw the string with"
+                                },
+                                "type": {
+                                    "@name": "xlib.Picture",
+                                    "@c:type": "Picture"
+                                }
+                            },
+                            {
+                                "@name": "dest_picture",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "862",
+                                    "#text": "the destination picture to draw the string onto"
+                                },
+                                "type": {
+                                    "@name": "xlib.Picture",
+                                    "@c:type": "Picture"
+                                }
+                            },
+                            {
+                                "@name": "font",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "863",
+                                    "#text": "the font in which to draw the string"
+                                },
+                                "type": {
+                                    "@name": "Pango.Font",
+                                    "@c:type": "PangoFont*"
+                                }
+                            },
+                            {
+                                "@name": "glyphs",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "864",
+                                    "#text": "the glyph string to draw"
+                                },
+                                "type": {
+                                    "@name": "Pango.GlyphString",
+                                    "@c:type": "PangoGlyphString*"
+                                }
+                            },
+                            {
+                                "@name": "x",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "865",
+                                    "#text": "the x position of start of string (in pixels)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "gint"
+                                }
+                            },
+                            {
+                                "@name": "y",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "866",
+                                    "#text": "the y position of baseline (in pixels)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "gint"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "render",
+                    "@c:identifier": "pango_xft_render",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-render.c",
+                        "@line": "830",
+                        "#text": "Renders a `PangoGlyphString` onto an XftDraw object wrapping an X drawable."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "121"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "draw",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "832",
+                                    "#text": "the XftDraw object."
+                                },
+                                "type": {
+                                    "@name": "xft.Draw",
+                                    "@c:type": "XftDraw*"
+                                }
+                            },
+                            {
+                                "@name": "color",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "833",
+                                    "#text": "the color in which to draw the string"
+                                },
+                                "type": {
+                                    "@name": "xft.Color",
+                                    "@c:type": "XftColor*"
+                                }
+                            },
+                            {
+                                "@name": "font",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "834",
+                                    "#text": "the font in which to draw the string"
+                                },
+                                "type": {
+                                    "@name": "Pango.Font",
+                                    "@c:type": "PangoFont*"
+                                }
+                            },
+                            {
+                                "@name": "glyphs",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "835",
+                                    "#text": "the glyph string to draw"
+                                },
+                                "type": {
+                                    "@name": "Pango.GlyphString",
+                                    "@c:type": "PangoGlyphString*"
+                                }
+                            },
+                            {
+                                "@name": "x",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "836",
+                                    "#text": "the x position of start of string (in pixels)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "gint"
+                                }
+                            },
+                            {
+                                "@name": "y",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "837",
+                                    "#text": "the y position of baseline (in pixels)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "gint"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "render_layout",
+                    "@c:identifier": "pango_xft_render_layout",
+                    "@version": "1.8",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-render.c",
+                        "@line": "706",
+                        "#text": "Render a `PangoLayout` onto a XftDraw"
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "150"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "draw",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "708",
+                                    "#text": "an XftDraw"
+                                },
+                                "type": {
+                                    "@name": "xft.Draw",
+                                    "@c:type": "XftDraw*"
+                                }
+                            },
+                            {
+                                "@name": "color",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "709",
+                                    "#text": "the foreground color in which to draw the layout\n  (may be overridden by color attributes)"
+                                },
+                                "type": {
+                                    "@name": "xft.Color",
+                                    "@c:type": "XftColor*"
+                                }
+                            },
+                            {
+                                "@name": "layout",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "711",
+                                    "#text": "a `PangoLayout`"
+                                },
+                                "type": {
+                                    "@name": "Pango.Layout",
+                                    "@c:type": "PangoLayout*"
+                                }
+                            },
+                            {
+                                "@name": "x",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "712",
+                                    "#text": "the X position of the left of the layout (in Pango units)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            },
+                            {
+                                "@name": "y",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "713",
+                                    "#text": "the Y position of the top of the layout (in Pango units)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "render_layout_line",
+                    "@c:identifier": "pango_xft_render_layout_line",
+                    "@version": "1.8",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-render.c",
+                        "@line": "743",
+                        "#text": "Render a `PangoLayoutLine` onto a XftDraw"
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "144"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "draw",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "745",
+                                    "#text": "an XftDraw"
+                                },
+                                "type": {
+                                    "@name": "xft.Draw",
+                                    "@c:type": "XftDraw*"
+                                }
+                            },
+                            {
+                                "@name": "color",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "746",
+                                    "#text": "the foreground color in which to draw the layout line\n  (may be overridden by color attributes)"
+                                },
+                                "type": {
+                                    "@name": "xft.Color",
+                                    "@c:type": "XftColor*"
+                                }
+                            },
+                            {
+                                "@name": "line",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "748",
+                                    "#text": "a `PangoLayoutLine`"
+                                },
+                                "type": {
+                                    "@name": "Pango.LayoutLine",
+                                    "@c:type": "PangoLayoutLine*"
+                                }
+                            },
+                            {
+                                "@name": "x",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "749",
+                                    "#text": "the x position of start of string (in Pango units)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            },
+                            {
+                                "@name": "y",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "750",
+                                    "#text": "the y position of baseline (in Pango units)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "render_transformed",
+                    "@c:identifier": "pango_xft_render_transformed",
+                    "@version": "1.8",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-render.c",
+                        "@line": "780",
+                        "#text": "Renders a `PangoGlyphString` onto a XftDraw, possibly\ntransforming the layed-out coordinates through a transformation\nmatrix.\n\nNote that the transformation matrix for @font is not\nchanged, so to produce correct rendering results, the @font\nmust have been loaded using a `PangoContext` with an identical\ntransformation matrix to that passed in to this function."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft-render.h",
+                        "@line": "136"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "draw",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "782",
+                                    "#text": "an XftDraw"
+                                },
+                                "type": {
+                                    "@name": "xft.Draw",
+                                    "@c:type": "XftDraw*"
+                                }
+                            },
+                            {
+                                "@name": "color",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "783",
+                                    "#text": "the color in which to draw the glyphs"
+                                },
+                                "type": {
+                                    "@name": "xft.Color",
+                                    "@c:type": "XftColor*"
+                                }
+                            },
+                            {
+                                "@name": "matrix",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "785",
+                                    "#text": "a `PangoMatrix`"
+                                },
+                                "type": {
+                                    "@name": "Pango.Matrix",
+                                    "@c:type": "PangoMatrix*"
+                                }
+                            },
+                            {
+                                "@name": "font",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "784",
+                                    "#text": "the font in which to draw the string"
+                                },
+                                "type": {
+                                    "@name": "Pango.Font",
+                                    "@c:type": "PangoFont*"
+                                }
+                            },
+                            {
+                                "@name": "glyphs",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "786",
+                                    "#text": "the glyph string to draw"
+                                },
+                                "type": {
+                                    "@name": "Pango.GlyphString",
+                                    "@c:type": "PangoGlyphString*"
+                                }
+                            },
+                            {
+                                "@name": "x",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "787",
+                                    "#text": "the x position of the start of the string (in Pango\n  units in user space coordinates)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            },
+                            {
+                                "@name": "y",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-render.c",
+                                    "@line": "789",
+                                    "#text": "the y position of the baseline (in Pango units\n  in user space coordinates)"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "set_default_substitute",
+                    "@c:identifier": "pango_xft_set_default_substitute",
+                    "@version": "1.2",
+                    "@deprecated": "1",
+                    "@deprecated-version": "1.46",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-fontmap.c",
+                        "@line": "276",
+                        "#text": "Sets a function that will be called to do final configuration\nsubstitution on a #FcPattern before it is used to load\nthe font. This function can be used to do things like set\nhinting and antialiasing options."
+                    },
+                    "doc-deprecated": {
+                        "@xml:space": "preserve",
+                        "#text": "Use pango_fc_font_map_set_default_substitute()\ninstead."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "107"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "display",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "278",
+                                    "#text": "an X Display"
+                                },
+                                "type": {
+                                    "@name": "xlib.Display",
+                                    "@c:type": "Display*"
+                                }
+                            },
+                            {
+                                "@name": "screen",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "279",
+                                    "#text": "the screen number of a screen within @display"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            },
+                            {
+                                "@name": "func",
+                                "@transfer-ownership": "none",
+                                "@scope": "notified",
+                                "@closure": "3",
+                                "@destroy": "4",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "280",
+                                    "#text": "function to call to to do final config tweaking\n       on #FcPattern objects."
+                                },
+                                "type": {
+                                    "@name": "SubstituteFunc",
+                                    "@c:type": "PangoXftSubstituteFunc"
+                                }
+                            },
+                            {
+                                "@name": "data",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "282",
+                                    "#text": "data to pass to @func"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "gpointer"
+                                }
+                            },
+                            {
+                                "@name": "notify",
+                                "@transfer-ownership": "none",
+                                "@scope": "async",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "283",
+                                    "#text": "function to call when @data is no longer used."
+                                },
+                                "type": {
+                                    "@name": "GLib.DestroyNotify",
+                                    "@c:type": "GDestroyNotify"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "shutdown_display",
+                    "@c:identifier": "pango_xft_shutdown_display",
+                    "@version": "1.2",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-fontmap.c",
+                        "@line": "243",
+                        "#text": "Release any resources that have been cached for the\ncombination of @display and @screen. Note that when the\nX display is closed, resources are released automatically,\nwithout needing to call this function."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "102"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "display",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "245",
+                                    "#text": "an X display"
+                                },
+                                "type": {
+                                    "@name": "xlib.Display",
+                                    "@c:type": "Display*"
+                                }
+                            },
+                            {
+                                "@name": "screen",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "246",
+                                    "#text": "the screen number of a screen within @display"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "substitute_changed",
+                    "@c:identifier": "pango_xft_substitute_changed",
+                    "@version": "1.2",
+                    "@deprecated": "1",
+                    "@deprecated-version": "1.46",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangoxft-fontmap.c",
+                        "@line": "308",
+                        "#text": "Call this function any time the results of the\ndefault substitution function set with\npango_xft_set_default_substitute() change.\nThat is, if your substitution function will return different\nresults for the same input pattern, you must call this function."
+                    },
+                    "doc-deprecated": {
+                        "@xml:space": "preserve",
+                        "#text": "Use pango_fc_font_map_substitute_changed()\ninstead."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangoxft.h",
+                        "@line": "113"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "display",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "310",
+                                    "#text": "an X Display"
+                                },
+                                "type": {
+                                    "@name": "xlib.Display",
+                                    "@c:type": "Display*"
+                                }
+                            },
+                            {
+                                "@name": "screen",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangoxft-fontmap.c",
+                                    "@line": "311",
+                                    "#text": "the screen number of a screen within @display"
+                                },
+                                "type": {
+                                    "@name": "gint",
+                                    "@c:type": "int"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

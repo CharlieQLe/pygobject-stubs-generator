@@ -1,0 +1,912 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "@xmlns:glib": "http://www.gtk.org/introspection/glib/1.0",
+        "namespace": {
+            "@name": "GDesktopEnums",
+            "@version": "3.0",
+            "@shared-library": "",
+            "@c:identifier-prefixes": "GDesktop",
+            "@c:symbol-prefixes": "g_desktop",
+            "enumeration": [
+                {
+                    "@name": "BackgroundShading",
+                    "@c:type": "GDesktopBackgroundShading",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "63"
+                    },
+                    "member": [
+                        {
+                            "@name": "solid",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_SHADING_SOLID"
+                        },
+                        {
+                            "@name": "vertical",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_SHADING_VERTICAL"
+                        },
+                        {
+                            "@name": "horizontal",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_SHADING_HORIZONTAL"
+                        }
+                    ]
+                },
+                {
+                    "@name": "BackgroundStyle",
+                    "@c:type": "GDesktopBackgroundStyle",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "56"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_STYLE_NONE"
+                        },
+                        {
+                            "@name": "wallpaper",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_STYLE_WALLPAPER"
+                        },
+                        {
+                            "@name": "centered",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_STYLE_CENTERED"
+                        },
+                        {
+                            "@name": "scaled",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_STYLE_SCALED"
+                        },
+                        {
+                            "@name": "stretched",
+                            "@value": "4",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_STYLE_STRETCHED"
+                        },
+                        {
+                            "@name": "zoom",
+                            "@value": "5",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_STYLE_ZOOM"
+                        },
+                        {
+                            "@name": "spanned",
+                            "@value": "6",
+                            "@c:identifier": "G_DESKTOP_BACKGROUND_STYLE_SPANNED"
+                        }
+                    ]
+                },
+                {
+                    "@name": "ClockFormat",
+                    "@c:type": "GDesktopClockFormat",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "83"
+                    },
+                    "member": [
+                        {
+                            "@name": "24h",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_CLOCK_FORMAT_24H"
+                        },
+                        {
+                            "@name": "12h",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_CLOCK_FORMAT_12H"
+                        }
+                    ]
+                },
+                {
+                    "@name": "ColorScheme",
+                    "@c:type": "GDesktopColorScheme",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "259"
+                    },
+                    "member": [
+                        {
+                            "@name": "default",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_COLOR_SCHEME_DEFAULT"
+                        },
+                        {
+                            "@name": "prefer_dark",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_COLOR_SCHEME_PREFER_DARK"
+                        },
+                        {
+                            "@name": "prefer_light",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_COLOR_SCHEME_PREFER_LIGHT"
+                        }
+                    ]
+                },
+                {
+                    "@name": "DeviceSendEvents",
+                    "@c:type": "GDesktopDeviceSendEvents",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "192"
+                    },
+                    "member": [
+                        {
+                            "@name": "enabled",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_DEVICE_SEND_EVENTS_ENABLED"
+                        },
+                        {
+                            "@name": "disabled",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_DEVICE_SEND_EVENTS_DISABLED"
+                        },
+                        {
+                            "@name": "disabled_on_external_mouse",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_DEVICE_SEND_EVENTS_DISABLED_ON_EXTERNAL_MOUSE"
+                        }
+                    ]
+                },
+                {
+                    "@name": "FocusMode",
+                    "@c:type": "GDesktopFocusMode",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "142"
+                    },
+                    "member": [
+                        {
+                            "@name": "click",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_FOCUS_MODE_CLICK"
+                        },
+                        {
+                            "@name": "sloppy",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_FOCUS_MODE_SLOPPY"
+                        },
+                        {
+                            "@name": "mouse",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_FOCUS_MODE_MOUSE"
+                        }
+                    ]
+                },
+                {
+                    "@name": "FocusNewWindows",
+                    "@c:type": "GDesktopFocusNewWindows",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "148"
+                    },
+                    "member": [
+                        {
+                            "@name": "smart",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_FOCUS_NEW_WINDOWS_SMART"
+                        },
+                        {
+                            "@name": "strict",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_FOCUS_NEW_WINDOWS_STRICT"
+                        }
+                    ]
+                },
+                {
+                    "@name": "FontAntialiasingMode",
+                    "@c:type": "GDesktopFontAntialiasingMode",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "235"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_FONT_ANTIALIASING_MODE_NONE"
+                        },
+                        {
+                            "@name": "grayscale",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_FONT_ANTIALIASING_MODE_GRAYSCALE"
+                        },
+                        {
+                            "@name": "rgba",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_FONT_ANTIALIASING_MODE_RGBA"
+                        }
+                    ]
+                },
+                {
+                    "@name": "FontHinting",
+                    "@c:type": "GDesktopFontHinting",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "243"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_FONT_HINTING_NONE"
+                        },
+                        {
+                            "@name": "slight",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_FONT_HINTING_SLIGHT"
+                        },
+                        {
+                            "@name": "medium",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_FONT_HINTING_MEDIUM"
+                        },
+                        {
+                            "@name": "full",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_FONT_HINTING_FULL"
+                        }
+                    ]
+                },
+                {
+                    "@name": "FontRgbaOrder",
+                    "@c:type": "GDesktopFontRgbaOrder",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "252"
+                    },
+                    "member": [
+                        {
+                            "@name": "rgba",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_FONT_RGBA_ORDER_RGBA"
+                        },
+                        {
+                            "@name": "rgb",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_FONT_RGBA_ORDER_RGB"
+                        },
+                        {
+                            "@name": "bgr",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_FONT_RGBA_ORDER_BGR"
+                        },
+                        {
+                            "@name": "vrgb",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_FONT_RGBA_ORDER_VRGB"
+                        },
+                        {
+                            "@name": "vbgr",
+                            "@value": "4",
+                            "@c:identifier": "G_DESKTOP_FONT_RGBA_ORDER_VBGR"
+                        }
+                    ]
+                },
+                {
+                    "@name": "LocationAccuracyLevel",
+                    "@c:type": "GDesktopLocationAccuracyLevel",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "163"
+                    },
+                    "member": [
+                        {
+                            "@name": "country",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_LOCATION_ACCURACY_LEVEL_COUNTRY"
+                        },
+                        {
+                            "@name": "city",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_LOCATION_ACCURACY_LEVEL_CITY"
+                        },
+                        {
+                            "@name": "neighborhood",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_LOCATION_ACCURACY_LEVEL_NEIGHBORHOOD"
+                        },
+                        {
+                            "@name": "street",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_LOCATION_ACCURACY_LEVEL_STREET"
+                        },
+                        {
+                            "@name": "exact",
+                            "@value": "4",
+                            "@c:identifier": "G_DESKTOP_LOCATION_ACCURACY_LEVEL_EXACT"
+                        }
+                    ]
+                },
+                {
+                    "@name": "MagnifierCaretTrackingMode",
+                    "@c:type": "GDesktopMagnifierCaretTrackingMode",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "114"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_CARET_TRACKING_MODE_NONE"
+                        },
+                        {
+                            "@name": "centered",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_CARET_TRACKING_MODE_CENTERED"
+                        },
+                        {
+                            "@name": "proportional",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_CARET_TRACKING_MODE_PROPORTIONAL"
+                        },
+                        {
+                            "@name": "push",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_CARET_TRACKING_MODE_PUSH"
+                        }
+                    ]
+                },
+                {
+                    "@name": "MagnifierFocusTrackingMode",
+                    "@c:type": "GDesktopMagnifierFocusTrackingMode",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "106"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_FOCUS_TRACKING_MODE_NONE"
+                        },
+                        {
+                            "@name": "centered",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_FOCUS_TRACKING_MODE_CENTERED"
+                        },
+                        {
+                            "@name": "proportional",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_FOCUS_TRACKING_MODE_PROPORTIONAL"
+                        },
+                        {
+                            "@name": "push",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_FOCUS_TRACKING_MODE_PUSH"
+                        }
+                    ]
+                },
+                {
+                    "@name": "MagnifierMouseTrackingMode",
+                    "@c:type": "GDesktopMagnifierMouseTrackingMode",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "98"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_NONE"
+                        },
+                        {
+                            "@name": "centered",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_CENTERED"
+                        },
+                        {
+                            "@name": "proportional",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PROPORTIONAL"
+                        },
+                        {
+                            "@name": "push",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PUSH"
+                        }
+                    ]
+                },
+                {
+                    "@name": "MagnifierScreenPosition",
+                    "@c:type": "GDesktopMagnifierScreenPosition",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "123"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_NONE"
+                        },
+                        {
+                            "@name": "full_screen",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_FULL_SCREEN"
+                        },
+                        {
+                            "@name": "top_half",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_TOP_HALF"
+                        },
+                        {
+                            "@name": "bottom_half",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_BOTTOM_HALF"
+                        },
+                        {
+                            "@name": "left_half",
+                            "@value": "4",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_LEFT_HALF"
+                        },
+                        {
+                            "@name": "right_half",
+                            "@value": "5",
+                            "@c:identifier": "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_RIGHT_HALF"
+                        }
+                    ]
+                },
+                {
+                    "@name": "MouseDwellDirection",
+                    "@c:type": "GDesktopMouseDwellDirection",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "77"
+                    },
+                    "member": [
+                        {
+                            "@name": "left",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_MOUSE_DWELL_DIRECTION_LEFT"
+                        },
+                        {
+                            "@name": "right",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_MOUSE_DWELL_DIRECTION_RIGHT"
+                        },
+                        {
+                            "@name": "up",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_MOUSE_DWELL_DIRECTION_UP"
+                        },
+                        {
+                            "@name": "down",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_MOUSE_DWELL_DIRECTION_DOWN"
+                        }
+                    ]
+                },
+                {
+                    "@name": "MouseDwellMode",
+                    "@c:type": "GDesktopMouseDwellMode",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "69"
+                    },
+                    "member": [
+                        {
+                            "@name": "window",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_MOUSE_DWELL_MODE_WINDOW"
+                        },
+                        {
+                            "@name": "gesture",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_MOUSE_DWELL_MODE_GESTURE"
+                        }
+                    ]
+                },
+                {
+                    "@name": "PadButtonAction",
+                    "@c:type": "GDesktopPadButtonAction",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "206"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_PAD_BUTTON_ACTION_NONE"
+                        },
+                        {
+                            "@name": "help",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_PAD_BUTTON_ACTION_HELP"
+                        },
+                        {
+                            "@name": "switch_monitor",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_PAD_BUTTON_ACTION_SWITCH_MONITOR"
+                        },
+                        {
+                            "@name": "keybinding",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_PAD_BUTTON_ACTION_KEYBINDING"
+                        }
+                    ]
+                },
+                {
+                    "@name": "PointerAccelProfile",
+                    "@c:type": "GDesktopPointerAccelProfile",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "222"
+                    },
+                    "member": [
+                        {
+                            "@name": "default",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_POINTER_ACCEL_PROFILE_DEFAULT"
+                        },
+                        {
+                            "@name": "flat",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_POINTER_ACCEL_PROFILE_FLAT"
+                        },
+                        {
+                            "@name": "adaptive",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_POINTER_ACCEL_PROFILE_ADAPTIVE"
+                        }
+                    ]
+                },
+                {
+                    "@name": "PointingStickScrollMethod",
+                    "@c:type": "GDesktopPointingStickScrollMethod",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "266"
+                    },
+                    "member": [
+                        {
+                            "@name": "default",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_POINTING_STICK_SCROLL_METHOD_DEFAULT"
+                        },
+                        {
+                            "@name": "none",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_POINTING_STICK_SCROLL_METHOD_NONE"
+                        },
+                        {
+                            "@name": "on_button_down",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_POINTING_STICK_SCROLL_METHOD_ON_BUTTON_DOWN"
+                        }
+                    ]
+                },
+                {
+                    "@name": "ProxyMode",
+                    "@c:type": "GDesktopProxyMode",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "31"
+                    },
+                    "member": [
+                        {
+                            "@name": "none",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_PROXY_MODE_NONE"
+                        },
+                        {
+                            "@name": "manual",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_PROXY_MODE_MANUAL"
+                        },
+                        {
+                            "@name": "auto",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_PROXY_MODE_AUTO"
+                        }
+                    ]
+                },
+                {
+                    "@name": "ScreensaverMode",
+                    "@c:type": "GDesktopScreensaverMode",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "90"
+                    },
+                    "member": [
+                        {
+                            "@name": "blank_only",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_SCREENSAVER_MODE_BLANK_ONLY"
+                        },
+                        {
+                            "@name": "random",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_SCREENSAVER_MODE_RANDOM"
+                        },
+                        {
+                            "@name": "single",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_SCREENSAVER_MODE_SINGLE"
+                        }
+                    ]
+                },
+                {
+                    "@name": "StylusButtonAction",
+                    "@c:type": "GDesktopStylusButtonAction",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "215"
+                    },
+                    "member": [
+                        {
+                            "@name": "default",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_STYLUS_BUTTON_ACTION_DEFAULT"
+                        },
+                        {
+                            "@name": "middle",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_STYLUS_BUTTON_ACTION_MIDDLE"
+                        },
+                        {
+                            "@name": "right",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_STYLUS_BUTTON_ACTION_RIGHT"
+                        },
+                        {
+                            "@name": "back",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_STYLUS_BUTTON_ACTION_BACK"
+                        },
+                        {
+                            "@name": "forward",
+                            "@value": "4",
+                            "@c:identifier": "G_DESKTOP_STYLUS_BUTTON_ACTION_FORWARD"
+                        }
+                    ]
+                },
+                {
+                    "@name": "TabletMapping",
+                    "@c:type": "GDesktopTabletMapping",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "198"
+                    },
+                    "member": [
+                        {
+                            "@name": "absolute",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_TABLET_MAPPING_ABSOLUTE"
+                        },
+                        {
+                            "@name": "relative",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_TABLET_MAPPING_RELATIVE"
+                        }
+                    ]
+                },
+                {
+                    "@name": "TitlebarAction",
+                    "@c:type": "GDesktopTitlebarAction",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "135"
+                    },
+                    "member": [
+                        {
+                            "@name": "toggle_shade",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_TITLEBAR_ACTION_TOGGLE_SHADE"
+                        },
+                        {
+                            "@name": "toggle_maximize",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE"
+                        },
+                        {
+                            "@name": "toggle_maximize_horizontally",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_HORIZONTALLY"
+                        },
+                        {
+                            "@name": "toggle_maximize_vertically",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_VERTICALLY"
+                        },
+                        {
+                            "@name": "minimize",
+                            "@value": "4",
+                            "@c:identifier": "G_DESKTOP_TITLEBAR_ACTION_MINIMIZE"
+                        },
+                        {
+                            "@name": "none",
+                            "@value": "5",
+                            "@c:identifier": "G_DESKTOP_TITLEBAR_ACTION_NONE"
+                        },
+                        {
+                            "@name": "lower",
+                            "@value": "6",
+                            "@c:identifier": "G_DESKTOP_TITLEBAR_ACTION_LOWER"
+                        },
+                        {
+                            "@name": "menu",
+                            "@value": "7",
+                            "@c:identifier": "G_DESKTOP_TITLEBAR_ACTION_MENU"
+                        }
+                    ]
+                },
+                {
+                    "@name": "ToolbarIconSize",
+                    "@c:type": "GDesktopToolbarIconSize",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "45"
+                    },
+                    "member": [
+                        {
+                            "@name": "small",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_TOOLBAR_ICON_SIZE_SMALL"
+                        },
+                        {
+                            "@name": "large",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_TOOLBAR_ICON_SIZE_LARGE"
+                        }
+                    ]
+                },
+                {
+                    "@name": "ToolbarStyle",
+                    "@c:type": "GDesktopToolbarStyle",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "39"
+                    },
+                    "member": [
+                        {
+                            "@name": "both",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_TOOLBAR_STYLE_BOTH"
+                        },
+                        {
+                            "@name": "both_horiz",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_TOOLBAR_STYLE_BOTH_HORIZ"
+                        },
+                        {
+                            "@name": "icons",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_TOOLBAR_STYLE_ICONS"
+                        },
+                        {
+                            "@name": "text",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_TOOLBAR_STYLE_TEXT"
+                        }
+                    ]
+                },
+                {
+                    "@name": "TouchpadClickMethod",
+                    "@c:type": "GDesktopTouchpadClickMethod",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "178"
+                    },
+                    "member": [
+                        {
+                            "@name": "default",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_CLICK_METHOD_DEFAULT"
+                        },
+                        {
+                            "@name": "none",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_CLICK_METHOD_NONE"
+                        },
+                        {
+                            "@name": "areas",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_CLICK_METHOD_AREAS"
+                        },
+                        {
+                            "@name": "fingers",
+                            "@value": "3",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_CLICK_METHOD_FINGERS"
+                        }
+                    ]
+                },
+                {
+                    "@name": "TouchpadHandedness",
+                    "@c:type": "GDesktopTouchpadHandedness",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "170"
+                    },
+                    "member": [
+                        {
+                            "@name": "right",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_HANDEDNESS_RIGHT"
+                        },
+                        {
+                            "@name": "left",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_HANDEDNESS_LEFT"
+                        },
+                        {
+                            "@name": "mouse",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_HANDEDNESS_MOUSE"
+                        }
+                    ]
+                },
+                {
+                    "@name": "TouchpadTapButtonMap",
+                    "@c:type": "GDesktopTouchpadTapButtonMap",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "185"
+                    },
+                    "member": [
+                        {
+                            "@name": "default",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_BUTTON_TAP_MAP_DEFAULT"
+                        },
+                        {
+                            "@name": "lrm",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_BUTTON_TAP_MAP_LRM"
+                        },
+                        {
+                            "@name": "lmr",
+                            "@value": "2",
+                            "@c:identifier": "G_DESKTOP_TOUCHPAD_BUTTON_TAP_MAP_LMR"
+                        }
+                    ]
+                },
+                {
+                    "@name": "UsbProtection",
+                    "@c:type": "GDesktopUsbProtection",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "228"
+                    },
+                    "member": [
+                        {
+                            "@name": "lockscreen",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_USB_PROTECTION_LOCKSCREEN"
+                        },
+                        {
+                            "@name": "always",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_USB_PROTECTION_ALWAYS"
+                        }
+                    ]
+                },
+                {
+                    "@name": "VisualBellType",
+                    "@c:type": "GDesktopVisualBellType",
+                    "source-position": {
+                        "@filename": "../headers/gdesktop-enums.h",
+                        "@line": "154"
+                    },
+                    "member": [
+                        {
+                            "@name": "fullscreen_flash",
+                            "@value": "0",
+                            "@c:identifier": "G_DESKTOP_VISUAL_BELL_FULLSCREEN_FLASH"
+                        },
+                        {
+                            "@name": "frame_flash",
+                            "@value": "1",
+                            "@c:identifier": "G_DESKTOP_VISUAL_BELL_FRAME_FLASH"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

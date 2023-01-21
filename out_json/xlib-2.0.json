@@ -1,0 +1,173 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "namespace": {
+            "@name": "xlib",
+            "@version": "2.0",
+            "@c:identifier-prefixes": "",
+            "@c:symbol-prefixes": "X",
+            "alias": [
+                {
+                    "@name": "Atom",
+                    "@c:type": "Atom",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "Colormap",
+                    "@c:type": "Colormap",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "Cursor",
+                    "@c:type": "Cursor",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "Drawable",
+                    "@c:type": "Drawable",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "GC",
+                    "@c:type": "GC",
+                    "type": {
+                        "@name": "gpointer",
+                        "@c:type": "gpointer"
+                    }
+                },
+                {
+                    "@name": "KeyCode",
+                    "@c:type": "KeyCode",
+                    "type": {
+                        "@name": "guint8",
+                        "@c:type": "guint8"
+                    }
+                },
+                {
+                    "@name": "KeySym",
+                    "@c:type": "KeySym",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "Picture",
+                    "@c:type": "Picture",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "Time",
+                    "@c:type": "Time",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "VisualID",
+                    "@c:type": "VisualID",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "Window",
+                    "@c:type": "Window",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "XID",
+                    "@c:type": "XID",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                },
+                {
+                    "@name": "Pixmap",
+                    "@c:type": "Pixmap",
+                    "type": {
+                        "@name": "gulong",
+                        "@c:type": "gulong"
+                    }
+                }
+            ],
+            "record": [
+                {
+                    "@name": "Display",
+                    "@c:type": "Display"
+                },
+                {
+                    "@name": "Screen",
+                    "@c:type": "Screen"
+                },
+                {
+                    "@name": "Visual",
+                    "@c:type": "Visual"
+                },
+                {
+                    "@name": "XConfigureEvent",
+                    "@c:type": "XConfigureEvent"
+                },
+                {
+                    "@name": "XImage",
+                    "@c:type": "XImage"
+                },
+                {
+                    "@name": "XFontStruct",
+                    "@c:type": "XFontStruct"
+                },
+                {
+                    "@name": "XTrapezoid",
+                    "@c:type": "XTrapezoid"
+                },
+                {
+                    "@name": "XVisualInfo",
+                    "@c:type": "XVisualInfo"
+                },
+                {
+                    "@name": "XWindowAttributes",
+                    "@c:type": "XWindowAttributes"
+                }
+            ],
+            "union": {
+                "@name": "XEvent",
+                "@c:type": "XEvent"
+            },
+            "function": {
+                "@name": "open_display",
+                "@c:identifier": "XOpenDisplay",
+                "return-value": {
+                    "@transfer-ownership": "none",
+                    "type": {
+                        "@name": "none",
+                        "@c:type": "void"
+                    }
+                },
+                "parameters": null
+            }
+        }
+    }
+}

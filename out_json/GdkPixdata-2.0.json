@@ -1,0 +1,790 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "@xmlns:glib": "http://www.gtk.org/introspection/glib/1.0",
+        "include": {
+            "@name": "GdkPixbuf",
+            "@version": "2.0"
+        },
+        "package": {
+            "@name": "gdk-pixbuf-2.0"
+        },
+        "c:include": {
+            "@name": "gdk-pixbuf/gdk-pixdata.h"
+        },
+        "namespace": {
+            "@name": "GdkPixdata",
+            "@version": "2.0",
+            "@shared-library": "libgdk_pixbuf-2.0.so.0",
+            "@c:identifier-prefixes": "Gdk",
+            "@c:symbol-prefixes": "gdk",
+            "constant": [
+                {
+                    "@name": "PIXBUF_MAGIC_NUMBER",
+                    "@value": "1197763408",
+                    "@c:type": "GDK_PIXBUF_MAGIC_NUMBER",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                        "@line": "25",
+                        "#text": "Magic number for #GdkPixdata structures."
+                    },
+                    "source-position": {
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                        "@line": "30"
+                    },
+                    "type": {
+                        "@name": "gint",
+                        "@c:type": "gint"
+                    }
+                },
+                {
+                    "@name": "PIXDATA_HEADER_LENGTH",
+                    "@value": "24",
+                    "@c:type": "GDK_PIXDATA_HEADER_LENGTH",
+                    "@deprecated": "1",
+                    "@deprecated-version": "2.32",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                        "@line": "83",
+                        "#text": "The length of a #GdkPixdata structure without the @pixel_data pointer."
+                    },
+                    "source-position": {
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                        "@line": "90"
+                    },
+                    "type": {
+                        "@name": "gint",
+                        "@c:type": "gint"
+                    }
+                }
+            ],
+            "record": {
+                "@name": "Pixdata",
+                "@c:type": "GdkPixdata",
+                "@deprecated": "1",
+                "@deprecated-version": "2.32",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                    "@line": "25",
+                    "#text": "A pixel buffer suitable for serialization and streaming.\n\nUsing `GdkPixdata`, images can be compiled into an application,\nmaking it unnecessary to refer to external image files at runtime.\n\n`GdkPixbuf` includes a utility named `gdk-pixbuf-csource`, which\ncan be used to convert image files into `GdkPixdata` structures suitable\nfor inclusion in C sources. To convert the `GdkPixdata` structures back\ninto a `GdkPixbuf`, use `gdk_pixbuf_from_pixdata()`."
+                },
+                "doc-deprecated": {
+                    "@xml:space": "preserve",
+                    "#text": "`GdkPixdata` should not be used any more. `GResource`\n  should be used to save the original compressed images inside the\n  program's binary"
+                },
+                "source-position": {
+                    "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                    "@line": "81"
+                },
+                "field": [
+                    {
+                        "@name": "magic",
+                        "@writable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "27",
+                            "#text": "magic number. A valid `GdkPixdata` structure must have\n  `GDK_PIXBUF_MAGIC_NUMBER` here"
+                        },
+                        "type": {
+                            "@name": "guint32",
+                            "@c:type": "guint32"
+                        }
+                    },
+                    {
+                        "@name": "length",
+                        "@writable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "29",
+                            "#text": "less than 1 to disable length checks, otherwise\n  `GDK_PIXDATA_HEADER_LENGTH` plus the length of `pixel_data`"
+                        },
+                        "type": {
+                            "@name": "gint32",
+                            "@c:type": "gint32"
+                        }
+                    },
+                    {
+                        "@name": "pixdata_type",
+                        "@writable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "31",
+                            "#text": "information about colorspace, sample width and\n  encoding, in a `GdkPixdataType`"
+                        },
+                        "type": {
+                            "@name": "guint32",
+                            "@c:type": "guint32"
+                        }
+                    },
+                    {
+                        "@name": "rowstride",
+                        "@writable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "33",
+                            "#text": "Distance in bytes between rows"
+                        },
+                        "type": {
+                            "@name": "guint32",
+                            "@c:type": "guint32"
+                        }
+                    },
+                    {
+                        "@name": "width",
+                        "@writable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "34",
+                            "#text": "Width of the image in pixels"
+                        },
+                        "type": {
+                            "@name": "guint32",
+                            "@c:type": "guint32"
+                        }
+                    },
+                    {
+                        "@name": "height",
+                        "@writable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "35",
+                            "#text": "Height of the image in pixels"
+                        },
+                        "type": {
+                            "@name": "guint32",
+                            "@c:type": "guint32"
+                        }
+                    },
+                    {
+                        "@name": "pixel_data",
+                        "@writable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "36",
+                            "#text": "`width` x `height`\n  pixels, encoded according to `pixdata_type` and `rowstride`"
+                        },
+                        "array": {
+                            "@zero-terminated": "0",
+                            "@c:type": "guint8*",
+                            "type": {
+                                "@name": "guint8"
+                            }
+                        }
+                    }
+                ],
+                "method": [
+                    {
+                        "@name": "deserialize",
+                        "@c:identifier": "gdk_pixdata_deserialize",
+                        "@deprecated": "1",
+                        "@deprecated-version": "2.32",
+                        "@throws": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "199",
+                            "#text": "Deserializes (reconstruct) a #GdkPixdata structure from a byte stream.\n\nThe byte stream consists of a straightforward writeout of the\n`GdkPixdata` fields in network byte order, plus the `pixel_data`\nbytes the structure points to.\n\nThe `pixdata` contents are reconstructed byte by byte and are checked\nfor validity.\n\nThis function may fail with `GDK_PIXBUF_ERROR_CORRUPT_IMAGE`\nor `GDK_PIXBUF_ERROR_UNKNOWN_TYPE`."
+                        },
+                        "doc-deprecated": {
+                            "@xml:space": "preserve",
+                            "#text": "Use `GResource` instead."
+                        },
+                        "source-position": {
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                            "@line": "97"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                "@line": "219",
+                                "#text": "Upon successful deserialization `TRUE` is returned,\n`FALSE` otherwise."
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "pixdata",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                    "@line": "201",
+                                    "#text": "a #GdkPixdata structure to be filled in."
+                                },
+                                "type": {
+                                    "@name": "Pixdata",
+                                    "@c:type": "GdkPixdata*"
+                                }
+                            },
+                            "parameter": [
+                                {
+                                    "@name": "stream_length",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                        "@line": "202",
+                                        "#text": "length of the stream used for deserialization."
+                                    },
+                                    "type": {
+                                        "@name": "guint",
+                                        "@c:type": "guint"
+                                    }
+                                },
+                                {
+                                    "@name": "stream",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                        "@line": "203",
+                                        "#text": "stream of bytes containing a\n  serialized #GdkPixdata structure."
+                                    },
+                                    "array": {
+                                        "@length": "0",
+                                        "@zero-terminated": "0",
+                                        "@c:type": "const guint8*",
+                                        "type": {
+                                            "@name": "guint8",
+                                            "@c:type": "guint8"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@name": "from_pixbuf",
+                        "@c:identifier": "gdk_pixdata_from_pixbuf",
+                        "@introspectable": "0",
+                        "@deprecated": "1",
+                        "@deprecated-version": "2.32",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "338",
+                            "#text": "Converts a `GdkPixbuf` to a `GdkPixdata`.\n\nIf `use_rle` is `TRUE`, the pixel data is run-length encoded into\nnewly-allocated memory and a pointer to that memory is returned."
+                        },
+                        "doc-deprecated": {
+                            "@xml:space": "preserve",
+                            "#text": "Use #GResource instead."
+                        },
+                        "source-position": {
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                            "@line": "102"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                "@line": "349",
+                                "#text": "If `use_rle` is\n  `TRUE`, a pointer to the newly-allocated memory for the run-length\n  encoded pixel data, otherwise `NULL`."
+                            },
+                            "array": {
+                                "@zero-terminated": "0",
+                                "@c:type": "gpointer",
+                                "type": {
+                                    "@name": "guint8"
+                                }
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "pixdata",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                    "@line": "340",
+                                    "#text": "a `GdkPixdata` to fill."
+                                },
+                                "type": {
+                                    "@name": "Pixdata",
+                                    "@c:type": "GdkPixdata*"
+                                }
+                            },
+                            "parameter": [
+                                {
+                                    "@name": "pixbuf",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                        "@line": "341",
+                                        "#text": "the data to fill `pixdata` with."
+                                    },
+                                    "type": {
+                                        "@name": "GdkPixbuf.Pixbuf",
+                                        "@c:type": "const GdkPixbuf*"
+                                    }
+                                },
+                                {
+                                    "@name": "use_rle",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                        "@line": "342",
+                                        "#text": "whether to use run-length encoding for the pixel data."
+                                    },
+                                    "type": {
+                                        "@name": "gboolean",
+                                        "@c:type": "gboolean"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@name": "serialize",
+                        "@c:identifier": "gdk_pixdata_serialize",
+                        "@deprecated": "1",
+                        "@deprecated-version": "2.32",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "110",
+                            "#text": "Serializes a #GdkPixdata structure into a byte stream.\nThe byte stream consists of a straightforward writeout of the\n#GdkPixdata fields in network byte order, plus the @pixel_data\nbytes the structure points to."
+                        },
+                        "doc-deprecated": {
+                            "@xml:space": "preserve",
+                            "#text": "Use #GResource instead."
+                        },
+                        "source-position": {
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                            "@line": "94"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "full",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                "@line": "120",
+                                "#text": "A\nnewly-allocated string containing the serialized #GdkPixdata\nstructure."
+                            },
+                            "array": {
+                                "@length": "0",
+                                "@zero-terminated": "0",
+                                "@c:type": "guint8*",
+                                "type": {
+                                    "@name": "guint8",
+                                    "@c:type": "guint8"
+                                }
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "pixdata",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                    "@line": "112",
+                                    "#text": "a valid #GdkPixdata structure to serialize."
+                                },
+                                "type": {
+                                    "@name": "Pixdata",
+                                    "@c:type": "const GdkPixdata*"
+                                }
+                            },
+                            "parameter": {
+                                "@name": "stream_length_p",
+                                "@direction": "out",
+                                "@caller-allocates": "0",
+                                "@transfer-ownership": "full",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                    "@line": "113",
+                                    "#text": "location to store the resulting stream length in."
+                                },
+                                "type": {
+                                    "@name": "guint",
+                                    "@c:type": "guint*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "to_csource",
+                        "@c:identifier": "gdk_pixdata_to_csource",
+                        "@deprecated": "1",
+                        "@deprecated-version": "2.32",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                            "@line": "711",
+                            "#text": "Generates C source code suitable for compiling images directly\ninto programs.\n\nGdkPixbuf ships with a program called `gdk-pixbuf-csource`, which offers\na command line interface to this function."
+                        },
+                        "doc-deprecated": {
+                            "@xml:space": "preserve",
+                            "#text": "Use #GResource instead."
+                        },
+                        "source-position": {
+                            "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                            "@line": "156"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "full",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                "@line": "723",
+                                "#text": "a newly-allocated string buffer containing\n  the C source form of `pixdata`."
+                            },
+                            "type": {
+                                "@name": "GLib.String",
+                                "@c:type": "GString*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "pixdata",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                    "@line": "713",
+                                    "#text": "a `GdkPixdata` to convert to C source"
+                                },
+                                "type": {
+                                    "@name": "Pixdata",
+                                    "@c:type": "GdkPixdata*"
+                                }
+                            },
+                            "parameter": [
+                                {
+                                    "@name": "name",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                        "@line": "714",
+                                        "#text": "used for naming generated data structures or macros"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const gchar*"
+                                    }
+                                },
+                                {
+                                    "@name": "dump_type",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                        "@line": "715",
+                                        "#text": "the kind of C source to be generated"
+                                    },
+                                    "type": {
+                                        "@name": "PixdataDumpType",
+                                        "@c:type": "GdkPixdataDumpType"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bitfield": [
+                {
+                    "@name": "PixdataDumpType",
+                    "@deprecated": "1",
+                    "@deprecated-version": "2.32",
+                    "@c:type": "GdkPixdataDumpType",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                        "@line": "109",
+                        "#text": "An enumeration which is used by gdk_pixdata_to_csource() to\ndetermine the form of C source to be generated. The three values\n@GDK_PIXDATA_DUMP_PIXDATA_STREAM, @GDK_PIXDATA_DUMP_PIXDATA_STRUCT\nand @GDK_PIXDATA_DUMP_MACROS are mutually exclusive, as are\n@GDK_PIXBUF_DUMP_GTYPES and @GDK_PIXBUF_DUMP_CTYPES. The remaining\nelements are optional flags that can be freely added."
+                    },
+                    "source-position": {
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                        "@line": "152"
+                    },
+                    "member": [
+                        {
+                            "@name": "pixdata_stream",
+                            "@value": "0",
+                            "@c:identifier": "GDK_PIXDATA_DUMP_PIXDATA_STREAM",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "111",
+                                "#text": "Generate pixbuf data stream (a single\n   string containing a serialized #GdkPixdata structure in network byte\n   order)."
+                            }
+                        },
+                        {
+                            "@name": "pixdata_struct",
+                            "@value": "1",
+                            "@c:identifier": "GDK_PIXDATA_DUMP_PIXDATA_STRUCT",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "114",
+                                "#text": "Generate #GdkPixdata structure (needs\n   the #GdkPixdata structure definition from gdk-pixdata.h)."
+                            }
+                        },
+                        {
+                            "@name": "macros",
+                            "@value": "2",
+                            "@c:identifier": "GDK_PIXDATA_DUMP_MACROS",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "116",
+                                "#text": "Generate <function>*_ROWSTRIDE</function>,\n   <function>*_WIDTH</function>, <function>*_HEIGHT</function>,\n   <function>*_BYTES_PER_PIXEL</function> and\n   <function>*_RLE_PIXEL_DATA</function> or <function>*_PIXEL_DATA</function>\n   macro definitions for the image."
+                            }
+                        },
+                        {
+                            "@name": "gtypes",
+                            "@value": "0",
+                            "@c:identifier": "GDK_PIXDATA_DUMP_GTYPES",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "121",
+                                "#text": "Generate GLib data types instead of\n   standard C data types."
+                            }
+                        },
+                        {
+                            "@name": "ctypes",
+                            "@value": "256",
+                            "@c:identifier": "GDK_PIXDATA_DUMP_CTYPES",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "123",
+                                "#text": "Generate standard C data types instead of\n   GLib data types."
+                            }
+                        },
+                        {
+                            "@name": "static",
+                            "@value": "512",
+                            "@c:identifier": "GDK_PIXDATA_DUMP_STATIC",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "125",
+                                "#text": "Generate static symbols."
+                            }
+                        },
+                        {
+                            "@name": "const",
+                            "@value": "1024",
+                            "@c:identifier": "GDK_PIXDATA_DUMP_CONST",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "126",
+                                "#text": "Generate const symbols."
+                            }
+                        },
+                        {
+                            "@name": "rle_decoder",
+                            "@value": "65536",
+                            "@c:identifier": "GDK_PIXDATA_DUMP_RLE_DECODER",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "127",
+                                "#text": "Provide a <function>*_RUN_LENGTH_DECODE(image_buf, rle_data, size, bpp)</function>\n   macro definition  to  decode  run-length encoded image data."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "PixdataType",
+                    "@deprecated": "1",
+                    "@deprecated-version": "2.32",
+                    "@c:type": "GdkPixdataType",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                        "@line": "32",
+                        "#text": "An enumeration containing three sets of flags for a #GdkPixdata struct:\none for the used colorspace, one for the width of the samples and one\nfor the encoding of the pixel data."
+                    },
+                    "source-position": {
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                        "@line": "67"
+                    },
+                    "member": [
+                        {
+                            "@name": "color_type_rgb",
+                            "@value": "1",
+                            "@c:identifier": "GDK_PIXDATA_COLOR_TYPE_RGB",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "34",
+                                "#text": "each pixel has red, green and blue samples."
+                            }
+                        },
+                        {
+                            "@name": "color_type_rgba",
+                            "@value": "2",
+                            "@c:identifier": "GDK_PIXDATA_COLOR_TYPE_RGBA",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "35",
+                                "#text": "each pixel has red, green and blue samples\n   and an alpha value."
+                            }
+                        },
+                        {
+                            "@name": "color_type_mask",
+                            "@value": "255",
+                            "@c:identifier": "GDK_PIXDATA_COLOR_TYPE_MASK",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "37",
+                                "#text": "mask for the colortype flags of the enum."
+                            }
+                        },
+                        {
+                            "@name": "sample_width_8",
+                            "@value": "65536",
+                            "@c:identifier": "GDK_PIXDATA_SAMPLE_WIDTH_8",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "38",
+                                "#text": "each sample has 8 bits."
+                            }
+                        },
+                        {
+                            "@name": "sample_width_mask",
+                            "@value": "983040",
+                            "@c:identifier": "GDK_PIXDATA_SAMPLE_WIDTH_MASK",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "39",
+                                "#text": "mask for the sample width flags of the enum."
+                            }
+                        },
+                        {
+                            "@name": "encoding_raw",
+                            "@value": "16777216",
+                            "@c:identifier": "GDK_PIXDATA_ENCODING_RAW",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "40",
+                                "#text": "the pixel data is in raw form."
+                            }
+                        },
+                        {
+                            "@name": "encoding_rle",
+                            "@value": "33554432",
+                            "@c:identifier": "GDK_PIXDATA_ENCODING_RLE",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "41",
+                                "#text": "the pixel data is run-length encoded. Runs may\n   be up to 127 bytes long; their length is stored in a single byte\n   preceding the pixel data for the run. If a run is constant, its length\n   byte has the high bit set and the pixel data consists of a single pixel\n   which must be repeated."
+                            }
+                        },
+                        {
+                            "@name": "encoding_mask",
+                            "@value": "251658240",
+                            "@c:identifier": "GDK_PIXDATA_ENCODING_MASK",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                                "@line": "46",
+                                "#text": "mask for the encoding flags of the enum."
+                            }
+                        }
+                    ]
+                }
+            ],
+            "function": {
+                "@name": "pixbuf_from_pixdata",
+                "@c:identifier": "gdk_pixbuf_from_pixdata",
+                "@deprecated": "1",
+                "@deprecated-version": "2.32",
+                "@throws": "1",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                    "@line": "438",
+                    "#text": "Converts a `GdkPixdata` to a `GdkPixbuf`.\n\nIf `copy_pixels` is `TRUE` or if the pixel data is run-length-encoded,\nthe pixel data is copied into newly-allocated memory; otherwise it is\nreused."
+                },
+                "doc-deprecated": {
+                    "@xml:space": "preserve",
+                    "#text": "Use `GResource` instead."
+                },
+                "source-position": {
+                    "@filename": "../gdk-pixbuf/gdk-pixdata.h",
+                    "@line": "106"
+                },
+                "return-value": {
+                    "@transfer-ownership": "full",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                        "@line": "451",
+                        "#text": "a new pixbuf"
+                    },
+                    "type": {
+                        "@name": "GdkPixbuf.Pixbuf",
+                        "@c:type": "GdkPixbuf*"
+                    }
+                },
+                "parameters": {
+                    "parameter": [
+                        {
+                            "@name": "pixdata",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                "@line": "440",
+                                "#text": "a #GdkPixdata to convert into a `GdkPixbuf`."
+                            },
+                            "type": {
+                                "@name": "Pixdata",
+                                "@c:type": "const GdkPixdata*"
+                            }
+                        },
+                        {
+                            "@name": "copy_pixels",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../gdk-pixbuf/gdk-pixdata.c",
+                                "@line": "441",
+                                "#text": "whether to copy raw pixel data; run-length encoded\n  pixel data is always copied."
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

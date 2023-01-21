@@ -1,0 +1,1864 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "@xmlns:glib": "http://www.gtk.org/introspection/glib/1.0",
+        "include": [
+            {
+                "@name": "GObject",
+                "@version": "2.0"
+            },
+            {
+                "@name": "Pango",
+                "@version": "1.0"
+            },
+            {
+                "@name": "cairo",
+                "@version": "1.0"
+            }
+        ],
+        "package": {
+            "@name": "pangocairo"
+        },
+        "c:include": {
+            "@name": "pango/pangocairo.h"
+        },
+        "namespace": {
+            "@name": "PangoCairo",
+            "@version": "1.0",
+            "@shared-library": "libpangocairo-1.0.so.0",
+            "@c:identifier-prefixes": "PangoCairo",
+            "@c:symbol-prefixes": "pango_cairo",
+            "function-macro": [
+                {
+                    "@name": "FONT",
+                    "@c:identifier": "PANGO_CAIRO_FONT",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "49"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                },
+                {
+                    "@name": "FONT_MAP",
+                    "@c:identifier": "PANGO_CAIRO_FONT_MAP",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "72"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_FONT",
+                    "@c:identifier": "PANGO_CAIRO_IS_FONT",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "50"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_FONT_MAP",
+                    "@c:identifier": "PANGO_CAIRO_IS_FONT_MAP",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "73"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                }
+            ],
+            "interface": [
+                {
+                    "@name": "Font",
+                    "@c:symbol-prefix": "font",
+                    "@c:type": "PangoCairoFont",
+                    "@version": "1.18",
+                    "@glib:type-name": "PangoCairoFont",
+                    "@glib:get-type": "pango_cairo_font_get_type",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "30",
+                        "#text": "`PangoCairoFont` is an interface exported by fonts for\nuse with Cairo.\n\nThe actual type of the font will depend on the particular\nfont technology Cairo was compiled to use."
+                    },
+                    "prerequisite": {
+                        "@name": "Pango.Font"
+                    },
+                    "method": {
+                        "@name": "get_scaled_font",
+                        "@c:identifier": "pango_cairo_font_get_scaled_font",
+                        "@version": "1.18",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-font.c",
+                            "@line": "138",
+                            "#text": "Gets the `cairo_scaled_font_t` used by @font.\nThe scaled font can be referenced and kept using\ncairo_scaled_font_reference()."
+                        },
+                        "source-position": {
+                            "@filename": "pango/pangocairo.h",
+                            "@line": "133"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-font.c",
+                                "@line": "146",
+                                "#text": "the `cairo_scaled_font_t`\n  used by @font"
+                            },
+                            "type": {
+                                "@name": "cairo.ScaledFont",
+                                "@c:type": "cairo_scaled_font_t*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "font",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-font.c",
+                                    "@line": "140",
+                                    "#text": "a `PangoFont` from a `PangoCairoFontMap`"
+                                },
+                                "type": {
+                                    "@name": "Font",
+                                    "@c:type": "PangoCairoFont*"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "FontMap",
+                    "@c:symbol-prefix": "font_map",
+                    "@c:type": "PangoCairoFontMap",
+                    "@version": "1.10",
+                    "@glib:type-name": "PangoCairoFontMap",
+                    "@glib:get-type": "pango_cairo_font_map_get_type",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "57",
+                        "#text": "`PangoCairoFontMap` is an interface exported by font maps for\nuse with Cairo.\n\nThe actual type of the font map will depend on the particular\nfont technology Cairo was compiled to use."
+                    },
+                    "prerequisite": {
+                        "@name": "Pango.FontMap"
+                    },
+                    "function": [
+                        {
+                            "@name": "get_default",
+                            "@c:identifier": "pango_cairo_font_map_get_default",
+                            "@version": "1.10",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "151",
+                                "#text": "Gets a default `PangoCairoFontMap` to use with Cairo.\n\nNote that the type of the returned object will depend on the\nparticular font backend Cairo was compiled to use; you generally\nshould only use the `PangoFontMap` and `PangoCairoFontMap`\ninterfaces on the returned object.\n\nThe default Cairo fontmap can be changed by using\n[method@PangoCairo.FontMap.set_default]. This can be used to\nchange the Cairo font backend that the default fontmap uses\nfor example.\n\nNote that since Pango 1.32.6, the default fontmap is per-thread.\nEach thread gets its own default fontmap. In this way, PangoCairo\ncan be used safely from multiple threads."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "110"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-fontmap.c",
+                                    "@line": "170",
+                                    "#text": "the default PangoCairo fontmap\n for the current thread. This object is owned by Pango and must\n not be freed."
+                                },
+                                "type": {
+                                    "@name": "Pango.FontMap",
+                                    "@c:type": "PangoFontMap*"
+                                }
+                            }
+                        },
+                        {
+                            "@name": "new",
+                            "@c:identifier": "pango_cairo_font_map_new",
+                            "@version": "1.10",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "47",
+                                "#text": "Creates a new `PangoCairoFontMap` object.\n\nA fontmap is used to cache information about available fonts,\nand holds certain global parameters such as the resolution.\nIn most cases, you can use `func@PangoCairo.font_map_get_default]\ninstead.\n\nNote that the type of the returned object will depend\non the particular font backend Cairo was compiled to use;\nYou generally should only use the `PangoFontMap` and\n`PangoCairoFontMap` interfaces on the returned object.\n\nYou can override the type of backend returned by using an\nenvironment variable %PANGOCAIRO_BACKEND. Supported types,\nbased on your build, are fc (fontconfig), win32, and coretext.\nIf requested type is not available, NULL is returned. Ie.\nthis is only useful for testing, when at least two backends\nare compiled in."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "106"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "full",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-fontmap.c",
+                                    "@line": "69",
+                                    "#text": "the newly allocated `PangoFontMap`,\n  which should be freed with g_object_unref()."
+                                },
+                                "type": {
+                                    "@name": "Pango.FontMap",
+                                    "@c:type": "PangoFontMap*"
+                                }
+                            }
+                        },
+                        {
+                            "@name": "new_for_font_type",
+                            "@c:identifier": "pango_cairo_font_map_new_for_font_type",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "110",
+                                "#text": "Creates a new `PangoCairoFontMap` object of the type suitable\nto be used with cairo font backend of type @fonttype.\n\nIn most cases one should simply use [func@PangoCairo.FontMap.new], or\nin fact in most of those cases, just use [func@PangoCairo.FontMap.get_default]."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "108"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "full",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-fontmap.c",
+                                    "@line": "120",
+                                    "#text": "the newly allocated\n  `PangoFontMap` of suitable type which should be freed with\n  g_object_unref(), or %NULL if the requested cairo font backend\n  is not supported / compiled in."
+                                },
+                                "type": {
+                                    "@name": "Pango.FontMap",
+                                    "@c:type": "PangoFontMap*"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "fonttype",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangocairo-fontmap.c",
+                                        "@line": "112",
+                                        "#text": "desired #cairo_font_type_t"
+                                    },
+                                    "type": {
+                                        "@name": "cairo.FontType",
+                                        "@c:type": "cairo_font_type_t"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "method": [
+                        {
+                            "@name": "create_context",
+                            "@c:identifier": "pango_cairo_font_map_create_context",
+                            "@version": "1.10",
+                            "@introspectable": "0",
+                            "@deprecated": "1",
+                            "@deprecated-version": "1.22",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "267",
+                                "#text": "Create a `PangoContext` for the given fontmap."
+                            },
+                            "doc-deprecated": {
+                                "@xml:space": "preserve",
+                                "#text": "Use pango_font_map_create_context() instead."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "123"
+                            },
+                            "return-value": {
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-fontmap.c",
+                                    "@line": "273",
+                                    "#text": "the newly created context; free with g_object_unref()."
+                                },
+                                "type": {
+                                    "@name": "Pango.Context",
+                                    "@c:type": "PangoContext*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "fontmap",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangocairo-fontmap.c",
+                                        "@line": "269",
+                                        "#text": "a `PangoCairoFontMap`"
+                                    },
+                                    "type": {
+                                        "@name": "FontMap",
+                                        "@c:type": "PangoCairoFontMap*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_font_type",
+                            "@c:identifier": "pango_cairo_font_map_get_font_type",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "287",
+                                "#text": "Gets the type of Cairo font backend that @fontmap uses."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "114"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-fontmap.c",
+                                    "@line": "293",
+                                    "#text": "the `cairo_font_type_t` cairo font backend type"
+                                },
+                                "type": {
+                                    "@name": "cairo.FontType",
+                                    "@c:type": "cairo_font_type_t"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "fontmap",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangocairo-fontmap.c",
+                                        "@line": "289",
+                                        "#text": "a `PangoCairoFontMap`"
+                                    },
+                                    "type": {
+                                        "@name": "FontMap",
+                                        "@c:type": "PangoCairoFontMap*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_resolution",
+                            "@c:identifier": "pango_cairo_font_map_get_resolution",
+                            "@version": "1.10",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "247",
+                                "#text": "Gets the resolution for the fontmap.\n\nSee [method@PangoCairo.FontMap.set_resolution]."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "120"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-fontmap.c",
+                                    "@line": "255",
+                                    "#text": "the resolution in \"dots per inch\""
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "fontmap",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangocairo-fontmap.c",
+                                        "@line": "249",
+                                        "#text": "a `PangoCairoFontMap`"
+                                    },
+                                    "type": {
+                                        "@name": "FontMap",
+                                        "@c:type": "PangoCairoFontMap*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "set_default",
+                            "@c:identifier": "pango_cairo_font_map_set_default",
+                            "@version": "1.22",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "190",
+                                "#text": "Sets a default `PangoCairoFontMap` to use with Cairo.\n\nThis can be used to change the Cairo font backend that the\ndefault fontmap uses for example. The old default font map\nis unreffed and the new font map referenced.\n\nNote that since Pango 1.32.6, the default fontmap is per-thread.\nThis function only changes the default fontmap for\nthe current thread. Default fontmaps of existing threads\nare not changed. Default fontmaps of any new threads will\nstill be created using [func@PangoCairo.FontMap.new].\n\nA value of %NULL for @fontmap will cause the current default\nfont map to be released and a new default font map to be created\non demand, using [func@PangoCairo.FontMap.new]."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "112"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "fontmap",
+                                    "@transfer-ownership": "none",
+                                    "@nullable": "1",
+                                    "@allow-none": "1",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangocairo-fontmap.c",
+                                        "@line": "192",
+                                        "#text": "The new default font map"
+                                    },
+                                    "type": {
+                                        "@name": "FontMap",
+                                        "@c:type": "PangoCairoFontMap*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "set_resolution",
+                            "@c:identifier": "pango_cairo_font_map_set_resolution",
+                            "@version": "1.10",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "223",
+                                "#text": "Sets the resolution for the fontmap.\n\nThis is a scale factor between\npoints specified in a `PangoFontDescription` and Cairo units. The\ndefault value is 96, meaning that a 10 point font will be 13\nunits high. (10 * 96. / 72. = 13.3)."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "117"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "fontmap",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangocairo-fontmap.c",
+                                        "@line": "225",
+                                        "#text": "a `PangoCairoFontMap`"
+                                    },
+                                    "type": {
+                                        "@name": "FontMap",
+                                        "@c:type": "PangoCairoFontMap*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "dpi",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pangocairo-fontmap.c",
+                                        "@line": "226",
+                                        "#text": "the resolution in \"dots per inch\". (Physical inches aren't actually\n  involved; the terminology is conventional.)"
+                                    },
+                                    "type": {
+                                        "@name": "gdouble",
+                                        "@c:type": "double"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "callback": {
+                "@name": "ShapeRendererFunc",
+                "@c:type": "PangoCairoShapeRendererFunc",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "pango/pangocairo.h",
+                    "@line": "80",
+                    "#text": "Function type for rendering attributes of type %PANGO_ATTR_SHAPE\nwith Pango's Cairo renderer."
+                },
+                "source-position": {
+                    "@filename": "pango/pangocairo.h",
+                    "@line": "94"
+                },
+                "return-value": {
+                    "@transfer-ownership": "none",
+                    "type": {
+                        "@name": "none",
+                        "@c:type": "void"
+                    }
+                },
+                "parameters": {
+                    "parameter": [
+                        {
+                            "@name": "cr",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "82",
+                                "#text": "a Cairo context with current point set to where the shape should\nbe rendered"
+                            },
+                            "type": {
+                                "@name": "cairo.Context",
+                                "@c:type": "cairo_t*"
+                            }
+                        },
+                        {
+                            "@name": "attr",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "84",
+                                "#text": "the %PANGO_ATTR_SHAPE to render"
+                            },
+                            "type": {
+                                "@name": "Pango.AttrShape",
+                                "@c:type": "PangoAttrShape*"
+                            }
+                        },
+                        {
+                            "@name": "do_path",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "85",
+                                "#text": "whether only the shape path should be appended to current\npath of @cr and no filling/stroking done.  This will be set\nto %TRUE when called from pango_cairo_layout_path() and\npango_cairo_layout_line_path() rendering functions."
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        },
+                        {
+                            "@name": "data",
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "@allow-none": "1",
+                            "@closure": "3",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo.h",
+                                "@line": "89",
+                                "#text": "user data passed to pango_cairo_context_set_shape_renderer()"
+                            },
+                            "type": {
+                                "@name": "gpointer",
+                                "@c:type": "gpointer"
+                            }
+                        }
+                    ]
+                }
+            },
+            "function": [
+                {
+                    "@name": "context_get_font_options",
+                    "@c:identifier": "pango_cairo_context_get_font_options",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "284",
+                        "#text": "Retrieves any font rendering options previously set with\n[func@PangoCairo.context_set_font_options].\n\nThis function does not report options that are derived from\nthe target surface by [func@update_context]."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "145"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "@nullable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-context.c",
+                            "@line": "294",
+                            "#text": "the font options previously set on the\n  context, or %NULL if no options have been set. This value is\n  owned by the context and must not be modified or freed."
+                        },
+                        "type": {
+                            "@name": "cairo.FontOptions",
+                            "@c:type": "const cairo_font_options_t*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "context",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-context.c",
+                                "@line": "286",
+                                "#text": "a `PangoContext`, from a pangocairo font map"
+                            },
+                            "type": {
+                                "@name": "Pango.Context",
+                                "@c:type": "PangoContext*"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "context_get_resolution",
+                    "@c:identifier": "pango_cairo_context_get_resolution",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "205",
+                        "#text": "Gets the resolution for the context.\n\nSee [func@PangoCairo.context_set_resolution]"
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "151"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-context.c",
+                            "@line": "213",
+                            "#text": "the resolution in \"dots per inch\". A negative value will\n  be returned if no resolution has previously been set."
+                        },
+                        "type": {
+                            "@name": "gdouble",
+                            "@c:type": "double"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "context",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-context.c",
+                                "@line": "207",
+                                "#text": "a `PangoContext`, from a pangocairo font map"
+                            },
+                            "type": {
+                                "@name": "Pango.Context",
+                                "@c:type": "PangoContext*"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "context_get_shape_renderer",
+                    "@c:identifier": "pango_cairo_context_get_shape_renderer",
+                    "@version": "1.18",
+                    "@introspectable": "0",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "380",
+                        "#text": "Sets callback function for context to use for rendering attributes\nof type %PANGO_ATTR_SHAPE.\n\nSee `PangoCairoShapeRendererFunc` for details.\n\nRetrieves callback function and associated user data for rendering\nattributes of type %PANGO_ATTR_SHAPE as set by\n[func@PangoCairo.context_set_shape_renderer], if any."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "159"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "@nullable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-context.c",
+                            "@line": "394",
+                            "#text": "the shape rendering callback\n  previously set on the context, or %NULL if no shape rendering callback\n  have been set."
+                        },
+                        "type": {
+                            "@name": "ShapeRendererFunc",
+                            "@c:type": "PangoCairoShapeRendererFunc"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "context",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "382",
+                                    "#text": "a `PangoContext`, from a pangocairo font map"
+                                },
+                                "type": {
+                                    "@name": "Pango.Context",
+                                    "@c:type": "PangoContext*"
+                                }
+                            },
+                            {
+                                "@name": "data",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "383",
+                                    "#text": "Pointer to `gpointer` to return user data"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "gpointer*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "context_set_font_options",
+                    "@c:identifier": "pango_cairo_context_set_font_options",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "229",
+                        "#text": "Sets the font options used when rendering text with this context.\n\nThese options override any options that [func@update_context]\nderives from the target surface."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "142"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "context",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "231",
+                                    "#text": "a `PangoContext`, from a pangocairo font map"
+                                },
+                                "type": {
+                                    "@name": "Pango.Context",
+                                    "@c:type": "PangoContext*"
+                                }
+                            },
+                            {
+                                "@name": "options",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "232",
+                                    "#text": "a `cairo_font_options_t`, or %NULL to unset\n  any previously set options. A copy is made."
+                                },
+                                "type": {
+                                    "@name": "cairo.FontOptions",
+                                    "@c:type": "const cairo_font_options_t*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "context_set_resolution",
+                    "@c:identifier": "pango_cairo_context_set_resolution",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "182",
+                        "#text": "Sets the resolution for the context.\n\nThis is a scale factor between points specified in a `PangoFontDescription`\nand Cairo units. The default value is 96, meaning that a 10 point font will\nbe 13 units high. (10 * 96. / 72. = 13.3)."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "148"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "context",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "184",
+                                    "#text": "a `PangoContext`, from a pangocairo font map"
+                                },
+                                "type": {
+                                    "@name": "Pango.Context",
+                                    "@c:type": "PangoContext*"
+                                }
+                            },
+                            {
+                                "@name": "dpi",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "185",
+                                    "#text": "the resolution in \"dots per inch\". (Physical inches aren't actually\n  involved; the terminology is conventional.) A 0 or negative value\n  means to use the resolution from the font map."
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "context_set_shape_renderer",
+                    "@c:identifier": "pango_cairo_context_set_shape_renderer",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "344",
+                        "#text": "Sets callback function for context to use for rendering attributes\nof type %PANGO_ATTR_SHAPE.\n\nSee `PangoCairoShapeRendererFunc` for details."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "154"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "context",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "346",
+                                    "#text": "a `PangoContext`, from a pangocairo font map"
+                                },
+                                "type": {
+                                    "@name": "Pango.Context",
+                                    "@c:type": "PangoContext*"
+                                }
+                            },
+                            {
+                                "@name": "func",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "@scope": "notified",
+                                "@closure": "2",
+                                "@destroy": "3",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "347",
+                                    "#text": "Callback function for rendering attributes of\n  type %PANGO_ATTR_SHAPE, or %NULL to disable shape rendering."
+                                },
+                                "type": {
+                                    "@name": "ShapeRendererFunc",
+                                    "@c:type": "PangoCairoShapeRendererFunc"
+                                }
+                            },
+                            {
+                                "@name": "data",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "349",
+                                    "#text": "User data that will be passed to @func."
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "gpointer"
+                                }
+                            },
+                            {
+                                "@name": "dnotify",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "@scope": "async",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "350",
+                                    "#text": "Callback that will be called when the\n  context is freed to release @data"
+                                },
+                                "type": {
+                                    "@name": "GLib.DestroyNotify",
+                                    "@c:type": "GDestroyNotify"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "create_context",
+                    "@c:identifier": "pango_cairo_create_context",
+                    "@version": "1.22",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "424",
+                        "#text": "Creates a context object set up to match the current transformation\nand target surface of the Cairo context.\n\nThis context can then be\nused to create a layout using [ctor@Pango.Layout.new].\n\nThis function is a convenience function that creates a context using\nthe default font map, then updates it to @cr. If you just need to\ncreate a layout for use with @cr and do not need to access `PangoContext`\ndirectly, you can use [func@create_layout] instead."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "165"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "full",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-context.c",
+                            "@line": "439",
+                            "#text": "the newly created `PangoContext`"
+                        },
+                        "type": {
+                            "@name": "Pango.Context",
+                            "@c:type": "PangoContext*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "cr",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-context.c",
+                                "@line": "426",
+                                "#text": "a Cairo context"
+                            },
+                            "type": {
+                                "@name": "cairo.Context",
+                                "@c:type": "cairo_t*"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "create_layout",
+                    "@c:identifier": "pango_cairo_create_layout",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "458",
+                        "#text": "Creates a layout object set up to match the current transformation\nand target surface of the Cairo context.\n\nThis layout can then be used for text measurement with functions\nlike [method@Pango.Layout.get_size] or drawing with functions like\n[func@show_layout]. If you change the transformation or target\nsurface for @cr, you need to call [func@update_layout].\n\nThis function is the most convenient way to use Cairo with Pango,\nhowever it is slightly inefficient since it creates a separate\n`PangoContext` object for each layout. This might matter in an\napplication that was laying out large amounts of text."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "167"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "full",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-context.c",
+                            "@line": "475",
+                            "#text": "the newly created `PangoLayout`"
+                        },
+                        "type": {
+                            "@name": "Pango.Layout",
+                            "@c:type": "PangoLayout*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "cr",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-context.c",
+                                "@line": "460",
+                                "#text": "a Cairo context"
+                            },
+                            "type": {
+                                "@name": "cairo.Context",
+                                "@c:type": "cairo_t*"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "error_underline_path",
+                    "@c:identifier": "pango_cairo_error_underline_path",
+                    "@version": "1.14",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1244",
+                        "#text": "Add a squiggly line to the current path in the specified cairo context that\napproximately covers the given rectangle in the style of an underline used\nto indicate a spelling error.\n\nThe width of the underline is rounded to an integer number of up/down\nsegments and the resulting rectangle is centered in the original rectangle."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "212"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1246",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "x",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1247",
+                                    "#text": "The X coordinate of one corner of the rectangle"
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            },
+                            {
+                                "@name": "y",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1248",
+                                    "#text": "The Y coordinate of one corner of the rectangle"
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            },
+                            {
+                                "@name": "width",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1249",
+                                    "#text": "Non-negative width of the rectangle"
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            },
+                            {
+                                "@name": "height",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1250",
+                                    "#text": "Non-negative height of the rectangle"
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "font_map_get_default",
+                    "@c:identifier": "pango_cairo_font_map_get_default",
+                    "@moved-to": "FontMap.get_default",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-fontmap.c",
+                        "@line": "151",
+                        "#text": "Gets a default `PangoCairoFontMap` to use with Cairo.\n\nNote that the type of the returned object will depend on the\nparticular font backend Cairo was compiled to use; you generally\nshould only use the `PangoFontMap` and `PangoCairoFontMap`\ninterfaces on the returned object.\n\nThe default Cairo fontmap can be changed by using\n[method@PangoCairo.FontMap.set_default]. This can be used to\nchange the Cairo font backend that the default fontmap uses\nfor example.\n\nNote that since Pango 1.32.6, the default fontmap is per-thread.\nEach thread gets its own default fontmap. In this way, PangoCairo\ncan be used safely from multiple threads."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "110"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-fontmap.c",
+                            "@line": "170",
+                            "#text": "the default PangoCairo fontmap\n for the current thread. This object is owned by Pango and must\n not be freed."
+                        },
+                        "type": {
+                            "@name": "Pango.FontMap",
+                            "@c:type": "PangoFontMap*"
+                        }
+                    }
+                },
+                {
+                    "@name": "font_map_new",
+                    "@c:identifier": "pango_cairo_font_map_new",
+                    "@moved-to": "FontMap.new",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-fontmap.c",
+                        "@line": "47",
+                        "#text": "Creates a new `PangoCairoFontMap` object.\n\nA fontmap is used to cache information about available fonts,\nand holds certain global parameters such as the resolution.\nIn most cases, you can use `func@PangoCairo.font_map_get_default]\ninstead.\n\nNote that the type of the returned object will depend\non the particular font backend Cairo was compiled to use;\nYou generally should only use the `PangoFontMap` and\n`PangoCairoFontMap` interfaces on the returned object.\n\nYou can override the type of backend returned by using an\nenvironment variable %PANGOCAIRO_BACKEND. Supported types,\nbased on your build, are fc (fontconfig), win32, and coretext.\nIf requested type is not available, NULL is returned. Ie.\nthis is only useful for testing, when at least two backends\nare compiled in."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "106"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "full",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-fontmap.c",
+                            "@line": "69",
+                            "#text": "the newly allocated `PangoFontMap`,\n  which should be freed with g_object_unref()."
+                        },
+                        "type": {
+                            "@name": "Pango.FontMap",
+                            "@c:type": "PangoFontMap*"
+                        }
+                    }
+                },
+                {
+                    "@name": "font_map_new_for_font_type",
+                    "@c:identifier": "pango_cairo_font_map_new_for_font_type",
+                    "@moved-to": "FontMap.new_for_font_type",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-fontmap.c",
+                        "@line": "110",
+                        "#text": "Creates a new `PangoCairoFontMap` object of the type suitable\nto be used with cairo font backend of type @fonttype.\n\nIn most cases one should simply use [func@PangoCairo.FontMap.new], or\nin fact in most of those cases, just use [func@PangoCairo.FontMap.get_default]."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "108"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "full",
+                        "@nullable": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pangocairo-fontmap.c",
+                            "@line": "120",
+                            "#text": "the newly allocated\n  `PangoFontMap` of suitable type which should be freed with\n  g_object_unref(), or %NULL if the requested cairo font backend\n  is not supported / compiled in."
+                        },
+                        "type": {
+                            "@name": "Pango.FontMap",
+                            "@c:type": "PangoFontMap*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "fonttype",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pangocairo-fontmap.c",
+                                "@line": "112",
+                                "#text": "desired #cairo_font_type_t"
+                            },
+                            "type": {
+                                "@name": "cairo.FontType",
+                                "@c:type": "cairo_font_type_t"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "glyph_string_path",
+                    "@c:identifier": "pango_cairo_glyph_string_path",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1173",
+                        "#text": "Adds the glyphs in @glyphs to the current path in the specified\ncairo context.\n\nThe origin of the glyphs (the left edge of the baseline)\nwill be at the current point of the cairo context."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "201"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1175",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "font",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1176",
+                                    "#text": "a `PangoFont` from a `PangoCairoFontMap`"
+                                },
+                                "type": {
+                                    "@name": "Pango.Font",
+                                    "@c:type": "PangoFont*"
+                                }
+                            },
+                            {
+                                "@name": "glyphs",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1177",
+                                    "#text": "a `PangoGlyphString`"
+                                },
+                                "type": {
+                                    "@name": "Pango.GlyphString",
+                                    "@c:type": "PangoGlyphString*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "layout_line_path",
+                    "@c:identifier": "pango_cairo_layout_line_path",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1198",
+                        "#text": "Adds the text in `PangoLayoutLine` to the current path in the\nspecified cairo context.\n\nThe origin of the glyphs (the left edge of the line) will be\nat the current point of the cairo context."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "205"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1200",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "line",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1201",
+                                    "#text": "a `PangoLayoutLine`"
+                                },
+                                "type": {
+                                    "@name": "Pango.LayoutLine",
+                                    "@c:type": "PangoLayoutLine*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "layout_path",
+                    "@c:identifier": "pango_cairo_layout_path",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1221",
+                        "#text": "Adds the text in a `PangoLayout` to the current path in the\nspecified cairo context.\n\nThe top-left corner of the `PangoLayout` will be at the\ncurrent point of the cairo context."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "208"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1223",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "layout",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1224",
+                                    "#text": "a Pango layout"
+                                },
+                                "type": {
+                                    "@name": "Pango.Layout",
+                                    "@c:type": "PangoLayout*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "show_error_underline",
+                    "@c:identifier": "pango_cairo_show_error_underline",
+                    "@version": "1.14",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1142",
+                        "#text": "Draw a squiggly line in the specified cairo context that approximately\ncovers the given rectangle in the style of an underline used to indicate a\nspelling error.\n\nThe width of the underline is rounded to an integer\nnumber of up/down segments and the resulting rectangle is centered in the\noriginal rectangle."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "191"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1144",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "x",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1145",
+                                    "#text": "The X coordinate of one corner of the rectangle"
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            },
+                            {
+                                "@name": "y",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1146",
+                                    "#text": "The Y coordinate of one corner of the rectangle"
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            },
+                            {
+                                "@name": "width",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1147",
+                                    "#text": "Non-negative width of the rectangle"
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            },
+                            {
+                                "@name": "height",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1148",
+                                    "#text": "Non-negative height of the rectangle"
+                                },
+                                "type": {
+                                    "@name": "gdouble",
+                                    "@c:type": "double"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "show_glyph_item",
+                    "@c:identifier": "pango_cairo_show_glyph_item",
+                    "@version": "1.22",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1066",
+                        "#text": "Draws the glyphs in @glyph_item in the specified cairo context,\n\nembedding the text associated with the glyphs in the output if the\noutput format supports it (PDF for example), otherwise it acts\nsimilar to [func@show_glyph_string].\n\nThe origin of the glyphs (the left edge of the baseline) will\nbe drawn at the current point of the cairo context.\n\nNote that @text is the start of the text for layout, which is then\nindexed by `glyph_item->item->offset`."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "180"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1068",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "text",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1069",
+                                    "#text": "the UTF-8 text that @glyph_item refers to"
+                                },
+                                "type": {
+                                    "@name": "utf8",
+                                    "@c:type": "const char*"
+                                }
+                            },
+                            {
+                                "@name": "glyph_item",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1070",
+                                    "#text": "a `PangoGlyphItem`"
+                                },
+                                "type": {
+                                    "@name": "Pango.GlyphItem",
+                                    "@c:type": "PangoGlyphItem*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "show_glyph_string",
+                    "@c:identifier": "pango_cairo_show_glyph_string",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1041",
+                        "#text": "Draws the glyphs in @glyphs in the specified cairo context.\n\nThe origin of the glyphs (the left edge of the baseline) will\nbe drawn at the current point of the cairo context."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "176"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1043",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "font",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1044",
+                                    "#text": "a `PangoFont` from a `PangoCairoFontMap`"
+                                },
+                                "type": {
+                                    "@name": "Pango.Font",
+                                    "@c:type": "PangoFont*"
+                                }
+                            },
+                            {
+                                "@name": "glyphs",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1045",
+                                    "#text": "a `PangoGlyphString`"
+                                },
+                                "type": {
+                                    "@name": "Pango.GlyphString",
+                                    "@c:type": "PangoGlyphString*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "show_layout",
+                    "@c:identifier": "pango_cairo_show_layout",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1120",
+                        "#text": "Draws a `PangoLayout` in the specified cairo context.\n\nThe top-left corner of the `PangoLayout` will be drawn\nat the current point of the cairo context."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "187"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1122",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "layout",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1123",
+                                    "#text": "a Pango layout"
+                                },
+                                "type": {
+                                    "@name": "Pango.Layout",
+                                    "@c:type": "PangoLayout*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "show_layout_line",
+                    "@c:identifier": "pango_cairo_show_layout_line",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-render.c",
+                        "@line": "1098",
+                        "#text": "Draws a `PangoLayoutLine` in the specified cairo context.\n\nThe origin of the glyphs (the left edge of the line) will\nbe drawn at the current point of the cairo context."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "184"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1100",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "line",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-render.c",
+                                    "@line": "1101",
+                                    "#text": "a `PangoLayoutLine`"
+                                },
+                                "type": {
+                                    "@name": "Pango.LayoutLine",
+                                    "@c:type": "PangoLayoutLine*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "update_context",
+                    "@c:identifier": "pango_cairo_update_context",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "158",
+                        "#text": "Updates a `PangoContext` previously created for use with Cairo to\nmatch the current transformation and target surface of a Cairo\ncontext.\n\nIf any layouts have been created for the context, it's necessary\nto call [method@Pango.Layout.context_changed] on those layouts."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "138"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "160",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "context",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "161",
+                                    "#text": "a `PangoContext`, from a pangocairo font map"
+                                },
+                                "type": {
+                                    "@name": "Pango.Context",
+                                    "@c:type": "PangoContext*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "update_layout",
+                    "@c:identifier": "pango_cairo_update_layout",
+                    "@version": "1.10",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pangocairo-context.c",
+                        "@line": "494",
+                        "#text": "Updates the private `PangoContext` of a `PangoLayout` created with\n[func@create_layout] to match the current transformation and target\nsurface of a Cairo context."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pangocairo.h",
+                        "@line": "169"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "cr",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "496",
+                                    "#text": "a Cairo context"
+                                },
+                                "type": {
+                                    "@name": "cairo.Context",
+                                    "@c:type": "cairo_t*"
+                                }
+                            },
+                            {
+                                "@name": "layout",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pangocairo-context.c",
+                                    "@line": "497",
+                                    "#text": "a `PangoLayout`, from [func@create_layout]"
+                                },
+                                "type": {
+                                    "@name": "Pango.Layout",
+                                    "@c:type": "PangoLayout*"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1605 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "@xmlns:glib": "http://www.gtk.org/introspection/glib/1.0",
+        "include": [
+            {
+                "@name": "GObject",
+                "@version": "2.0"
+            },
+            {
+                "@name": "GUdev",
+                "@version": "1.0"
+            },
+            {
+                "@name": "Gio",
+                "@version": "2.0"
+            }
+        ],
+        "package": {
+            "@name": "manette-0.2"
+        },
+        "c:include": {
+            "@name": "libmanette.h"
+        },
+        "namespace": {
+            "@name": "Manette",
+            "@version": "0.2",
+            "@shared-library": "libmanette-0.2.so.0",
+            "@c:identifier-prefixes": "Manette",
+            "@c:symbol-prefixes": "manette",
+            "class": [
+                {
+                    "@name": "Device",
+                    "@c:symbol-prefix": "device",
+                    "@c:type": "ManetteDevice",
+                    "@parent": "GObject.Object",
+                    "@glib:type-name": "ManetteDevice",
+                    "@glib:get-type": "manette_device_get_type",
+                    "@glib:type-struct": "DeviceClass",
+                    "source-position": {
+                        "@filename": "../src/manette-device.h",
+                        "@line": "31"
+                    },
+                    "method": [
+                        {
+                            "@name": "get_name",
+                            "@c:identifier": "manette_device_get_name",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "602",
+                                "#text": "Gets the device's name."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-device.h",
+                                "@line": "36"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-device.c",
+                                    "@line": "608",
+                                    "#text": "the name of @self, do not modify it or free it"
+                                },
+                                "type": {
+                                    "@name": "utf8",
+                                    "@c:type": "const gchar*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "604",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device",
+                                        "@c:type": "ManetteDevice*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "has_input",
+                            "@c:identifier": "manette_device_has_input",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "578",
+                                "#text": "Gets whether the device has the given input. If the input is present it means\nthat the device can send events for it regardless of whether the device is\nmapped or not."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-device.h",
+                                "@line": "33"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-device.c",
+                                    "@line": "588",
+                                    "#text": "whether the device has the given input"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "580",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device",
+                                        "@c:type": "ManetteDevice*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "../src/manette-device.c",
+                                            "@line": "581",
+                                            "#text": "the input type"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "code",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "../src/manette-device.c",
+                                            "@line": "582",
+                                            "#text": "the input code"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "has_rumble",
+                            "@c:identifier": "manette_device_has_rumble",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "772",
+                                "#text": "Gets whether @self supports rumble."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-device.h",
+                                "@line": "41"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-device.c",
+                                    "@line": "778",
+                                    "#text": "whether @self supports rumble"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "774",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device",
+                                        "@c:type": "ManetteDevice*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "has_user_mapping",
+                            "@c:identifier": "manette_device_has_user_mapping",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "704",
+                                "#text": "Gets whether @self has a user mapping."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-device.h",
+                                "@line": "37"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-device.c",
+                                    "@line": "710",
+                                    "#text": "whether @self has a user mapping"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "706",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device",
+                                        "@c:type": "ManetteDevice*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "remove_user_mapping",
+                            "@c:identifier": "manette_device_remove_user_mapping",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "753",
+                                "#text": "Removes the user mapping for @self."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-device.h",
+                                "@line": "40"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "755",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device",
+                                        "@c:type": "ManetteDevice*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "rumble",
+                            "@c:identifier": "manette_device_rumble",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "796",
+                                "#text": "Make @self rumble during @milliseconds milliseconds, with the heavy and light\nmotors rumbling at their respectively defined magnitudes.\n\nThe duration cannot exceed 32767 milliseconds."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-device.h",
+                                "@line": "42"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-device.c",
+                                    "@line": "808",
+                                    "#text": "whether the rumble effect was played"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "798",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device",
+                                        "@c:type": "ManetteDevice*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "strong_magnitude",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "../src/manette-device.c",
+                                            "@line": "799",
+                                            "#text": "the magnitude for the heavy motor"
+                                        },
+                                        "type": {
+                                            "@name": "guint16",
+                                            "@c:type": "guint16"
+                                        }
+                                    },
+                                    {
+                                        "@name": "weak_magnitude",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "../src/manette-device.c",
+                                            "@line": "800",
+                                            "#text": "the magnitude for the light motor"
+                                        },
+                                        "type": {
+                                            "@name": "guint16",
+                                            "@c:type": "guint16"
+                                        }
+                                    },
+                                    {
+                                        "@name": "milliseconds",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "../src/manette-device.c",
+                                            "@line": "801",
+                                            "#text": "the rumble effect play time in milliseconds"
+                                        },
+                                        "type": {
+                                            "@name": "guint16",
+                                            "@c:type": "guint16"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "save_user_mapping",
+                            "@c:identifier": "manette_device_save_user_mapping",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "726",
+                                "#text": "Saves @mapping_string as the user mapping for @self."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-device.h",
+                                "@line": "38"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "728",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device",
+                                        "@c:type": "ManetteDevice*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "mapping_string",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "729",
+                                        "#text": "the mapping string"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const gchar*"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "glib:signal": [
+                        {
+                            "@name": "absolute-axis-event",
+                            "@when": "last",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "281",
+                                "#text": "Emitted when an absolute axis' value changes."
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "event",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "284",
+                                        "#text": "the event emitted by the manette device"
+                                    },
+                                    "type": {
+                                        "@name": "Event"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "button-press-event",
+                            "@when": "last",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "249",
+                                "#text": "Emitted when a button is pressed."
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "event",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "252",
+                                        "#text": "the event emitted by the manette device"
+                                    },
+                                    "type": {
+                                        "@name": "Event"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "button-release-event",
+                            "@when": "last",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "265",
+                                "#text": "Emitted when a button is released."
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "event",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "268",
+                                        "#text": "the event emitted by the manette device"
+                                    },
+                                    "type": {
+                                        "@name": "Event"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "disconnected",
+                            "@when": "last",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "313",
+                                "#text": "Emitted when the device is disconnected."
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            }
+                        },
+                        {
+                            "@name": "event",
+                            "@when": "last",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "233",
+                                "#text": "Emitted for any kind of event before mapping it."
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "event",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "236",
+                                        "#text": "the event emitted by the manette device"
+                                    },
+                                    "type": {
+                                        "@name": "Event"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "hat-axis-event",
+                            "@when": "last",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-device.c",
+                                "@line": "297",
+                                "#text": "Emitted when a hat axis' value changes."
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "event",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-device.c",
+                                        "@line": "300",
+                                        "#text": "the event emitted by the manette device"
+                                    },
+                                    "type": {
+                                        "@name": "Event"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "Monitor",
+                    "@c:symbol-prefix": "monitor",
+                    "@c:type": "ManetteMonitor",
+                    "@parent": "GObject.Object",
+                    "@glib:type-name": "ManetteMonitor",
+                    "@glib:get-type": "manette_monitor_get_type",
+                    "@glib:type-struct": "MonitorClass",
+                    "source-position": {
+                        "@filename": "../src/manette-monitor.h",
+                        "@line": "33"
+                    },
+                    "constructor": {
+                        "@name": "new",
+                        "@c:identifier": "manette_monitor_new",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-monitor.c",
+                            "@line": "393",
+                            "#text": "Creates a new #ManetteMonitor object."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-monitor.h",
+                            "@line": "35"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "full",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-monitor.c",
+                                "@line": "398",
+                                "#text": "a new #ManetteMonitor"
+                            },
+                            "type": {
+                                "@name": "Monitor",
+                                "@c:type": "ManetteMonitor*"
+                            }
+                        }
+                    },
+                    "method": {
+                        "@name": "iterate",
+                        "@c:identifier": "manette_monitor_iterate",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-monitor.c",
+                            "@line": "480",
+                            "#text": "Creates a new #ManetteMonitorIter iterating on @self."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-monitor.h",
+                            "@line": "36"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "full",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-monitor.c",
+                                "@line": "486",
+                                "#text": "a new #ManetteMonitorIter iterating on @self"
+                            },
+                            "type": {
+                                "@name": "MonitorIter",
+                                "@c:type": "ManetteMonitorIter*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-monitor.c",
+                                    "@line": "482",
+                                    "#text": "a #ManetteMonitor"
+                                },
+                                "type": {
+                                    "@name": "Monitor",
+                                    "@c:type": "ManetteMonitor*"
+                                }
+                            }
+                        }
+                    },
+                    "glib:signal": [
+                        {
+                            "@name": "device-connected",
+                            "@when": "last",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-monitor.c",
+                                "@line": "447",
+                                "#text": "Emitted when a device is connected."
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "device",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-monitor.c",
+                                        "@line": "450",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "device-disconnected",
+                            "@when": "last",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-monitor.c",
+                                "@line": "463",
+                                "#text": "Emitted when a device is disconnected."
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "device",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-monitor.c",
+                                        "@line": "466",
+                                        "#text": "a #ManetteDevice"
+                                    },
+                                    "type": {
+                                        "@name": "Device"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "record": [
+                {
+                    "@name": "DeviceClass",
+                    "@c:type": "ManetteDeviceClass",
+                    "@glib:is-gtype-struct-for": "Device",
+                    "source-position": {
+                        "@filename": "../src/manette-device.h",
+                        "@line": "31"
+                    },
+                    "field": {
+                        "@name": "parent_class",
+                        "type": {
+                            "@name": "GObject.ObjectClass",
+                            "@c:type": "GObjectClass"
+                        }
+                    }
+                },
+                {
+                    "@name": "MonitorClass",
+                    "@c:type": "ManetteMonitorClass",
+                    "@glib:is-gtype-struct-for": "Monitor",
+                    "source-position": {
+                        "@filename": "../src/manette-monitor.h",
+                        "@line": "33"
+                    },
+                    "field": {
+                        "@name": "parent_class",
+                        "type": {
+                            "@name": "GObject.ObjectClass",
+                            "@c:type": "GObjectClass"
+                        }
+                    }
+                },
+                {
+                    "@name": "MonitorIter",
+                    "@c:type": "ManetteMonitorIter",
+                    "@glib:type-name": "ManetteMonitorIter",
+                    "@glib:get-type": "manette_monitor_iter_get_type",
+                    "@c:symbol-prefix": "monitor_iter",
+                    "source-position": {
+                        "@filename": "../src/manette-monitor-iter.h",
+                        "@line": "34"
+                    },
+                    "method": [
+                        {
+                            "@name": "free",
+                            "@c:identifier": "manette_monitor_iter_free",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-monitor-iter.c",
+                                "@line": "82",
+                                "#text": "Frees a #ManetteMonitorIter."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-monitor-iter.h",
+                                "@line": "38"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-monitor-iter.c",
+                                        "@line": "84",
+                                        "#text": "a #ManetteMonitorIter"
+                                    },
+                                    "type": {
+                                        "@name": "MonitorIter",
+                                        "@c:type": "ManetteMonitorIter*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "next",
+                            "@c:identifier": "manette_monitor_iter_next",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-monitor-iter.c",
+                                "@line": "101",
+                                "#text": "Gets the next device from the device monitor iterator."
+                            },
+                            "source-position": {
+                                "@filename": "../src/manette-monitor-iter.h",
+                                "@line": "36"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-monitor-iter.c",
+                                    "@line": "108",
+                                    "#text": "whether the next device was retrieved, if not, the end was reached"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "self",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-monitor-iter.c",
+                                        "@line": "103",
+                                        "#text": "a #ManetteMonitorIter"
+                                    },
+                                    "type": {
+                                        "@name": "MonitorIter",
+                                        "@c:type": "ManetteMonitorIter*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "device",
+                                    "@direction": "out",
+                                    "@caller-allocates": "0",
+                                    "@transfer-ownership": "none",
+                                    "@nullable": "1",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-monitor-iter.c",
+                                        "@line": "104",
+                                        "#text": "return location for the device"
+                                    },
+                                    "type": {
+                                        "@name": "Device",
+                                        "@c:type": "ManetteDevice**"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "union": {
+                "@name": "Event",
+                "@c:type": "ManetteEvent",
+                "@glib:type-name": "ManetteEvent",
+                "@glib:get-type": "manette_event_get_type",
+                "@c:symbol-prefix": "event",
+                "source-position": {
+                    "@filename": "../src/manette-event.h",
+                    "@line": "34"
+                },
+                "method": [
+                    {
+                        "@name": "copy",
+                        "@c:identifier": "manette_event_copy",
+                        "@introspectable": "0",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "45",
+                            "#text": "Creates a copy of a #ManetteEvent."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "59"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "full",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "51",
+                                "#text": "a new #ManetteEvent"
+                            },
+                            "type": {
+                                "@name": "Event",
+                                "@c:type": "ManetteEvent*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "47",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "free",
+                        "@c:identifier": "manette_event_free",
+                        "@introspectable": "0",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "68",
+                            "#text": "Frees @self."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "60"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "type": {
+                                "@name": "none",
+                                "@c:type": "void"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "70",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "ManetteEvent*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "get_absolute",
+                        "@c:identifier": "manette_event_get_absolute",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "225",
+                            "#text": "Gets the axis of @self, if any."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "70"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "233",
+                                "#text": "whether the axis was retrieved"
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "227",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            },
+                            "parameter": [
+                                {
+                                    "@name": "axis",
+                                    "@direction": "out",
+                                    "@caller-allocates": "0",
+                                    "@transfer-ownership": "full",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-event.c",
+                                        "@line": "228",
+                                        "#text": "return location for the axis"
+                                    },
+                                    "type": {
+                                        "@name": "guint16",
+                                        "@c:type": "guint16*"
+                                    }
+                                },
+                                {
+                                    "@name": "value",
+                                    "@direction": "out",
+                                    "@caller-allocates": "0",
+                                    "@transfer-ownership": "full",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-event.c",
+                                        "@line": "229",
+                                        "#text": "return location for the axis"
+                                    },
+                                    "type": {
+                                        "@name": "gdouble",
+                                        "@c:type": "gdouble*"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@name": "get_button",
+                        "@c:identifier": "manette_event_get_button",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "198",
+                            "#text": "Gets the button of @self, if any."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "68"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "205",
+                                "#text": "whether the button was retrieved"
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "200",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            },
+                            "parameter": {
+                                "@name": "button",
+                                "@direction": "out",
+                                "@caller-allocates": "0",
+                                "@transfer-ownership": "full",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "201",
+                                    "#text": "return location for the button"
+                                },
+                                "type": {
+                                    "@name": "guint16",
+                                    "@c:type": "guint16*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "get_device",
+                        "@c:identifier": "manette_event_get_device",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "118",
+                            "#text": "Gets the #ManetteDevice associated with the @self."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "63"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "124",
+                                "#text": "the #ManetteDevice associated with the @self"
+                            },
+                            "type": {
+                                "@name": "Device",
+                                "@c:type": "ManetteDevice*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "120",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "get_event_type",
+                        "@c:identifier": "manette_event_get_event_type",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "84",
+                            "#text": "Gets the event type of @self."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "61"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "90",
+                                "#text": "the event type of @self"
+                            },
+                            "type": {
+                                "@name": "EventType",
+                                "@c:type": "ManetteEventType"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "86",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "get_hardware_code",
+                        "@c:identifier": "manette_event_get_hardware_code",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "150",
+                            "#text": "Gets the hardware code of @self."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "65"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "156",
+                                "#text": "the hardware code of @self"
+                            },
+                            "type": {
+                                "@name": "guint16",
+                                "@c:type": "guint16"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "152",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "get_hardware_index",
+                        "@c:identifier": "manette_event_get_hardware_index",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "182",
+                            "#text": "Gets the hardware index of @self."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "67"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "188",
+                                "#text": "the hardware index of @self"
+                            },
+                            "type": {
+                                "@name": "guint16",
+                                "@c:type": "guint16"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "184",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "get_hardware_type",
+                        "@c:identifier": "manette_event_get_hardware_type",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "134",
+                            "#text": "Gets the hardware type of @self."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "64"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "140",
+                                "#text": "the hardware type of @self"
+                            },
+                            "type": {
+                                "@name": "guint16",
+                                "@c:type": "guint16"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "136",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "get_hardware_value",
+                        "@c:identifier": "manette_event_get_hardware_value",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "166",
+                            "#text": "Gets the hardware value of @self."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "66"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "172",
+                                "#text": "the hardware value of @self"
+                            },
+                            "type": {
+                                "@name": "guint16",
+                                "@c:type": "guint16"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "168",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "get_hat",
+                        "@c:identifier": "manette_event_get_hat",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "255",
+                            "#text": "Gets the hat of @self, if any."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "73"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "263",
+                                "#text": "whether the hat was retrieved"
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "257",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            },
+                            "parameter": [
+                                {
+                                    "@name": "axis",
+                                    "@direction": "out",
+                                    "@caller-allocates": "0",
+                                    "@transfer-ownership": "full",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-event.c",
+                                        "@line": "258",
+                                        "#text": "return location for the hat"
+                                    },
+                                    "type": {
+                                        "@name": "guint16",
+                                        "@c:type": "guint16*"
+                                    }
+                                },
+                                {
+                                    "@name": "value",
+                                    "@direction": "out",
+                                    "@caller-allocates": "0",
+                                    "@transfer-ownership": "full",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "../src/manette-event.c",
+                                        "@line": "259",
+                                        "#text": "return location for the hat"
+                                    },
+                                    "type": {
+                                        "@name": "gint8",
+                                        "@c:type": "gint8*"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@name": "get_time",
+                        "@c:identifier": "manette_event_get_time",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.c",
+                            "@line": "100",
+                            "#text": "Gets the timestamp of when @self was received by the input driver that takes\ncare of its device. Use this timestamp to ensure external factors such as\nsynchronous disk writes don't influence your timing computations."
+                        },
+                        "source-position": {
+                            "@filename": "../src/manette-event.h",
+                            "@line": "62"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "../src/manette-event.c",
+                                "@line": "108",
+                                "#text": "the timestamp of when @self was received by the input driver"
+                            },
+                            "type": {
+                                "@name": "guint32",
+                                "@c:type": "guint32"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "self",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "../src/manette-event.c",
+                                    "@line": "102",
+                                    "#text": "a #ManetteEvent"
+                                },
+                                "type": {
+                                    "@name": "Event",
+                                    "@c:type": "const ManetteEvent*"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "enumeration": {
+                "@name": "EventType",
+                "@glib:type-name": "ManetteEventType",
+                "@glib:get-type": "manette_event_type_get_type",
+                "@c:type": "ManetteEventType",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "../src/manette-event.h",
+                    "@line": "36",
+                    "#text": "Specifies the type of the event."
+                },
+                "member": [
+                    {
+                        "@name": "event_nothing",
+                        "@value": "-1",
+                        "@c:identifier": "MANETTE_EVENT_NOTHING",
+                        "@glib:nick": "event-nothing",
+                        "@glib:name": "MANETTE_EVENT_NOTHING",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.h",
+                            "@line": "38",
+                            "#text": "a special code to indicate a null event"
+                        }
+                    },
+                    {
+                        "@name": "event_button_press",
+                        "@value": "0",
+                        "@c:identifier": "MANETTE_EVENT_BUTTON_PRESS",
+                        "@glib:nick": "event-button-press",
+                        "@glib:name": "MANETTE_EVENT_BUTTON_PRESS",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.h",
+                            "@line": "39",
+                            "#text": "a button has been pressed"
+                        }
+                    },
+                    {
+                        "@name": "event_button_release",
+                        "@value": "1",
+                        "@c:identifier": "MANETTE_EVENT_BUTTON_RELEASE",
+                        "@glib:nick": "event-button-release",
+                        "@glib:name": "MANETTE_EVENT_BUTTON_RELEASE",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.h",
+                            "@line": "40",
+                            "#text": "a button has been released"
+                        }
+                    },
+                    {
+                        "@name": "event_absolute",
+                        "@value": "2",
+                        "@c:identifier": "MANETTE_EVENT_ABSOLUTE",
+                        "@glib:nick": "event-absolute",
+                        "@glib:name": "MANETTE_EVENT_ABSOLUTE",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.h",
+                            "@line": "41",
+                            "#text": "an absolute axis has been moved"
+                        }
+                    },
+                    {
+                        "@name": "event_hat",
+                        "@value": "3",
+                        "@c:identifier": "MANETTE_EVENT_HAT",
+                        "@glib:nick": "event-hat",
+                        "@glib:name": "MANETTE_EVENT_HAT",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "../src/manette-event.h",
+                            "@line": "42",
+                            "#text": "a hat axis has been moved"
+                        }
+                    }
+                ]
+            },
+            "function": {
+                "@name": "get_resource",
+                "@c:identifier": "manette_get_resource",
+                "source-position": {
+                    "@filename": "../src/manette_resources.h",
+                    "@line": "6"
+                },
+                "return-value": {
+                    "@transfer-ownership": "full",
+                    "type": {
+                        "@name": "Gio.Resource",
+                        "@c:type": "GResource*"
+                    }
+                }
+            }
+        }
+    }
+}

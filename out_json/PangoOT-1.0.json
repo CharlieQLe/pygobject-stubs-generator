@@ -1,0 +1,2741 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "@xmlns:glib": "http://www.gtk.org/introspection/glib/1.0",
+        "include": [
+            {
+                "@name": "PangoFc",
+                "@version": "1.0"
+            },
+            {
+                "@name": "freetype2",
+                "@version": "2.0"
+            }
+        ],
+        "package": {
+            "@name": "pangoot"
+        },
+        "c:include": {
+            "@name": "pango/pango-ot.h"
+        },
+        "namespace": {
+            "@name": "PangoOT",
+            "@version": "1.0",
+            "@shared-library": "libpangoft2-1.0.so.0",
+            "@c:identifier-prefixes": "PangoOT",
+            "@c:symbol-prefixes": "pango_ot",
+            "alias": {
+                "@name": "Tag",
+                "@c:type": "PangoOTTag",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "pango/pango-ot.h",
+                    "@line": "40",
+                    "#text": "The `PangoOTTag` typedef is used to represent TrueType and OpenType\nfour letter tags inside Pango. Use PANGO_OT_TAG_MAKE()\nor PANGO_OT_TAG_MAKE_FROM_STRING() macros to create PangoOTTags manually."
+                },
+                "source-position": {
+                    "@filename": "pango/pango-ot.h",
+                    "@line": "47"
+                },
+                "type": {
+                    "@name": "guint32",
+                    "@c:type": "guint32"
+                }
+            },
+            "constant": [
+                {
+                    "@name": "ALL_GLYPHS",
+                    "@value": "65535",
+                    "@c:type": "PANGO_OT_ALL_GLYPHS",
+                    "@version": "1.16",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "97",
+                        "#text": "This is used as the property bit in pango_ot_ruleset_add_feature() when a\nfeature should be applied to all glyphs."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "142"
+                    },
+                    "type": {
+                        "@name": "guint",
+                        "@c:type": "guint"
+                    }
+                },
+                {
+                    "@name": "DEFAULT_LANGUAGE",
+                    "@value": "65535",
+                    "@c:type": "PANGO_OT_DEFAULT_LANGUAGE",
+                    "@version": "1.16",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "127",
+                        "#text": "This is used as the language index in pango_ot_info_find_feature() when\nthe default language system of the script is desired.\n\nIt is also returned by pango_ot_info_find_language() if the requested language\nis not found, or the requested language tag was PANGO_OT_TAG_DEFAULT_LANGUAGE.\nThe end result is that one can always call pango_ot_tag_from_language()\nfollowed by pango_ot_info_find_language() and pass the result to\npango_ot_info_find_feature() without having to worry about falling back to\ndefault language system explicitly."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "145"
+                    },
+                    "type": {
+                        "@name": "guint",
+                        "@c:type": "guint"
+                    }
+                },
+                {
+                    "@name": "NO_FEATURE",
+                    "@value": "65535",
+                    "@c:type": "PANGO_OT_NO_FEATURE",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "105",
+                        "#text": "This is used as a feature index that represent no feature, that is, should be\nskipped.  It may be returned as feature index by pango_ot_info_find_feature()\nif the feature is not found, and pango_ot_ruleset_add_feature() function\nautomatically skips this value, so no special handling is required by the user."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "143"
+                    },
+                    "type": {
+                        "@name": "guint",
+                        "@c:type": "guint"
+                    }
+                },
+                {
+                    "@name": "NO_SCRIPT",
+                    "@value": "65535",
+                    "@c:type": "PANGO_OT_NO_SCRIPT",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "115",
+                        "#text": "This is used as a script index that represent no script, that is, when the\nrequested script was not found, and a default ('DFLT') script was not found\neither.  It may be returned as script index by pango_ot_info_find_script()\nif the script or a default script are not found, all other functions\ntaking a script index essentially return if the input script index is\nthis value, so no special handling is required by the user."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "144"
+                    },
+                    "type": {
+                        "@name": "guint",
+                        "@c:type": "guint"
+                    }
+                }
+            ],
+            "record": [
+                {
+                    "@name": "Buffer",
+                    "@c:type": "PangoOTBuffer",
+                    "@glib:type-name": "PangoOTBuffer",
+                    "@glib:get-type": "pango_ot_buffer_get_type",
+                    "@c:symbol-prefix": "buffer",
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "76"
+                    },
+                    "constructor": {
+                        "@name": "new",
+                        "@c:identifier": "pango_ot_buffer_new",
+                        "@version": "1.4",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot-buffer.c",
+                            "@line": "40",
+                            "#text": "Creates a new `PangoOTBuffer` for the given OpenType font."
+                        },
+                        "source-position": {
+                            "@filename": "pango/pango-ot.h",
+                            "@line": "323"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "full",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-buffer.c",
+                                "@line": "46",
+                                "#text": "the newly allocated `PangoOTBuffer`, which should\n  be freed with [method@PangoOT.Buffer.destroy]."
+                            },
+                            "type": {
+                                "@name": "Buffer",
+                                "@c:type": "PangoOTBuffer*"
+                            }
+                        },
+                        "parameters": {
+                            "parameter": {
+                                "@name": "font",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-buffer.c",
+                                    "@line": "42",
+                                    "#text": "a `PangoFcFont`"
+                                },
+                                "type": {
+                                    "@name": "PangoFc.Font",
+                                    "@c:type": "PangoFcFont*"
+                                }
+                            }
+                        }
+                    },
+                    "method": [
+                        {
+                            "@name": "add_glyph",
+                            "@c:identifier": "pango_ot_buffer_add_glyph",
+                            "@version": "1.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-buffer.c",
+                                "@line": "90",
+                                "#text": "Appends a glyph to a `PangoOTBuffer`, with @properties identifying which\nfeatures should be applied on this glyph.\n\nSee [method@PangoOT.Ruleset.add_feature]."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "332"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "92",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "PangoOTBuffer*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "glyph",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-buffer.c",
+                                            "@line": "93",
+                                            "#text": "the glyph index to add, like a `PangoGlyph`"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "properties",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-buffer.c",
+                                            "@line": "94",
+                                            "#text": "the glyph properties"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "cluster",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-buffer.c",
+                                            "@line": "95",
+                                            "#text": "the cluster that this glyph belongs to"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "clear",
+                            "@c:identifier": "pango_ot_buffer_clear",
+                            "@version": "1.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-buffer.c",
+                                "@line": "76",
+                                "#text": "Empties a `PangoOTBuffer`, make it ready to add glyphs to."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "327"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "78",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "PangoOTBuffer*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "destroy",
+                            "@c:identifier": "pango_ot_buffer_destroy",
+                            "@version": "1.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-buffer.c",
+                                "@line": "61",
+                                "#text": "Destroys a `PangoOTBuffer` and free all associated memory."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "325"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "63",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "PangoOTBuffer*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_glyphs",
+                            "@c:identifier": "pango_ot_buffer_get_glyphs",
+                            "@version": "1.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-buffer.c",
+                                "@line": "152",
+                                "#text": "Gets the glyph array contained in a `PangoOTBuffer`.\n\nThe glyphs are owned by the buffer and should not be freed,\nand are only valid as long as buffer is not modified."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "337"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "154",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "const PangoOTBuffer*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "glyphs",
+                                        "@direction": "out",
+                                        "@caller-allocates": "0",
+                                        "@transfer-ownership": "full",
+                                        "@optional": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-buffer.c",
+                                            "@line": "155",
+                                            "#text": "location to\n  store the array of glyphs"
+                                        },
+                                        "array": {
+                                            "@length": "1",
+                                            "@zero-terminated": "0",
+                                            "@c:type": "PangoOTGlyph**",
+                                            "type": {
+                                                "@name": "Glyph",
+                                                "@c:type": "PangoOTGlyph*"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@name": "n_glyphs",
+                                        "@direction": "out",
+                                        "@caller-allocates": "0",
+                                        "@transfer-ownership": "full",
+                                        "@optional": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-buffer.c",
+                                            "@line": "157",
+                                            "#text": "location to store the number of glyphs"
+                                        },
+                                        "type": {
+                                            "@name": "gint",
+                                            "@c:type": "int*"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "output",
+                            "@c:identifier": "pango_ot_buffer_output",
+                            "@version": "1.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-buffer.c",
+                                "@line": "178",
+                                "#text": "Exports the glyphs in a `PangoOTBuffer` into a `PangoGlyphString`.\n\nThis is typically used after the OpenType layout processing\nis over, to convert the resulting glyphs into a generic Pango\nglyph string."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "341"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "180",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "const PangoOTBuffer*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "glyphs",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "181",
+                                        "#text": "a `PangoGlyphString`"
+                                    },
+                                    "type": {
+                                        "@name": "Pango.GlyphString",
+                                        "@c:type": "PangoGlyphString*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "set_rtl",
+                            "@c:identifier": "pango_ot_buffer_set_rtl",
+                            "@version": "1.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-buffer.c",
+                                "@line": "113",
+                                "#text": "Sets whether glyphs will be rendered right-to-left.\n\nThis setting is needed for proper horizontal positioning\nof right-to-left scripts."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "329"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "115",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "PangoOTBuffer*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "rtl",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "116",
+                                        "#text": "%TRUE for right-to-left text"
+                                    },
+                                    "type": {
+                                        "@name": "gboolean",
+                                        "@c:type": "gboolean"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "set_zero_width_marks",
+                            "@c:identifier": "pango_ot_buffer_set_zero_width_marks",
+                            "@version": "1.6",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-buffer.c",
+                                "@line": "132",
+                                "#text": "Sets whether characters with a mark class should be forced to zero width.\n\nThis setting is needed for proper positioning of Arabic accents,\nbut will produce incorrect results with standard OpenType Indic\nfonts."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "345"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "134",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "PangoOTBuffer*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "zero_width_marks",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-buffer.c",
+                                        "@line": "135",
+                                        "#text": "%TRUE if characters with a mark class should\n  be forced to zero width"
+                                    },
+                                    "type": {
+                                        "@name": "gboolean",
+                                        "@c:type": "gboolean"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "FeatureMap",
+                    "@c:type": "PangoOTFeatureMap",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "196",
+                        "#text": "The `PangoOTFeatureMap` typedef is used to represent an OpenType\nfeature with the property bit associated with it.  The feature tag is\nrepresented as a char array instead of a `PangoOTTag` for convenience."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "212"
+                    },
+                    "field": [
+                        {
+                            "@name": "feature_name",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "198",
+                                "#text": "feature tag in represented as four-letter ASCII string."
+                            },
+                            "array": {
+                                "@zero-terminated": "0",
+                                "@fixed-size": "5",
+                                "type": {
+                                    "@name": "gchar",
+                                    "@c:type": "char"
+                                }
+                            }
+                        },
+                        {
+                            "@name": "property_bit",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "199",
+                                "#text": "the property bit to use for this feature.  See\npango_ot_ruleset_add_feature() for details."
+                            },
+                            "type": {
+                                "@name": "gulong",
+                                "@c:type": "gulong"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "Glyph",
+                    "@c:type": "PangoOTGlyph",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "171",
+                        "#text": "The `PangoOTGlyph` structure represents a single glyph together with\ninformation used for OpenType layout processing of the glyph.\nIt contains the following fields."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "194"
+                    },
+                    "field": [
+                        {
+                            "@name": "glyph",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "173",
+                                "#text": "the glyph itself."
+                            },
+                            "type": {
+                                "@name": "guint32",
+                                "@c:type": "guint32"
+                            }
+                        },
+                        {
+                            "@name": "properties",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "174",
+                                "#text": "the properties value, identifying which features should be\napplied on this glyph.  See pango_ot_ruleset_add_feature()."
+                            },
+                            "type": {
+                                "@name": "guint",
+                                "@c:type": "guint"
+                            }
+                        },
+                        {
+                            "@name": "cluster",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "176",
+                                "#text": "the cluster that this glyph belongs to."
+                            },
+                            "type": {
+                                "@name": "guint",
+                                "@c:type": "guint"
+                            }
+                        },
+                        {
+                            "@name": "component",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "177",
+                                "#text": "a component value, set by the OpenType layout engine."
+                            },
+                            "type": {
+                                "@name": "gushort",
+                                "@c:type": "gushort"
+                            }
+                        },
+                        {
+                            "@name": "ligID",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "178",
+                                "#text": "a ligature index value, set by the OpenType layout engine."
+                            },
+                            "type": {
+                                "@name": "gushort",
+                                "@c:type": "gushort"
+                            }
+                        },
+                        {
+                            "@name": "internal",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "179",
+                                "#text": "for Pango internal use"
+                            },
+                            "type": {
+                                "@name": "guint",
+                                "@c:type": "guint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "RulesetDescription",
+                    "@c:type": "PangoOTRulesetDescription",
+                    "@version": "1.18",
+                    "@glib:type-name": "PangoOTRulesetDescription",
+                    "@glib:get-type": "pango_ot_ruleset_description_get_type",
+                    "@c:symbol-prefix": "ruleset_description",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "214",
+                        "#text": "The `PangoOTRuleset` structure holds all the information needed\nto build a complete `PangoOTRuleset` from an OpenType font.\nThe main use of this struct is to act as the key for a per-font\nhash of rulesets.  The user populates a ruleset description and\ngets the ruleset using pango_ot_ruleset_get_for_description()\nor create a new one using pango_ot_ruleset_new_from_description()."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "245"
+                    },
+                    "field": [
+                        {
+                            "@name": "script",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "216",
+                                "#text": "a `PangoScript`"
+                            },
+                            "type": {
+                                "@name": "Pango.Script",
+                                "@c:type": "PangoScript"
+                            }
+                        },
+                        {
+                            "@name": "language",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "217",
+                                "#text": "a `PangoLanguage`"
+                            },
+                            "type": {
+                                "@name": "Pango.Language",
+                                "@c:type": "PangoLanguage*"
+                            }
+                        },
+                        {
+                            "@name": "static_gsub_features",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "218",
+                                "#text": "static map of GSUB features"
+                            },
+                            "type": {
+                                "@name": "FeatureMap",
+                                "@c:type": "const PangoOTFeatureMap*"
+                            }
+                        },
+                        {
+                            "@name": "n_static_gsub_features",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "219",
+                                "#text": "length of @static_gsub_features, or 0."
+                            },
+                            "type": {
+                                "@name": "guint",
+                                "@c:type": "guint"
+                            }
+                        },
+                        {
+                            "@name": "static_gpos_features",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "220",
+                                "#text": "static map of GPOS features"
+                            },
+                            "type": {
+                                "@name": "FeatureMap",
+                                "@c:type": "const PangoOTFeatureMap*"
+                            }
+                        },
+                        {
+                            "@name": "n_static_gpos_features",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "221",
+                                "#text": "length of @static_gpos_features, or 0."
+                            },
+                            "type": {
+                                "@name": "guint",
+                                "@c:type": "guint"
+                            }
+                        },
+                        {
+                            "@name": "other_features",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "222",
+                                "#text": "map of extra features to add to both\n  GSUB and GPOS. Unlike the static maps, this pointer need not\n  live beyond the life of function calls taking this struct."
+                            },
+                            "type": {
+                                "@name": "FeatureMap",
+                                "@c:type": "const PangoOTFeatureMap*"
+                            }
+                        },
+                        {
+                            "@name": "n_other_features",
+                            "@writable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "225",
+                                "#text": "length of @other_features, or 0."
+                            },
+                            "type": {
+                                "@name": "guint",
+                                "@c:type": "guint"
+                            }
+                        }
+                    ],
+                    "method": [
+                        {
+                            "@name": "copy",
+                            "@c:identifier": "pango_ot_ruleset_description_copy",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "366",
+                                "#text": "Creates a copy of @desc, which should be freed with\n[method@PangoOT.RulesetDescription.free].\n\nPrimarily used internally by [func@PangoOT.Ruleset.get_for_description]\nto cache rulesets for ruleset descriptions."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "417"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "full",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "376",
+                                    "#text": "the newly allocated `PangoOTRulesetDescription`"
+                                },
+                                "type": {
+                                    "@name": "RulesetDescription",
+                                    "@c:type": "PangoOTRulesetDescription*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "desc",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "368",
+                                        "#text": "ruleset description to copy"
+                                    },
+                                    "type": {
+                                        "@name": "RulesetDescription",
+                                        "@c:type": "const PangoOTRulesetDescription*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "equal",
+                            "@c:identifier": "pango_ot_ruleset_description_equal",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "334",
+                                "#text": "Compares two ruleset descriptions for equality.\n\nTwo ruleset descriptions are considered equal if the rulesets\nthey describe are provably identical. This means that their\nscript, language, and all feature sets should be equal.\n\nFor static feature sets, the array addresses are compared directly,\nwhile for other features, the list of features is compared one by\none.(Two ruleset descriptions may result in identical rulesets\nbeing created, but still compare %FALSE.)"
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "413"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "350",
+                                    "#text": "%TRUE if two ruleset descriptions are identical,\n  %FALSE otherwise"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "desc1",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "336",
+                                        "#text": "a ruleset description"
+                                    },
+                                    "type": {
+                                        "@name": "RulesetDescription",
+                                        "@c:type": "const PangoOTRulesetDescription*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "desc2",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "337",
+                                        "#text": "a ruleset description"
+                                    },
+                                    "type": {
+                                        "@name": "RulesetDescription",
+                                        "@c:type": "const PangoOTRulesetDescription*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "free",
+                            "@c:identifier": "pango_ot_ruleset_description_free",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "394",
+                                "#text": "Frees a ruleset description allocated by\npango_ot_ruleset_description_copy()."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "420"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "desc",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "396",
+                                        "#text": "an allocated `PangoOTRulesetDescription`"
+                                    },
+                                    "type": {
+                                        "@name": "RulesetDescription",
+                                        "@c:type": "PangoOTRulesetDescription*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "hash",
+                            "@c:identifier": "pango_ot_ruleset_description_hash",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "317",
+                                "#text": "Computes a hash of a `PangoOTRulesetDescription` structure suitable\nto be used, for example, as an argument to g_hash_table_new()."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "410"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "324",
+                                    "#text": "the hash value"
+                                },
+                                "type": {
+                                    "@name": "guint",
+                                    "@c:type": "guint"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "desc",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "319",
+                                        "#text": "a ruleset description"
+                                    },
+                                    "type": {
+                                        "@name": "RulesetDescription",
+                                        "@c:type": "const PangoOTRulesetDescription*"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "function-macro": [
+                {
+                    "@name": "INFO",
+                    "@c:identifier": "PANGO_OT_INFO",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "249"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_INFO",
+                    "@c:identifier": "PANGO_OT_IS_INFO",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "250"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_RULESET",
+                    "@c:identifier": "PANGO_OT_IS_RULESET",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "263"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "RULESET",
+                    "@c:identifier": "PANGO_OT_RULESET",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "262"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "TAG_MAKE",
+                    "@c:identifier": "PANGO_OT_TAG_MAKE",
+                    "@introspectable": "0",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "49",
+                        "#text": "Creates a `PangoOTTag` from four characters.  This is similar and\ncompatible with the FT_MAKE_TAG() macro from FreeType."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "69"
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "c1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot.h",
+                                    "@line": "51",
+                                    "#text": "First character."
+                                }
+                            },
+                            {
+                                "@name": "c2",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot.h",
+                                    "@line": "52",
+                                    "#text": "Second character."
+                                }
+                            },
+                            {
+                                "@name": "c3",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot.h",
+                                    "@line": "53",
+                                    "#text": "Third character."
+                                }
+                            },
+                            {
+                                "@name": "c4",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot.h",
+                                    "@line": "54",
+                                    "#text": "Fourth character."
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "TAG_MAKE_FROM_STRING",
+                    "@c:identifier": "PANGO_OT_TAG_MAKE_FROM_STRING",
+                    "@introspectable": "0",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "59",
+                        "#text": "Creates a `PangoOTTag` from a string. The string should be at least\nfour characters long (pad with space characters if needed), and need\nnot be nul-terminated.  This is a convenience wrapper around\nPANGO_OT_TAG_MAKE(), but cannot be used in certain situations, for\nexample, as a switch expression, as it dereferences pointers."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "70"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "s",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "61",
+                                "#text": "The string representation of the tag."
+                            }
+                        }
+                    }
+                }
+            ],
+            "class": [
+                {
+                    "@name": "Info",
+                    "@c:symbol-prefix": "info",
+                    "@c:type": "PangoOTInfo",
+                    "@parent": "GObject.Object",
+                    "@glib:type-name": "PangoOTInfo",
+                    "@glib:get-type": "pango_ot_info_get_type",
+                    "function": {
+                        "@name": "get",
+                        "@c:identifier": "pango_ot_info_get",
+                        "@version": "1.2",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot-info.c",
+                            "@line": "65",
+                            "#text": "Returns the `PangoOTInfo` structure for the given FreeType font face."
+                        },
+                        "source-position": {
+                            "@filename": "pango/pango-ot.h",
+                            "@line": "275"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-info.c",
+                                "@line": "71",
+                                "#text": "the `PangoOTInfo` for @face.\n  This object will have the same lifetime as @face."
+                            },
+                            "type": {
+                                "@name": "Info",
+                                "@c:type": "PangoOTInfo*"
+                            }
+                        },
+                        "parameters": {
+                            "parameter": {
+                                "@name": "face",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-info.c",
+                                    "@line": "67",
+                                    "#text": "a `FT_Face`"
+                                },
+                                "type": {
+                                    "@name": "freetype2.Face",
+                                    "@c:type": "FT_Face"
+                                }
+                            }
+                        }
+                    },
+                    "method": [
+                        {
+                            "@name": "find_feature",
+                            "@c:identifier": "pango_ot_info_find_feature",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-info.c",
+                                "@line": "195",
+                                "#text": "Finds the index of a feature.\n\nIf the feature is not found, sets @feature_index to PANGO_OT_NO_FEATURE,\nwhich is safe to pass to [method@PangoOT.Ruleset.add_feature] and similar\nfunctions.\n\nIn the future, this may set @feature_index to an special value that if\nused in [method@PangoOT.Ruleset.add_feature] will ask Pango to synthesize\nthe requested feature based on Unicode properties and data. However, this\nfunction will still return %FALSE in those cases. So, users may want to\nignore the return value of this function in certain cases."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "291"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-info.c",
+                                    "@line": "218",
+                                    "#text": "%TRUE if the feature was found"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "info",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-info.c",
+                                        "@line": "197",
+                                        "#text": "a `PangoOTInfo`"
+                                    },
+                                    "type": {
+                                        "@name": "Info",
+                                        "@c:type": "PangoOTInfo*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "table_type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "198",
+                                            "#text": "the table type to obtain information about"
+                                        },
+                                        "type": {
+                                            "@name": "TableType",
+                                            "@c:type": "PangoOTTableType"
+                                        }
+                                    },
+                                    {
+                                        "@name": "feature_tag",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "199",
+                                            "#text": "the tag of the feature to find"
+                                        },
+                                        "type": {
+                                            "@name": "Tag",
+                                            "@c:type": "PangoOTTag"
+                                        }
+                                    },
+                                    {
+                                        "@name": "script_index",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "200",
+                                            "#text": "the index of the script"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "language_index",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "201",
+                                            "#text": "the index of the language whose features are searched,\n  or %PANGO_OT_DEFAULT_LANGUAGE to use the default language of the script"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "feature_index",
+                                        "@direction": "out",
+                                        "@caller-allocates": "0",
+                                        "@transfer-ownership": "full",
+                                        "@optional": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "203",
+                                            "#text": "location to store the index of\n  the feature"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint*"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "find_language",
+                            "@c:identifier": "pango_ot_info_find_language",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-info.c",
+                                "@line": "144",
+                                "#text": "Finds the index of a language and its required feature index.\n\nIf the language is not found, sets @language_index to %PANGO_OT_DEFAULT_LANGUAGE\nand the required feature of the default language system is returned in\nrequired_feature_index. For best compatibility with some fonts, also\nsearches the language system tag 'dflt' before falling back to the default\nlanguage system, but that is transparent to the user. The user can simply\nignore the return value of this function to automatically fall back to the\ndefault language system."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "284"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-info.c",
+                                    "@line": "164",
+                                    "#text": "%TRUE if the language was found"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "info",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-info.c",
+                                        "@line": "146",
+                                        "#text": "a `PangoOTInfo`"
+                                    },
+                                    "type": {
+                                        "@name": "Info",
+                                        "@c:type": "PangoOTInfo*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "table_type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "147",
+                                            "#text": "the table type to obtain information about"
+                                        },
+                                        "type": {
+                                            "@name": "TableType",
+                                            "@c:type": "PangoOTTableType"
+                                        }
+                                    },
+                                    {
+                                        "@name": "script_index",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "148",
+                                            "#text": "the index of the script whose languages are searched"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "language_tag",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "149",
+                                            "#text": "the tag of the language to find"
+                                        },
+                                        "type": {
+                                            "@name": "Tag",
+                                            "@c:type": "PangoOTTag"
+                                        }
+                                    },
+                                    {
+                                        "@name": "language_index",
+                                        "@direction": "out",
+                                        "@caller-allocates": "0",
+                                        "@transfer-ownership": "full",
+                                        "@optional": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "150",
+                                            "#text": "location to store the index of the language"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "required_feature_index",
+                                        "@direction": "out",
+                                        "@caller-allocates": "0",
+                                        "@transfer-ownership": "full",
+                                        "@optional": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "151",
+                                            "#text": "location to store the\n  required feature index of the language"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint*"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "find_script",
+                            "@c:identifier": "pango_ot_info_find_script",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-info.c",
+                                "@line": "111",
+                                "#text": "Finds the index of a script.\n\nIf not found, tries to find the 'DFLT' and then 'dflt' scripts and\nreturn the index of that in @script_index. If none of those is found\neither, %PANGO_OT_NO_SCRIPT is placed in @script_index.\n\nAll other functions taking an input script_index parameter know\nhow to handle %PANGO_OT_NO_SCRIPT, so one can ignore the return\nvalue of this function completely and proceed, to enjoy the automatic\nfallback to the 'DFLT'/'dflt' script."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "278"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-info.c",
+                                    "@line": "129",
+                                    "#text": "%TRUE if the script was found"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "info",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-info.c",
+                                        "@line": "113",
+                                        "#text": "a `PangoOTInfo`"
+                                    },
+                                    "type": {
+                                        "@name": "Info",
+                                        "@c:type": "PangoOTInfo*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "table_type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "114",
+                                            "#text": "the table type to obtain information about"
+                                        },
+                                        "type": {
+                                            "@name": "TableType",
+                                            "@c:type": "PangoOTTableType"
+                                        }
+                                    },
+                                    {
+                                        "@name": "script_tag",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "115",
+                                            "#text": "the tag of the script to find"
+                                        },
+                                        "type": {
+                                            "@name": "Tag",
+                                            "@c:type": "PangoOTTag"
+                                        }
+                                    },
+                                    {
+                                        "@name": "script_index",
+                                        "@direction": "out",
+                                        "@caller-allocates": "0",
+                                        "@transfer-ownership": "full",
+                                        "@optional": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "116",
+                                            "#text": "location to store the index of the script"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint*"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "list_features",
+                            "@c:identifier": "pango_ot_info_list_features",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-info.c",
+                                "@line": "293",
+                                "#text": "Obtains the list of features for the given language of the given script."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "307"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-info.c",
+                                    "@line": "305",
+                                    "#text": "a newly-allocated zero-terminated\n  array containing the tags of the available features"
+                                },
+                                "type": {
+                                    "@name": "Tag",
+                                    "@c:type": "PangoOTTag*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "info",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-info.c",
+                                        "@line": "295",
+                                        "#text": "a `PangoOTInfo`"
+                                    },
+                                    "type": {
+                                        "@name": "Info",
+                                        "@c:type": "PangoOTInfo*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "table_type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "296",
+                                            "#text": "the table type to obtain information about"
+                                        },
+                                        "type": {
+                                            "@name": "TableType",
+                                            "@c:type": "PangoOTTableType"
+                                        }
+                                    },
+                                    {
+                                        "@name": "tag",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "297",
+                                            "#text": "unused parameter"
+                                        },
+                                        "type": {
+                                            "@name": "Tag",
+                                            "@c:type": "PangoOTTag"
+                                        }
+                                    },
+                                    {
+                                        "@name": "script_index",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "298",
+                                            "#text": "the index of the script to obtain information about"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "language_index",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "299",
+                                            "#text": "the index of the language to list features for, or\n  %PANGO_OT_DEFAULT_LANGUAGE, to list features for the default\n  language of the script"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "list_languages",
+                            "@c:identifier": "pango_ot_info_list_languages",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-info.c",
+                                "@line": "263",
+                                "#text": "Obtains the list of available languages for a given script."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "302"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-info.c",
+                                    "@line": "272",
+                                    "#text": "a newly-allocated zero-terminated\n  array containing the tags of the available languages"
+                                },
+                                "type": {
+                                    "@name": "Tag",
+                                    "@c:type": "PangoOTTag*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "info",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-info.c",
+                                        "@line": "265",
+                                        "#text": "a `PangoOTInfo`"
+                                    },
+                                    "type": {
+                                        "@name": "Info",
+                                        "@c:type": "PangoOTInfo*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "table_type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "266",
+                                            "#text": "the table type to obtain information about"
+                                        },
+                                        "type": {
+                                            "@name": "TableType",
+                                            "@c:type": "PangoOTTableType"
+                                        }
+                                    },
+                                    {
+                                        "@name": "script_index",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "267",
+                                            "#text": "the index of the script to list languages for"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "language_tag",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-info.c",
+                                            "@line": "268",
+                                            "#text": "unused parameter"
+                                        },
+                                        "type": {
+                                            "@name": "Tag",
+                                            "@c:type": "PangoOTTag"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "list_scripts",
+                            "@c:identifier": "pango_ot_info_list_scripts",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-info.c",
+                                "@line": "237",
+                                "#text": "Obtains the list of available scripts."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "299"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-info.c",
+                                    "@line": "244",
+                                    "#text": "a newly-allocated zero-terminated\n  array containing the tags of the available scripts"
+                                },
+                                "type": {
+                                    "@name": "Tag",
+                                    "@c:type": "PangoOTTag*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "info",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-info.c",
+                                        "@line": "239",
+                                        "#text": "a `PangoOTInfo`"
+                                    },
+                                    "type": {
+                                        "@name": "Info",
+                                        "@c:type": "PangoOTInfo*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "table_type",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-info.c",
+                                        "@line": "240",
+                                        "#text": "the table type to obtain information about"
+                                    },
+                                    "type": {
+                                        "@name": "TableType",
+                                        "@c:type": "PangoOTTableType"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "Ruleset",
+                    "@c:symbol-prefix": "ruleset",
+                    "@c:type": "PangoOTRuleset",
+                    "@parent": "GObject.Object",
+                    "@glib:type-name": "PangoOTRuleset",
+                    "@glib:get-type": "pango_ot_ruleset_get_type",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot-ruleset.c",
+                        "@line": "28",
+                        "#text": "The `PangoOTRuleset` structure holds a set of features selected\nfrom the tables in an OpenType font.\n\nA feature is an operation such as adjusting glyph positioning\nthat should be applied to a text feature such as a certain\ntype of accent.\n\nA `PangoOTRuleset` is created with [ctor@PangoOT.Ruleset.new],\nfeatures are added to it with [method@PangoOT.Ruleset.add_feature],\nthen it is applied to a `PangoGlyphString` with\n[method@PangoOT.Ruleset.position]."
+                    },
+                    "constructor": [
+                        {
+                            "@name": "new",
+                            "@c:identifier": "pango_ot_ruleset_new",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "96",
+                                "#text": "Creates a new `PangoOTRuleset` for the given OpenType info."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "352"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "full",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "102",
+                                    "#text": "the newly allocated `PangoOTRuleset`"
+                                },
+                                "type": {
+                                    "@name": "Ruleset",
+                                    "@c:type": "PangoOTRuleset*"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": {
+                                    "@name": "info",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "98",
+                                        "#text": "a `PangoOTInfo`"
+                                    },
+                                    "type": {
+                                        "@name": "Info",
+                                        "@c:type": "PangoOTInfo*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "new_for",
+                            "@c:identifier": "pango_ot_ruleset_new_for",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "110",
+                                "#text": "Creates a new `PangoOTRuleset` for the given OpenType info, script, and\nlanguage.\n\nThis function is part of a convenience scheme that highly simplifies\nusing a `PangoOTRuleset` to represent features for a specific pair of script\nand language.  So one can use this function passing in the script and\nlanguage of interest, and later try to add features to the ruleset by just\nspecifying the feature name or tag, without having to deal with finding\nscript, language, or feature indices manually.\n\nIn addition to what [ctor@PangoOT.Ruleset.new] does, this function will:\n\n* Find the `PangoOTTag` script and language tags associated with\n  @script and @language using [func@PangoOT.tag_from_script] and\n  [func@PangoOT.tag_from_language],\n\n* For each of table types %PANGO_OT_TABLE_GSUB and %PANGO_OT_TABLE_GPOS,\n  find the script index of the script tag found and the language\n  system index of the language tag found in that script system, using\n  [method@PangoOT.Info.find_script] and [method@PangoOT.Info.find_language],\n\n* For found language-systems, if they have required feature index,\n  add that feature to the ruleset using [method@PangoOT.Ruleset.add_feature],\n\n* Remember found script and language indices for both table types,\n  and use them in future [method@PangoOT.Ruleset.maybe_add_feature] and\n  [method@PangoOT.Ruleset.maybe_add_features].\n\nBecause of the way return values of [method@PangoOT.Info.find_script] and\n[method@PangoOT.Info.find_language] are ignored, this function automatically\nfinds and uses the 'DFLT' script and the default language-system."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "354"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "full",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "148",
+                                    "#text": "the newly allocated `PangoOTRuleset`"
+                                },
+                                "type": {
+                                    "@name": "Ruleset",
+                                    "@c:type": "PangoOTRuleset*"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": [
+                                    {
+                                        "@name": "info",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "112",
+                                            "#text": "a `PangoOTInfo`"
+                                        },
+                                        "type": {
+                                            "@name": "Info",
+                                            "@c:type": "PangoOTInfo*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "script",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "113",
+                                            "#text": "a `PangoScript`"
+                                        },
+                                        "type": {
+                                            "@name": "Pango.Script",
+                                            "@c:type": "PangoScript"
+                                        }
+                                    },
+                                    {
+                                        "@name": "language",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "114",
+                                            "#text": "a `PangoLanguage`"
+                                        },
+                                        "type": {
+                                            "@name": "Pango.Language",
+                                            "@c:type": "PangoLanguage*"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "new_from_description",
+                            "@c:identifier": "pango_ot_ruleset_new_from_description",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "160",
+                                "#text": "Creates a new `PangoOTRuleset` for the given OpenType info and\nmatching the given ruleset description.\n\nThis is a convenience function that calls [ctor@PangoOT.Ruleset.new_for]\nand adds the static GSUB/GPOS features to the resulting ruleset,\nfollowed by adding other features to both GSUB and GPOS.\n\nThe static feature map members of @desc should be alive as\nlong as @info is."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "358"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "full",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "175",
+                                    "#text": "the newly allocated `PangoOTRuleset`"
+                                },
+                                "type": {
+                                    "@name": "Ruleset",
+                                    "@c:type": "PangoOTRuleset*"
+                                }
+                            },
+                            "parameters": {
+                                "parameter": [
+                                    {
+                                        "@name": "info",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "162",
+                                            "#text": "a `PangoOTInfo`"
+                                        },
+                                        "type": {
+                                            "@name": "Info",
+                                            "@c:type": "PangoOTInfo*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "desc",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "163",
+                                            "#text": "a `PangoOTRulesetDescription`"
+                                        },
+                                        "type": {
+                                            "@name": "RulesetDescription",
+                                            "@c:type": "const PangoOTRulesetDescription*"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "function": {
+                        "@name": "get_for_description",
+                        "@c:identifier": "pango_ot_ruleset_get_for_description",
+                        "@version": "1.18",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot-ruleset.c",
+                            "@line": "64",
+                            "#text": "Returns a ruleset for the given OpenType info and ruleset\ndescription.\n\nRulesets are created on demand using\n[ctor@PangoOT.Ruleset.new_from_description].\nThe returned ruleset should not be modified or destroyed.\n\nThe static feature map members of @desc should be alive as\nlong as @info is."
+                        },
+                        "source-position": {
+                            "@filename": "pango/pango-ot.h",
+                            "@line": "349"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "79",
+                                "#text": "the `PangoOTRuleset` for @desc. This object will have\n  the same lifetime as @info."
+                            },
+                            "type": {
+                                "@name": "Ruleset",
+                                "@c:type": "const PangoOTRuleset*"
+                            }
+                        },
+                        "parameters": {
+                            "parameter": [
+                                {
+                                    "@name": "info",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "66",
+                                        "#text": "a `PangoOTInfo`"
+                                    },
+                                    "type": {
+                                        "@name": "Info",
+                                        "@c:type": "PangoOTInfo*"
+                                    }
+                                },
+                                {
+                                    "@name": "desc",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "67",
+                                        "#text": "a `PangoOTRulesetDescription`"
+                                    },
+                                    "type": {
+                                        "@name": "RulesetDescription",
+                                        "@c:type": "const PangoOTRulesetDescription*"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "method": [
+                        {
+                            "@name": "add_feature",
+                            "@c:identifier": "pango_ot_ruleset_add_feature",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "186",
+                                "#text": "Adds a feature to the ruleset."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "361"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "ruleset",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "188",
+                                        "#text": "a `PangoOTRuleset`"
+                                    },
+                                    "type": {
+                                        "@name": "Ruleset",
+                                        "@c:type": "PangoOTRuleset*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "table_type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "189",
+                                            "#text": "the table type to add a feature to"
+                                        },
+                                        "type": {
+                                            "@name": "TableType",
+                                            "@c:type": "PangoOTTableType"
+                                        }
+                                    },
+                                    {
+                                        "@name": "feature_index",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "190",
+                                            "#text": "the index of the feature to add"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    },
+                                    {
+                                        "@name": "property_bit",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "191",
+                                            "#text": "the property bit to use for this feature. Used to\n  identify the glyphs that this feature should be applied to, or\n  %PANGO_OT_ALL_GLYPHS if it should be applied to all glyphs."
+                                        },
+                                        "type": {
+                                            "@name": "gulong",
+                                            "@c:type": "gulong"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "get_feature_count",
+                            "@c:identifier": "pango_ot_ruleset_get_feature_count",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "262",
+                                "#text": "Gets the number of GSUB and GPOS features in the ruleset."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "376"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "270",
+                                    "#text": "Total number of features in the @ruleset"
+                                },
+                                "type": {
+                                    "@name": "guint",
+                                    "@c:type": "guint"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "ruleset",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "264",
+                                        "#text": "a `PangoOTRuleset`"
+                                    },
+                                    "type": {
+                                        "@name": "Ruleset",
+                                        "@c:type": "const PangoOTRuleset*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "n_gsub_features",
+                                        "@direction": "out",
+                                        "@caller-allocates": "0",
+                                        "@transfer-ownership": "full",
+                                        "@optional": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "265",
+                                            "#text": "location to store number of GSUB features"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "n_gpos_features",
+                                        "@direction": "out",
+                                        "@caller-allocates": "0",
+                                        "@transfer-ownership": "full",
+                                        "@optional": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "266",
+                                            "#text": "location to store number of GPOS features"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint*"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "maybe_add_feature",
+                            "@c:identifier": "pango_ot_ruleset_maybe_add_feature",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "205",
+                                "#text": "This is a convenience function that first tries to find the feature\nusing [method@PangoOT.Info.find_feature] and the ruleset script and\nlanguage passed to [ctor@PangoOT.Ruleset.new_for] and if the feature\nis found, adds it to the ruleset.\n\nIf @ruleset was not created using [ctor@PangoOT.Ruleset.new_for],\nthis function does nothing."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "366"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "222",
+                                    "#text": "%TRUE if the feature was found and added to ruleset,\n  %FALSE otherwise"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "ruleset",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "207",
+                                        "#text": "a `PangoOTRuleset`"
+                                    },
+                                    "type": {
+                                        "@name": "Ruleset",
+                                        "@c:type": "PangoOTRuleset*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "table_type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "208",
+                                            "#text": "the table type to add a feature to"
+                                        },
+                                        "type": {
+                                            "@name": "TableType",
+                                            "@c:type": "PangoOTTableType"
+                                        }
+                                    },
+                                    {
+                                        "@name": "feature_tag",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "209",
+                                            "#text": "the tag of the feature to add"
+                                        },
+                                        "type": {
+                                            "@name": "Tag",
+                                            "@c:type": "PangoOTTag"
+                                        }
+                                    },
+                                    {
+                                        "@name": "property_bit",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "210",
+                                            "#text": "the property bit to use for this feature. Used to\n  identify the glyphs that this feature should be applied to, or\n  %PANGO_OT_ALL_GLYPHS if it should be applied to all glyphs."
+                                        },
+                                        "type": {
+                                            "@name": "gulong",
+                                            "@c:type": "gulong"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "maybe_add_features",
+                            "@c:identifier": "pango_ot_ruleset_maybe_add_features",
+                            "@version": "1.18",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "236",
+                                "#text": "This is a convenience function that for each feature in the feature map\narray @features converts the feature name to a `PangoOTTag` feature tag\nusing PANGO_OT_TAG_MAKE() and calls [method@PangoOT.Ruleset.maybe_add_feature]\non it."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "371"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "pango/pango-ot-ruleset.c",
+                                    "@line": "248",
+                                    "#text": "The number of features in @features that were found\n  and added to @ruleset"
+                                },
+                                "type": {
+                                    "@name": "guint",
+                                    "@c:type": "guint"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "ruleset",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "238",
+                                        "#text": "a `PangoOTRuleset`"
+                                    },
+                                    "type": {
+                                        "@name": "Ruleset",
+                                        "@c:type": "PangoOTRuleset*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "table_type",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "239",
+                                            "#text": "the table type to add features to"
+                                        },
+                                        "type": {
+                                            "@name": "TableType",
+                                            "@c:type": "PangoOTTableType"
+                                        }
+                                    },
+                                    {
+                                        "@name": "features",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "240",
+                                            "#text": "array of feature name and property bits to add"
+                                        },
+                                        "type": {
+                                            "@name": "FeatureMap",
+                                            "@c:type": "const PangoOTFeatureMap*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "n_features",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "pango/pango-ot-ruleset.c",
+                                            "@line": "241",
+                                            "#text": "number of feature records in @features array"
+                                        },
+                                        "type": {
+                                            "@name": "guint",
+                                            "@c:type": "guint"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "position",
+                            "@c:identifier": "pango_ot_ruleset_position",
+                            "@version": "1.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "298",
+                                "#text": "Performs the OpenType GPOS positioning on @buffer using\nthe features in @ruleset."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "385"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "ruleset",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "300",
+                                        "#text": "a `PangoOTRuleset`"
+                                    },
+                                    "type": {
+                                        "@name": "Ruleset",
+                                        "@c:type": "const PangoOTRuleset*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "301",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "PangoOTBuffer*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "substitute",
+                            "@c:identifier": "pango_ot_ruleset_substitute",
+                            "@version": "1.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-ruleset.c",
+                                "@line": "282",
+                                "#text": "Performs the OpenType GSUB substitution on @buffer using\nthe features in @ruleset."
+                            },
+                            "source-position": {
+                                "@filename": "pango/pango-ot.h",
+                                "@line": "381"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "ruleset",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "284",
+                                        "#text": "a `PangoOTRuleset`"
+                                    },
+                                    "type": {
+                                        "@name": "Ruleset",
+                                        "@c:type": "const PangoOTRuleset*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "buffer",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "pango/pango-ot-ruleset.c",
+                                        "@line": "285",
+                                        "#text": "a `PangoOTBuffer`"
+                                    },
+                                    "type": {
+                                        "@name": "Buffer",
+                                        "@c:type": "PangoOTBuffer*"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "enumeration": {
+                "@name": "TableType",
+                "@c:type": "PangoOTTableType",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "pango/pango-ot.h",
+                    "@line": "82",
+                    "#text": "The PangoOTTableType enumeration values are used to\nidentify the various OpenType tables in the\npango_ot_info_\u2026 functions."
+                },
+                "source-position": {
+                    "@filename": "pango/pango-ot.h",
+                    "@line": "95"
+                },
+                "member": [
+                    {
+                        "@name": "gsub",
+                        "@value": "0",
+                        "@c:identifier": "PANGO_OT_TABLE_GSUB",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot.h",
+                            "@line": "84",
+                            "#text": "The GSUB table."
+                        }
+                    },
+                    {
+                        "@name": "gpos",
+                        "@value": "1",
+                        "@c:identifier": "PANGO_OT_TABLE_GPOS",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot.h",
+                            "@line": "85",
+                            "#text": "The GPOS table."
+                        }
+                    }
+                ]
+            },
+            "function": [
+                {
+                    "@name": "tag_from_language",
+                    "@c:identifier": "pango_ot_tag_from_language",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot-tag.c",
+                        "@line": "91",
+                        "#text": "Finds the OpenType language-system tag best describing @language."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "398"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot-tag.c",
+                            "@line": "97",
+                            "#text": "`PangoOTTag` best matching @language or\n%PANGO_OT_TAG_DEFAULT_LANGUAGE if none found or if @language\nis %NULL."
+                        },
+                        "type": {
+                            "@name": "Tag",
+                            "@c:type": "PangoOTTag"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "language",
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "@allow-none": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-tag.c",
+                                "@line": "93",
+                                "#text": "A `PangoLanguage`"
+                            },
+                            "type": {
+                                "@name": "Pango.Language",
+                                "@c:type": "PangoLanguage*"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "tag_from_script",
+                    "@c:identifier": "pango_ot_tag_from_script",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot-tag.c",
+                        "@line": "26",
+                        "#text": "Finds the OpenType script tag corresponding to @script.\n\nThe %PANGO_SCRIPT_COMMON, %PANGO_SCRIPT_INHERITED, and\n%PANGO_SCRIPT_UNKNOWN scripts are mapped to the OpenType\n'DFLT' script tag that is also defined as\n%PANGO_OT_TAG_DEFAULT_SCRIPT.\n\nNote that multiple `PangoScript` values may map to the same\nOpenType script tag.  In particular, %PANGO_SCRIPT_HIRAGANA\nand %PANGO_SCRIPT_KATAKANA both map to the OT tag 'kana'."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "392"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot-tag.c",
+                            "@line": "41",
+                            "#text": "`PangoOTTag` corresponding to @script or\n%PANGO_OT_TAG_DEFAULT_SCRIPT if none found."
+                        },
+                        "type": {
+                            "@name": "Tag",
+                            "@c:type": "PangoOTTag"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "script",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-tag.c",
+                                "@line": "28",
+                                "#text": "A `PangoScript`"
+                            },
+                            "type": {
+                                "@name": "Pango.Script",
+                                "@c:type": "PangoScript"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "tag_to_language",
+                    "@c:identifier": "pango_ot_tag_to_language",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot-tag.c",
+                        "@line": "120",
+                        "#text": "Finds a `PangoLanguage` corresponding to @language_tag."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "395"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "full",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot-tag.c",
+                            "@line": "126",
+                            "#text": "`PangoLanguage` best matching @language_tag or\n`PangoLanguage` corresponding to the string \"xx\" if none found."
+                        },
+                        "type": {
+                            "@name": "Pango.Language",
+                            "@c:type": "PangoLanguage*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "language_tag",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-tag.c",
+                                "@line": "122",
+                                "#text": "A `PangoOTTag` OpenType language-system tag"
+                            },
+                            "type": {
+                                "@name": "Tag",
+                                "@c:type": "PangoOTTag"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "tag_to_script",
+                    "@c:identifier": "pango_ot_tag_to_script",
+                    "@version": "1.18",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "pango/pango-ot-tag.c",
+                        "@line": "63",
+                        "#text": "Finds the `PangoScript` corresponding to @script_tag.\n\nThe 'DFLT' script tag is mapped to %PANGO_SCRIPT_COMMON.\n\nNote that an OpenType script tag may correspond to multiple\n`PangoScript` values.  In such cases, the `PangoScript` value\nwith the smallest value is returned.\nIn particular, %PANGO_SCRIPT_HIRAGANA\nand %PANGO_SCRIPT_KATAKANA both map to the OT tag 'kana'.\nThis function will return %PANGO_SCRIPT_HIRAGANA for\n'kana'."
+                    },
+                    "source-position": {
+                        "@filename": "pango/pango-ot.h",
+                        "@line": "389"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "pango/pango-ot-tag.c",
+                            "@line": "79",
+                            "#text": "`PangoScript` corresponding to @script_tag or\n%PANGO_SCRIPT_UNKNOWN if none found."
+                        },
+                        "type": {
+                            "@name": "Pango.Script",
+                            "@c:type": "PangoScript"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "script_tag",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "pango/pango-ot-tag.c",
+                                "@line": "65",
+                                "#text": "A `PangoOTTag` OpenType script tag"
+                            },
+                            "type": {
+                                "@name": "Tag",
+                                "@c:type": "PangoOTTag"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

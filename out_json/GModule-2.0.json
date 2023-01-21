@@ -1,0 +1,805 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "@xmlns:glib": "http://www.gtk.org/introspection/glib/1.0",
+        "include": {
+            "@name": "GLib",
+            "@version": "2.0"
+        },
+        "package": {
+            "@name": "gmodule-2.0"
+        },
+        "c:include": {
+            "@name": "gmodule.h"
+        },
+        "namespace": {
+            "@name": "GModule",
+            "@version": "2.0",
+            "@shared-library": "libgmodule-2.0.so.0",
+            "@c:identifier-prefixes": "G",
+            "@c:symbol-prefixes": "g",
+            "record": {
+                "@name": "Module",
+                "@c:type": "GModule",
+                "@disguised": "1",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "gmodule-2.0.c",
+                    "@line": "5",
+                    "#text": "The #GModule struct is an opaque data structure to represent a\n[dynamically-loaded module][glib-Dynamic-Loading-of-Modules].\nIt should only be accessed via the following functions."
+                },
+                "source-position": {
+                    "@filename": "gmodule.h",
+                    "@line": "67"
+                },
+                "method": [
+                    {
+                        "@name": "close",
+                        "@c:identifier": "g_module_close",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "185",
+                            "#text": "Closes a module."
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "107"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "191",
+                                "#text": "%TRUE on success"
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "module",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gmodule-2.0.c",
+                                    "@line": "187",
+                                    "#text": "a #GModule to close"
+                                },
+                                "type": {
+                                    "@name": "Module",
+                                    "@c:type": "GModule*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "make_resident",
+                        "@c:identifier": "g_module_make_resident",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "204",
+                            "#text": "Ensures that a module will never be unloaded.\nAny future g_module_close() calls on the module will be ignored."
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "111"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "type": {
+                                "@name": "none",
+                                "@c:type": "void"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "module",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gmodule-2.0.c",
+                                    "@line": "206",
+                                    "#text": "a #GModule to make permanently resident"
+                                },
+                                "type": {
+                                    "@name": "Module",
+                                    "@c:type": "GModule*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "name",
+                        "@c:identifier": "g_module_name",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "213",
+                            "#text": "Returns the filename that the module was opened with.\n\nIf @module refers to the application itself, \"main\" is returned."
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "125"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "221",
+                                "#text": "the filename of the module"
+                            },
+                            "type": {
+                                "@name": "utf8",
+                                "@c:type": "const gchar*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "module",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gmodule-2.0.c",
+                                    "@line": "215",
+                                    "#text": "a #GModule"
+                                },
+                                "type": {
+                                    "@name": "Module",
+                                    "@c:type": "GModule*"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@name": "symbol",
+                        "@c:identifier": "g_module_symbol",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "273",
+                            "#text": "Gets a symbol pointer from a module, such as one exported\nby %G_MODULE_EXPORT. Note that a valid symbol can be %NULL."
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "119"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "282",
+                                "#text": "%TRUE on success"
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "module",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gmodule-2.0.c",
+                                    "@line": "275",
+                                    "#text": "a #GModule"
+                                },
+                                "type": {
+                                    "@name": "Module",
+                                    "@c:type": "GModule*"
+                                }
+                            },
+                            "parameter": [
+                                {
+                                    "@name": "symbol_name",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gmodule-2.0.c",
+                                        "@line": "276",
+                                        "#text": "the name of the symbol to find"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const gchar*"
+                                    }
+                                },
+                                {
+                                    "@name": "symbol",
+                                    "@direction": "out",
+                                    "@caller-allocates": "0",
+                                    "@transfer-ownership": "full",
+                                    "@nullable": "1",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gmodule-2.0.c",
+                                        "@line": "277",
+                                        "#text": "returns the pointer to the symbol value"
+                                    },
+                                    "type": {
+                                        "@name": "gpointer",
+                                        "@c:type": "gpointer*"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "function": [
+                    {
+                        "@name": "build_path",
+                        "@c:identifier": "g_module_build_path",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "159",
+                            "#text": "A portable way to build the filename of a module. The platform-specific\nprefix and suffix are added to the filename, if needed, and the result\nis added to the directory, using the correct separator character.\n\nThe directory should specify the directory where the module can be found.\nIt can be %NULL or an empty string to indicate that the module is in a\nstandard platform-specific directory, though this is not recommended\nsince the wrong module may be found.\n\nFor example, calling g_module_build_path() on a Linux system with a\n@directory of `/lib` and a @module_name of \"mylibrary\" will return\n`/lib/libmylibrary.so`. On a Windows system, using `\\Windows` as the\ndirectory it will return `\\Windows\\mylibrary.dll`."
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "139"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "full",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "180",
+                                "#text": "the complete path of the module, including the standard library\n    prefix and suffix. This should be freed when no longer needed"
+                            },
+                            "type": {
+                                "@name": "utf8",
+                                "@c:type": "gchar*"
+                            }
+                        },
+                        "parameters": {
+                            "parameter": [
+                                {
+                                    "@name": "directory",
+                                    "@transfer-ownership": "none",
+                                    "@nullable": "1",
+                                    "@allow-none": "1",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gmodule-2.0.c",
+                                        "@line": "161",
+                                        "#text": "the directory where the module is. This can be\n    %NULL or the empty string to indicate that the standard platform-specific\n    directories will be used, though that is not recommended"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const gchar*"
+                                    }
+                                },
+                                {
+                                    "@name": "module_name",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gmodule-2.0.c",
+                                        "@line": "164",
+                                        "#text": "the name of the module"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const gchar*"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@name": "error",
+                        "@c:identifier": "g_module_error",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "195",
+                            "#text": "Gets a string describing the last module error."
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "115"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "200",
+                                "#text": "a string describing the last module error"
+                            },
+                            "type": {
+                                "@name": "utf8",
+                                "@c:type": "const gchar*"
+                            }
+                        }
+                    },
+                    {
+                        "@name": "error_quark",
+                        "@c:identifier": "g_module_error_quark",
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "type": {
+                                "@name": "GLib.Quark",
+                                "@c:type": "GQuark"
+                            }
+                        }
+                    },
+                    {
+                        "@name": "open",
+                        "@c:identifier": "g_module_open",
+                        "@introspectable": "0",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "225",
+                            "#text": "A thin wrapper function around g_module_open_full()"
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "97"
+                        },
+                        "return-value": {
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "234",
+                                "#text": "a #GModule on success, or %NULL on failure"
+                            },
+                            "type": {
+                                "@name": "Module",
+                                "@c:type": "GModule*"
+                            }
+                        },
+                        "parameters": {
+                            "parameter": [
+                                {
+                                    "@name": "file_name",
+                                    "@transfer-ownership": "none",
+                                    "@nullable": "1",
+                                    "@allow-none": "1",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gmodule-2.0.c",
+                                        "@line": "227",
+                                        "#text": "the name of the file containing the module, or %NULL\n    to obtain a #GModule representing the main program itself"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const gchar*"
+                                    }
+                                },
+                                {
+                                    "@name": "flags",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gmodule-2.0.c",
+                                        "@line": "229",
+                                        "#text": "the flags used for opening the module. This can be the\n    logical OR of any of the #GModuleFlags."
+                                    },
+                                    "type": {
+                                        "@name": "ModuleFlags",
+                                        "@c:type": "GModuleFlags"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@name": "open_full",
+                        "@c:identifier": "g_module_open_full",
+                        "@version": "2.70",
+                        "@introspectable": "0",
+                        "@throws": "1",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "238",
+                            "#text": "Opens a module. If the module has already been opened,\nits reference count is incremented.\n\nFirst of all g_module_open_full() tries to open @file_name as a module.\nIf that fails and @file_name has the \".la\"-suffix (and is a libtool\narchive) it tries to open the corresponding module. If that fails\nand it doesn't have the proper module suffix for the platform\n(%G_MODULE_SUFFIX), this suffix will be appended and the corresponding\nmodule will be opened. If that fails and @file_name doesn't have the\n\".la\"-suffix, this suffix is appended and g_module_open_full() tries to open\nthe corresponding module. If eventually that fails as well, %NULL is\nreturned."
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "101"
+                        },
+                        "return-value": {
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "259",
+                                "#text": "a #GModule on success, or %NULL on failure"
+                            },
+                            "type": {
+                                "@name": "Module",
+                                "@c:type": "GModule*"
+                            }
+                        },
+                        "parameters": {
+                            "parameter": [
+                                {
+                                    "@name": "file_name",
+                                    "@transfer-ownership": "none",
+                                    "@nullable": "1",
+                                    "@allow-none": "1",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gmodule-2.0.c",
+                                        "@line": "240",
+                                        "#text": "the name of the file containing the module, or %NULL\n    to obtain a #GModule representing the main program itself"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const gchar*"
+                                    }
+                                },
+                                {
+                                    "@name": "flags",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gmodule-2.0.c",
+                                        "@line": "242",
+                                        "#text": "the flags used for opening the module. This can be the\n    logical OR of any of the #GModuleFlags"
+                                    },
+                                    "type": {
+                                        "@name": "ModuleFlags",
+                                        "@c:type": "GModuleFlags"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@name": "supported",
+                        "@c:identifier": "g_module_supported",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "264",
+                            "#text": "Checks if modules are supported on the current platform."
+                        },
+                        "source-position": {
+                            "@filename": "gmodule.h",
+                            "@line": "93"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "269",
+                                "#text": "%TRUE if modules are supported"
+                            },
+                            "type": {
+                                "@name": "gboolean",
+                                "@c:type": "gboolean"
+                            }
+                        }
+                    }
+                ]
+            },
+            "callback": [
+                {
+                    "@name": "ModuleCheckInit",
+                    "@c:type": "GModuleCheckInit",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gmodule-2.0.c",
+                        "@line": "14",
+                        "#text": "Specifies the type of the module initialization function.\nIf a module contains a function named g_module_check_init() it is called\nautomatically when the module is loaded. It is passed the #GModule structure\nand should return %NULL on success or a string describing the initialization\nerror."
+                    },
+                    "source-position": {
+                        "@filename": "gmodule.h",
+                        "@line": "68"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "24",
+                            "#text": "%NULL on success, or a string describing the initialization error"
+                        },
+                        "type": {
+                            "@name": "utf8",
+                            "@c:type": "const gchar*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "module",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "16",
+                                "#text": "the #GModule corresponding to the module which has just been loaded"
+                            },
+                            "type": {
+                                "@name": "Module",
+                                "@c:type": "GModule*"
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "ModuleUnload",
+                    "@c:type": "GModuleUnload",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gmodule-2.0.c",
+                        "@line": "28",
+                        "#text": "Specifies the type of the module function called when it is unloaded.\nIf a module contains a function named g_module_unload() it is called\nautomatically when the module is unloaded.\nIt is passed the #GModule structure."
+                    },
+                    "source-position": {
+                        "@filename": "gmodule.h",
+                        "@line": "69"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "none",
+                            "@c:type": "void"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "module",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gmodule-2.0.c",
+                                "@line": "30",
+                                "#text": "the #GModule about to be unloaded"
+                            },
+                            "type": {
+                                "@name": "Module",
+                                "@c:type": "GModule*"
+                            }
+                        }
+                    }
+                }
+            ],
+            "enumeration": {
+                "@name": "ModuleError",
+                "@version": "2.70",
+                "@c:type": "GModuleError",
+                "@glib:error-domain": "g-module-error-quark",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "gmodule.h",
+                    "@line": "75",
+                    "#text": "Errors returned by g_module_open_full()."
+                },
+                "source-position": {
+                    "@filename": "gmodule.h",
+                    "@line": "88"
+                },
+                "member": [
+                    {
+                        "@name": "failed",
+                        "@value": "0",
+                        "@c:identifier": "G_MODULE_ERROR_FAILED",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule.h",
+                            "@line": "77",
+                            "#text": "there was an error loading or opening a module file"
+                        }
+                    },
+                    {
+                        "@name": "check_failed",
+                        "@value": "1",
+                        "@c:identifier": "G_MODULE_ERROR_CHECK_FAILED",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule.h",
+                            "@line": "78",
+                            "#text": "a module returned an error from its `g_module_check_init()` function"
+                        }
+                    }
+                ]
+            },
+            "bitfield": {
+                "@name": "ModuleFlags",
+                "@c:type": "GModuleFlags",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "gmodule.h",
+                    "@line": "46",
+                    "#text": "Flags passed to g_module_open().\nNote that these flags are not supported on all platforms."
+                },
+                "source-position": {
+                    "@filename": "gmodule.h",
+                    "@line": "65"
+                },
+                "member": [
+                    {
+                        "@name": "lazy",
+                        "@value": "1",
+                        "@c:identifier": "G_MODULE_BIND_LAZY",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule.h",
+                            "@line": "48",
+                            "#text": "specifies that symbols are only resolved when\n    needed. The default action is to bind all symbols when the module\n    is loaded."
+                        }
+                    },
+                    {
+                        "@name": "local",
+                        "@value": "2",
+                        "@c:identifier": "G_MODULE_BIND_LOCAL",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule.h",
+                            "@line": "51",
+                            "#text": "specifies that symbols in the module should\n    not be added to the global name space. The default action on most\n    platforms is to place symbols in the module in the global name space,\n    which may cause conflicts with existing symbols."
+                        }
+                    },
+                    {
+                        "@name": "mask",
+                        "@value": "3",
+                        "@c:identifier": "G_MODULE_BIND_MASK",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule.h",
+                            "@line": "55",
+                            "#text": "mask for all flags."
+                        }
+                    }
+                ]
+            },
+            "function": [
+                {
+                    "@name": "module_build_path",
+                    "@c:identifier": "g_module_build_path",
+                    "@moved-to": "Module.build_path",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gmodule-2.0.c",
+                        "@line": "159",
+                        "#text": "A portable way to build the filename of a module. The platform-specific\nprefix and suffix are added to the filename, if needed, and the result\nis added to the directory, using the correct separator character.\n\nThe directory should specify the directory where the module can be found.\nIt can be %NULL or an empty string to indicate that the module is in a\nstandard platform-specific directory, though this is not recommended\nsince the wrong module may be found.\n\nFor example, calling g_module_build_path() on a Linux system with a\n@directory of `/lib` and a @module_name of \"mylibrary\" will return\n`/lib/libmylibrary.so`. On a Windows system, using `\\Windows` as the\ndirectory it will return `\\Windows\\mylibrary.dll`."
+                    },
+                    "source-position": {
+                        "@filename": "gmodule.h",
+                        "@line": "139"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "full",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "180",
+                            "#text": "the complete path of the module, including the standard library\n    prefix and suffix. This should be freed when no longer needed"
+                        },
+                        "type": {
+                            "@name": "utf8",
+                            "@c:type": "gchar*"
+                        }
+                    },
+                    "parameters": {
+                        "parameter": [
+                            {
+                                "@name": "directory",
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "@allow-none": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gmodule-2.0.c",
+                                    "@line": "161",
+                                    "#text": "the directory where the module is. This can be\n    %NULL or the empty string to indicate that the standard platform-specific\n    directories will be used, though that is not recommended"
+                                },
+                                "type": {
+                                    "@name": "utf8",
+                                    "@c:type": "const gchar*"
+                                }
+                            },
+                            {
+                                "@name": "module_name",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gmodule-2.0.c",
+                                    "@line": "164",
+                                    "#text": "the name of the module"
+                                },
+                                "type": {
+                                    "@name": "utf8",
+                                    "@c:type": "const gchar*"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@name": "module_error",
+                    "@c:identifier": "g_module_error",
+                    "@moved-to": "Module.error",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gmodule-2.0.c",
+                        "@line": "195",
+                        "#text": "Gets a string describing the last module error."
+                    },
+                    "source-position": {
+                        "@filename": "gmodule.h",
+                        "@line": "115"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "200",
+                            "#text": "a string describing the last module error"
+                        },
+                        "type": {
+                            "@name": "utf8",
+                            "@c:type": "const gchar*"
+                        }
+                    }
+                },
+                {
+                    "@name": "module_error_quark",
+                    "@c:identifier": "g_module_error_quark",
+                    "@moved-to": "Module.error_quark",
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "type": {
+                            "@name": "GLib.Quark",
+                            "@c:type": "GQuark"
+                        }
+                    }
+                },
+                {
+                    "@name": "module_supported",
+                    "@c:identifier": "g_module_supported",
+                    "@moved-to": "Module.supported",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gmodule-2.0.c",
+                        "@line": "264",
+                        "#text": "Checks if modules are supported on the current platform."
+                    },
+                    "source-position": {
+                        "@filename": "gmodule.h",
+                        "@line": "93"
+                    },
+                    "return-value": {
+                        "@transfer-ownership": "none",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gmodule-2.0.c",
+                            "@line": "269",
+                            "#text": "%TRUE if modules are supported"
+                        },
+                        "type": {
+                            "@name": "gboolean",
+                            "@c:type": "gboolean"
+                        }
+                    }
+                }
+            ],
+            "docsection": {
+                "@name": "modules",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "gmodule-2.0.c",
+                    "@line": "79",
+                    "#text": "These functions provide a portable way to dynamically load object files\n(commonly known as 'plug-ins'). The current implementation supports all\nsystems that provide an implementation of dlopen() (e.g. Linux/Sun), as\nwell as Windows platforms via DLLs.\n\nA program which wants to use these functions must be linked to the\nlibraries output by the command `pkg-config --libs gmodule-2.0`.\n\nTo use them you must first determine whether dynamic loading\nis supported on the platform by calling g_module_supported().\nIf it is, you can open a module with g_module_open(),\nfind the module's symbols (e.g. function names) with g_module_symbol(),\nand later close the module with g_module_close().\ng_module_name() will return the file name of a currently opened module.\n\nIf any of the above functions fail, the error status can be found with\ng_module_error().\n\nThe #GModule implementation features reference counting for opened modules,\nand supports hook functions within a module which are called when the\nmodule is loaded and unloaded (see #GModuleCheckInit and #GModuleUnload).\n\nIf your module introduces static data to common subsystems in the running\nprogram, e.g. through calling\n`g_quark_from_static_string (\"my-module-stuff\")`,\nit must ensure that it is never unloaded, by calling g_module_make_resident().\n\nExample: Calling a function defined in a GModule\n|[<!-- language=\"C\" -->\n// the function signature for 'say_hello'\ntypedef void (* SayHelloFunc) (const char *message);\n\ngboolean\njust_say_hello (const char *filename, GError **error)\n{\n  SayHelloFunc  say_hello;\n  GModule      *module;\n\n  module = g_module_open (filename, G_MODULE_BIND_LAZY);\n  if (!module)\n    {\n      g_set_error (error, FOO_ERROR, FOO_ERROR_BLAH,\n                   \"%s\", g_module_error ());\n      return FALSE;\n    }\n\n  if (!g_module_symbol (module, \"say_hello\", (gpointer *)&say_hello))\n    {\n      g_set_error (error, SAY_ERROR, SAY_ERROR_OPEN,\n                   \"%s: %s\", filename, g_module_error ());\n      if (!g_module_close (module))\n        g_warning (\"%s: %s\", filename, g_module_error ());\n      return FALSE;\n    }\n\n  if (say_hello == NULL)\n    {\n      g_set_error (error, SAY_ERROR, SAY_ERROR_OPEN,\n                   \"symbol say_hello is NULL\");\n      if (!g_module_close (module))\n        g_warning (\"%s: %s\", filename, g_module_error ());\n      return FALSE;\n    }\n\n  // call our function in the module\n  say_hello (\"Hello world!\");\n\n  if (!g_module_close (module))\n    g_warning (\"%s: %s\", filename, g_module_error ());\n  return TRUE;\n }\n]|"
+                }
+            }
+        }
+    }
+}

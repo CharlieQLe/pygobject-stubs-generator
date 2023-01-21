@@ -1,0 +1,1559 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "@xmlns:glib": "http://www.gtk.org/introspection/glib/1.0",
+        "include": {
+            "@name": "Gdk",
+            "@version": "4.0"
+        },
+        "package": {
+            "@name": "gtk4-wayland"
+        },
+        "c:include": {
+            "@name": "gdk/wayland/gdkwayland.h"
+        },
+        "namespace": {
+            "@name": "GdkWayland",
+            "@version": "4.0",
+            "@shared-library": "libgtk-4.so.1",
+            "@c:identifier-prefixes": "Gdk",
+            "@c:symbol-prefixes": "gdk",
+            "function-macro": [
+                {
+                    "@name": "IS_WAYLAND_DEVICE",
+                    "@c:identifier": "GDK_IS_WAYLAND_DEVICE",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                        "@line": "42"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "o"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_WAYLAND_DEVICE_CLASS",
+                    "@c:identifier": "GDK_IS_WAYLAND_DEVICE_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                        "@line": "43"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "c"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_WAYLAND_DISPLAY",
+                    "@c:identifier": "GDK_IS_WAYLAND_DISPLAY",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                        "@line": "41"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_WAYLAND_DISPLAY_CLASS",
+                    "@c:identifier": "GDK_IS_WAYLAND_DISPLAY_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                        "@line": "42"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "klass"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_WAYLAND_MONITOR",
+                    "@c:identifier": "GDK_IS_WAYLAND_MONITOR",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandmonitor.h",
+                        "@line": "35"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_WAYLAND_POPUP",
+                    "@c:identifier": "GDK_IS_WAYLAND_POPUP",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                        "@line": "51"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_WAYLAND_SEAT",
+                    "@c:identifier": "GDK_IS_WAYLAND_SEAT",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandseat.h",
+                        "@line": "41"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "o"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_WAYLAND_SURFACE",
+                    "@c:identifier": "GDK_IS_WAYLAND_SURFACE",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                        "@line": "43"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "IS_WAYLAND_TOPLEVEL",
+                    "@c:identifier": "GDK_IS_WAYLAND_TOPLEVEL",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                        "@line": "47"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_DEVICE",
+                    "@c:identifier": "GDK_WAYLAND_DEVICE",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                        "@line": "40"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "o"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_DEVICE_CLASS",
+                    "@c:identifier": "GDK_WAYLAND_DEVICE_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                        "@line": "41"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "c"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_DEVICE_GET_CLASS",
+                    "@c:identifier": "GDK_WAYLAND_DEVICE_GET_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                        "@line": "44"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "o"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_DISPLAY",
+                    "@c:identifier": "GDK_WAYLAND_DISPLAY",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                        "@line": "39"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_DISPLAY_CLASS",
+                    "@c:identifier": "GDK_WAYLAND_DISPLAY_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                        "@line": "40"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "klass"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_DISPLAY_GET_CLASS",
+                    "@c:identifier": "GDK_WAYLAND_DISPLAY_GET_CLASS",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                        "@line": "43"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_GL_CONTEXT",
+                    "@c:identifier": "GDK_WAYLAND_GL_CONTEXT",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandglcontext.h",
+                        "@line": "34"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_IS_GL_CONTEXT",
+                    "@c:identifier": "GDK_WAYLAND_IS_GL_CONTEXT",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandglcontext.h",
+                        "@line": "35"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "obj"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_MONITOR",
+                    "@c:identifier": "GDK_WAYLAND_MONITOR",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandmonitor.h",
+                        "@line": "34"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_POPUP",
+                    "@c:identifier": "GDK_WAYLAND_POPUP",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                        "@line": "50"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_SEAT",
+                    "@c:identifier": "GDK_WAYLAND_SEAT",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandseat.h",
+                        "@line": "40"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "o"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_SURFACE",
+                    "@c:identifier": "GDK_WAYLAND_SURFACE",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                        "@line": "42"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                },
+                {
+                    "@name": "WAYLAND_TOPLEVEL",
+                    "@c:identifier": "GDK_WAYLAND_TOPLEVEL",
+                    "@introspectable": "0",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                        "@line": "46"
+                    },
+                    "parameters": {
+                        "parameter": {
+                            "@name": "object"
+                        }
+                    }
+                }
+            ],
+            "class": [
+                {
+                    "@name": "WaylandDevice",
+                    "@c:symbol-prefix": "wayland_device",
+                    "@c:type": "GdkWaylandDevice",
+                    "@parent": "Gdk.Device",
+                    "@glib:type-name": "GdkWaylandDevice",
+                    "@glib:get-type": "gdk_wayland_device_get_type",
+                    "@glib:type-struct": "WaylandDeviceClass",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                        "@line": "58",
+                        "#text": "The Wayland implementation of `GdkDevice`.\n\nBeyond the regular [class@Gdk.Device] API, the Wayland implementation\nprovides access to Wayland objects such as the `wl_seat` with\n[method@GdkWayland.WaylandDevice.get_wl_seat], the `wl_keyboard` with\n[method@GdkWayland.WaylandDevice.get_wl_keyboard] and the `wl_pointer` with\n[method@GdkWayland.WaylandDevice.get_wl_pointer]."
+                    },
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                        "@line": "37"
+                    },
+                    "method": [
+                        {
+                            "@name": "get_node_path",
+                            "@c:identifier": "gdk_wayland_device_get_node_path",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                "@line": "5351",
+                                "#text": "Returns the `/dev/input/event*` path of this device.\n\nFor `GdkDevice`s that possibly coalesce multiple hardware\ndevices (eg. mouse, keyboard, touch,...), this function\nwill return %NULL.\n\nThis is most notably implemented for devices of type\n%GDK_SOURCE_PEN, %GDK_SOURCE_TABLET_PAD."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                                "@line": "59"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                    "@line": "5364",
+                                    "#text": "the `/dev/input/event*`\n  path of this device"
+                                },
+                                "type": {
+                                    "@name": "utf8",
+                                    "@c:type": "const char*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "device",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                        "@line": "5353",
+                                        "#text": "a `GdkDevice`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDevice",
+                                        "@c:type": "GdkDevice*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_wl_keyboard",
+                            "@c:identifier": "gdk_wayland_device_get_wl_keyboard",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                "@line": "1030",
+                                "#text": "Returns the Wayland `wl_keyboard` of a `GdkDevice`."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                                "@line": "54"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                    "@line": "1036",
+                                    "#text": "a Wayland `wl_keyboard`"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "wl_keyboard*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "device",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                        "@line": "1032",
+                                        "#text": "a `GdkDevice`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDevice",
+                                        "@c:type": "GdkDevice*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_wl_pointer",
+                            "@c:identifier": "gdk_wayland_device_get_wl_pointer",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                "@line": "1011",
+                                "#text": "Returns the Wayland `wl_pointer` of a `GdkDevice`."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                                "@line": "52"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                    "@line": "1017",
+                                    "#text": "a Wayland `wl_pointer`"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "wl_pointer*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "device",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                        "@line": "1013",
+                                        "#text": "a `GdkDevice`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDevice",
+                                        "@c:type": "GdkDevice*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_wl_seat",
+                            "@c:identifier": "gdk_wayland_device_get_wl_seat",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                "@line": "992",
+                                "#text": "Returns the Wayland `wl_seat` of a `GdkDevice`."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                                "@line": "50"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                    "@line": "998",
+                                    "#text": "a Wayland `wl_seat`"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "wl_seat*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "device",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                        "@line": "994",
+                                        "#text": "a `GdkDevice`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDevice",
+                                        "@c:type": "GdkDevice*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_xkb_keymap",
+                            "@c:identifier": "gdk_wayland_device_get_xkb_keymap",
+                            "@version": "4.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                "@line": "1049",
+                                "#text": "Returns the `xkb_keymap` of a `GdkDevice`."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                                "@line": "56"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                    "@line": "1055",
+                                    "#text": "a `struct xkb_keymap`"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "xkb_keymap*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "device",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                        "@line": "1051",
+                                        "#text": "a `GdkDevice`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDevice",
+                                        "@c:type": "GdkDevice*"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "WaylandDisplay",
+                    "@c:symbol-prefix": "wayland_display",
+                    "@c:type": "GdkWaylandDisplay",
+                    "@parent": "Gdk.Display",
+                    "@glib:type-name": "GdkWaylandDisplay",
+                    "@glib:get-type": "gdk_wayland_display_get_type",
+                    "@glib:type-struct": "WaylandDisplayClass",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                        "@line": "74",
+                        "#text": "The Wayland implementation of `GdkDisplay`.\n\nBeyond the regular [class@Gdk.Display] API, the Wayland implementation\nprovides access to Wayland objects such as the `wl_display` with\n[method@GdkWayland.WaylandDisplay.get_wl_display], the `wl_compositor` with\n[method@GdkWayland.WaylandDisplay.get_wl_compositor].\n\nYou can find out what Wayland globals are supported by a display\nwith [method@GdkWayland.WaylandDisplay.query_registry]."
+                    },
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                        "@line": "36"
+                    },
+                    "method": [
+                        {
+                            "@name": "get_egl_display",
+                            "@c:identifier": "gdk_wayland_display_get_egl_display",
+                            "@version": "4.4",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkglcontext-wayland.c",
+                                "@line": "89",
+                                "#text": "Retrieves the EGL display connection object for the given GDK display."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                                "@line": "67"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkglcontext-wayland.c",
+                                    "@line": "95",
+                                    "#text": "the EGL display"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "gpointer"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "display",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkglcontext-wayland.c",
+                                        "@line": "91",
+                                        "#text": "a Wayland display"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDisplay",
+                                        "@c:type": "GdkDisplay*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_startup_notification_id",
+                            "@c:identifier": "gdk_wayland_display_get_startup_notification_id",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                "@line": "809",
+                                "#text": "Gets the startup notification ID for a Wayland display, or %NULL\nif no ID has been defined."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                                "@line": "57"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                    "@line": "816",
+                                    "#text": "the startup notification ID for @display"
+                                },
+                                "type": {
+                                    "@name": "utf8",
+                                    "@c:type": "const char*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "display",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                        "@line": "811",
+                                        "#text": "a `GdkDisplay`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDisplay",
+                                        "@c:type": "GdkDisplay*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_wl_compositor",
+                            "@c:identifier": "gdk_wayland_display_get_wl_compositor",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                "@line": "1142",
+                                "#text": "Returns the Wayland `wl_compositor` of a `GdkDisplay`."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                                "@line": "51"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                    "@line": "1148",
+                                    "#text": "a Wayland `wl_compositor`"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "wl_compositor*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "display",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                        "@line": "1144",
+                                        "#text": "a `GdkDisplay`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDisplay",
+                                        "@c:type": "GdkDisplay*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "get_wl_display",
+                            "@c:identifier": "gdk_wayland_display_get_wl_display",
+                            "@introspectable": "0",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                "@line": "1126",
+                                "#text": "Returns the Wayland `wl_display` of a `GdkDisplay`."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                                "@line": "49"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "@nullable": "1",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                    "@line": "1132",
+                                    "#text": "a Wayland `wl_display`"
+                                },
+                                "type": {
+                                    "@name": "gpointer",
+                                    "@c:type": "wl_display*"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "display",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                        "@line": "1128",
+                                        "#text": "a `GdkDisplay`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDisplay",
+                                        "@c:type": "GdkDisplay*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "query_registry",
+                            "@c:identifier": "gdk_wayland_display_query_registry",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                "@line": "2638",
+                                "#text": "Returns %TRUE if the interface was found in the display\n`wl_registry.global` handler."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                                "@line": "63"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                    "@line": "2646",
+                                    "#text": "%TRUE if the global is offered by the compositor"
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "display",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                        "@line": "2640",
+                                        "#text": "a `GdkDisplay`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDisplay",
+                                        "@c:type": "GdkDisplay*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "global",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                        "@line": "2641",
+                                        "#text": "global interface to query in the registry"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const char*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "set_cursor_theme",
+                            "@c:identifier": "gdk_wayland_display_set_cursor_theme",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                "@line": "1042",
+                                "#text": "Sets the cursor theme for the given @display."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                                "@line": "53"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "display",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                        "@line": "1044",
+                                        "#text": "a `GdkDisplay`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDisplay",
+                                        "@c:type": "GdkDisplay*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "name",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                            "@line": "1045",
+                                            "#text": "the new cursor theme"
+                                        },
+                                        "type": {
+                                            "@name": "utf8",
+                                            "@c:type": "const char*"
+                                        }
+                                    },
+                                    {
+                                        "@name": "size",
+                                        "@transfer-ownership": "none",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                            "@line": "1046",
+                                            "#text": "the size to use for cursors"
+                                        },
+                                        "type": {
+                                            "@name": "gint",
+                                            "@c:type": "int"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "set_startup_notification_id",
+                            "@c:identifier": "gdk_wayland_display_set_startup_notification_id",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                "@line": "824",
+                                "#text": "Sets the startup notification ID for a display.\n\nThis is usually taken from the value of the `DESKTOP_STARTUP_ID`\nenvironment variable, but in some cases (such as the application not\nbeing launched using exec()) it can come from other sources.\n\nThe startup ID is also what is used to signal that the startup is\ncomplete (for example, when opening a window or when calling\n[method@Gdk.Display.notify_startup_complete])."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                                "@line": "59"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "display",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                        "@line": "826",
+                                        "#text": "a `GdkDisplay`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandDisplay",
+                                        "@c:type": "GdkDisplay*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "startup_id",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdkdisplay-wayland.c",
+                                        "@line": "827",
+                                        "#text": "the startup notification ID (must be valid utf8)"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const char*"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@name": "WaylandGLContext",
+                    "@c:symbol-prefix": "wayland_gl_context",
+                    "@c:type": "GdkWaylandGLContext",
+                    "@parent": "Gdk.GLContext",
+                    "@glib:type-name": "GdkWaylandGLContext",
+                    "@glib:get-type": "gdk_wayland_gl_context_get_type",
+                    "@glib:type-struct": "WaylandGLContextClass",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gdk/wayland/gdkglcontext-wayland.c",
+                        "@line": "40",
+                        "#text": "The Wayland implementation of `GdkGLContext`."
+                    },
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandglcontext.h",
+                        "@line": "38"
+                    }
+                },
+                {
+                    "@name": "WaylandMonitor",
+                    "@c:symbol-prefix": "wayland_monitor",
+                    "@c:type": "GdkWaylandMonitor",
+                    "@parent": "Gdk.Monitor",
+                    "@glib:type-name": "GdkWaylandMonitor",
+                    "@glib:get-type": "gdk_wayland_monitor_get_type",
+                    "@glib:type-struct": "WaylandMonitorClass",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gdk/wayland/gdkmonitor-wayland.c",
+                        "@line": "26",
+                        "#text": "The Wayland implementation of `GdkMonitor`.\n\nBeyond the [class@Gdk.Monitor] API, the Wayland implementation\noffers access to the Wayland `wl_output` object with\n[method@GdkWayland.WaylandMonitor.get_wl_output]."
+                    },
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandmonitor.h",
+                        "@line": "38"
+                    },
+                    "method": {
+                        "@name": "get_wl_output",
+                        "@c:identifier": "gdk_wayland_monitor_get_wl_output",
+                        "@introspectable": "0",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gdk/wayland/gdkmonitor-wayland.c",
+                            "@line": "61",
+                            "#text": "Returns the Wayland `wl_output` of a `GdkMonitor`."
+                        },
+                        "source-position": {
+                            "@filename": "gdk/wayland/gdkwaylandmonitor.h",
+                            "@line": "44"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkmonitor-wayland.c",
+                                "@line": "67",
+                                "#text": "a Wayland `wl_output`"
+                            },
+                            "type": {
+                                "@name": "gpointer",
+                                "@c:type": "wl_output*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "monitor",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkmonitor-wayland.c",
+                                    "@line": "63",
+                                    "#text": "a `GdkMonitor`"
+                                },
+                                "type": {
+                                    "@name": "WaylandMonitor",
+                                    "@c:type": "GdkMonitor*"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "WaylandPopup",
+                    "@c:symbol-prefix": "wayland_popup",
+                    "@c:type": "GdkWaylandPopup",
+                    "@parent": "WaylandSurface",
+                    "@glib:type-name": "GdkWaylandPopup",
+                    "@glib:get-type": "gdk_wayland_popup_get_type",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                        "@line": "68",
+                        "#text": "The Wayland implementation of `GdkPopup`."
+                    },
+                    "implements": {
+                        "@name": "Gdk.Popup"
+                    }
+                },
+                {
+                    "@name": "WaylandSeat",
+                    "@c:symbol-prefix": "wayland_seat",
+                    "@c:type": "GdkWaylandSeat",
+                    "@parent": "Gdk.Seat",
+                    "@glib:type-name": "GdkWaylandSeat",
+                    "@glib:get-type": "gdk_wayland_seat_get_type",
+                    "@glib:type-struct": "WaylandSeatClass",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                        "@line": "70",
+                        "#text": "The Wayland implementation of `GdkSeat`.\n\nBeyond the regular [class@Gdk.Seat] API, the Wayland implementation\nprovides access to the Wayland `wl_seat` object with\n[method@GdkWayland.WaylandSeat.get_wl_seat]."
+                    },
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandseat.h",
+                        "@line": "37"
+                    },
+                    "method": {
+                        "@name": "get_wl_seat",
+                        "@c:identifier": "gdk_wayland_seat_get_wl_seat",
+                        "@introspectable": "0",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                            "@line": "5335",
+                            "#text": "Returns the Wayland `wl_seat` of a `GdkSeat`."
+                        },
+                        "source-position": {
+                            "@filename": "gdk/wayland/gdkwaylandseat.h",
+                            "@line": "47"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                "@line": "5341",
+                                "#text": "a Wayland `wl_seat`"
+                            },
+                            "type": {
+                                "@name": "gpointer",
+                                "@c:type": "wl_seat*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "seat",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdkdevice-wayland.c",
+                                    "@line": "5337",
+                                    "#text": "a `GdkSeat`"
+                                },
+                                "type": {
+                                    "@name": "WaylandSeat",
+                                    "@c:type": "GdkSeat*"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "WaylandSurface",
+                    "@c:symbol-prefix": "wayland_surface",
+                    "@c:type": "GdkWaylandSurface",
+                    "@parent": "Gdk.Surface",
+                    "@glib:type-name": "GdkWaylandSurface",
+                    "@glib:get-type": "gdk_wayland_surface_get_type",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                        "@line": "47",
+                        "#text": "The Wayland implementation of `GdkSurface`.\n\nBeyond the [class@Gdk.Surface] API, the Wayland implementation offers\naccess to the Wayland `wl_surface` object with\n[method@GdkWayland.WaylandSurface.get_wl_surface]."
+                    },
+                    "method": {
+                        "@name": "get_wl_surface",
+                        "@c:identifier": "gdk_wayland_surface_get_wl_surface",
+                        "@introspectable": "0",
+                        "doc": {
+                            "@xml:space": "preserve",
+                            "@filename": "gdk/wayland/gdksurface-wayland.c",
+                            "@line": "4417",
+                            "#text": "Returns the Wayland `wl_surface` of a `GdkSurface`."
+                        },
+                        "source-position": {
+                            "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                            "@line": "63"
+                        },
+                        "return-value": {
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                "@line": "4423",
+                                "#text": "a Wayland `wl_surface`"
+                            },
+                            "type": {
+                                "@name": "gpointer",
+                                "@c:type": "wl_surface*"
+                            }
+                        },
+                        "parameters": {
+                            "instance-parameter": {
+                                "@name": "surface",
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                    "@line": "4419",
+                                    "#text": "a `GdkSurface`"
+                                },
+                                "type": {
+                                    "@name": "WaylandSurface",
+                                    "@c:type": "GdkSurface*"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "@name": "WaylandToplevel",
+                    "@c:symbol-prefix": "wayland_toplevel",
+                    "@c:type": "GdkWaylandToplevel",
+                    "@parent": "WaylandSurface",
+                    "@glib:type-name": "GdkWaylandToplevel",
+                    "@glib:get-type": "gdk_wayland_toplevel_get_type",
+                    "doc": {
+                        "@xml:space": "preserve",
+                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                        "@line": "57",
+                        "#text": "The Wayland implementation of `GdkToplevel`.\n\nBeyond the [iface@Gdk.Toplevel] API, the Wayland implementation\nhas API to set up cross-process parent-child relationships between\nsurfaces with [method@GdkWayland.WaylandToplevel.export_handle] and\n[method@GdkWayland.WaylandToplevel.set_transient_for_exported]."
+                    },
+                    "implements": {
+                        "@name": "Gdk.Toplevel"
+                    },
+                    "method": [
+                        {
+                            "@name": "export_handle",
+                            "@c:identifier": "gdk_wayland_toplevel_export_handle",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                "@line": "4583",
+                                "#text": "Asynchronously obtains a handle for a surface that can be passed\nto other processes.\n\nWhen the handle has been obtained, @callback will be called.\n\nIt is an error to call this function on a surface that is already\nexported.\n\nWhen the handle is no longer needed, [method@GdkWayland.WaylandToplevel.unexport_handle]\nshould be called to clean up resources.\n\nThe main purpose for obtaining a handle is to mark a surface\nfrom another surface as transient for this one, see\n[method@GdkWayland.WaylandToplevel.set_transient_for_exported].\n\nNote that this API depends on an unstable Wayland protocol,\nand thus may require changes in the future."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                                "@line": "70"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                    "@line": "4608",
+                                    "#text": "%TRUE if the handle has been requested, %FALSE if\n  an error occurred."
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "toplevel",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                        "@line": "4585",
+                                        "#text": "the `GdkToplevel` to obtain a handle for"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandToplevel",
+                                        "@c:type": "GdkToplevel*"
+                                    }
+                                },
+                                "parameter": [
+                                    {
+                                        "@name": "callback",
+                                        "@transfer-ownership": "none",
+                                        "@scope": "notified",
+                                        "@closure": "1",
+                                        "@destroy": "2",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                            "@line": "4586",
+                                            "#text": "callback to call with the handle"
+                                        },
+                                        "type": {
+                                            "@name": "WaylandToplevelExported",
+                                            "@c:type": "GdkWaylandToplevelExported"
+                                        }
+                                    },
+                                    {
+                                        "@name": "user_data",
+                                        "@transfer-ownership": "none",
+                                        "@nullable": "1",
+                                        "@allow-none": "1",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                            "@line": "4587",
+                                            "#text": "user data for @callback"
+                                        },
+                                        "type": {
+                                            "@name": "gpointer",
+                                            "@c:type": "gpointer"
+                                        }
+                                    },
+                                    {
+                                        "@name": "destroy_func",
+                                        "@transfer-ownership": "none",
+                                        "@scope": "async",
+                                        "doc": {
+                                            "@xml:space": "preserve",
+                                            "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                            "@line": "4588",
+                                            "#text": "destroy notify for @user_data"
+                                        },
+                                        "type": {
+                                            "@name": "GLib.DestroyNotify",
+                                            "@c:type": "GDestroyNotify"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@name": "set_application_id",
+                            "@c:identifier": "gdk_wayland_toplevel_set_application_id",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                "@line": "1983",
+                                "#text": "Sets the application id on a `GdkToplevel`."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                                "@line": "83"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "toplevel",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                        "@line": "1985",
+                                        "#text": "a `GdkToplevel`"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandToplevel",
+                                        "@c:type": "GdkToplevel*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "application_id",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                        "@line": "1986",
+                                        "#text": "the application id for the @toplevel"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const char*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "set_transient_for_exported",
+                            "@c:identifier": "gdk_wayland_toplevel_set_transient_for_exported",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                "@line": "4706",
+                                "#text": "Marks @toplevel as transient for the surface to which the given\n@parent_handle_str refers.\n\nTypically, the handle will originate from a\n[method@GdkWayland.WaylandToplevel.export_handle] call in another process.\n\nNote that this API depends on an unstable Wayland protocol,\nand thus may require changes in the future."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                                "@line": "79"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "doc": {
+                                    "@xml:space": "preserve",
+                                    "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                    "@line": "4720",
+                                    "#text": "%TRUE if the surface has been marked as transient,\n  %FALSE if an error occurred."
+                                },
+                                "type": {
+                                    "@name": "gboolean",
+                                    "@c:type": "gboolean"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "toplevel",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                        "@line": "4708",
+                                        "#text": "the `GdkToplevel` to make as transient"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandToplevel",
+                                        "@c:type": "GdkToplevel*"
+                                    }
+                                },
+                                "parameter": {
+                                    "@name": "parent_handle_str",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                        "@line": "4709",
+                                        "#text": "an exported handle for a surface"
+                                    },
+                                    "type": {
+                                        "@name": "utf8",
+                                        "@c:type": "const char*"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "@name": "unexport_handle",
+                            "@c:identifier": "gdk_wayland_toplevel_unexport_handle",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                "@line": "4652",
+                                "#text": "Destroys the handle that was obtained with\ngdk_wayland_toplevel_export_handle().\n\nIt is an error to call this function on a surface that\ndoes not have a handle.\n\nNote that this API depends on an unstable Wayland protocol,\nand thus may require changes in the future."
+                            },
+                            "source-position": {
+                                "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                                "@line": "76"
+                            },
+                            "return-value": {
+                                "@transfer-ownership": "none",
+                                "type": {
+                                    "@name": "none",
+                                    "@c:type": "void"
+                                }
+                            },
+                            "parameters": {
+                                "instance-parameter": {
+                                    "@name": "toplevel",
+                                    "@transfer-ownership": "none",
+                                    "doc": {
+                                        "@xml:space": "preserve",
+                                        "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                        "@line": "4654",
+                                        "#text": "the `GdkToplevel` to unexport"
+                                    },
+                                    "type": {
+                                        "@name": "WaylandToplevel",
+                                        "@c:type": "GdkToplevel*"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "record": [
+                {
+                    "@name": "WaylandDeviceClass",
+                    "@c:type": "GdkWaylandDeviceClass",
+                    "@disguised": "1",
+                    "@glib:is-gtype-struct-for": "WaylandDevice",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddevice.h",
+                        "@line": "37"
+                    }
+                },
+                {
+                    "@name": "WaylandDisplayClass",
+                    "@c:type": "GdkWaylandDisplayClass",
+                    "@disguised": "1",
+                    "@glib:is-gtype-struct-for": "WaylandDisplay",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylanddisplay.h",
+                        "@line": "36"
+                    }
+                },
+                {
+                    "@name": "WaylandGLContextClass",
+                    "@c:type": "GdkWaylandGLContextClass",
+                    "@disguised": "1",
+                    "@glib:is-gtype-struct-for": "WaylandGLContext",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandglcontext.h",
+                        "@line": "38"
+                    }
+                },
+                {
+                    "@name": "WaylandMonitorClass",
+                    "@c:type": "GdkWaylandMonitorClass",
+                    "@disguised": "1",
+                    "@glib:is-gtype-struct-for": "WaylandMonitor",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandmonitor.h",
+                        "@line": "38"
+                    }
+                },
+                {
+                    "@name": "WaylandSeatClass",
+                    "@c:type": "GdkWaylandSeatClass",
+                    "@disguised": "1",
+                    "@glib:is-gtype-struct-for": "WaylandSeat",
+                    "source-position": {
+                        "@filename": "gdk/wayland/gdkwaylandseat.h",
+                        "@line": "37"
+                    }
+                }
+            ],
+            "callback": {
+                "@name": "WaylandToplevelExported",
+                "@c:type": "GdkWaylandToplevelExported",
+                "doc": {
+                    "@xml:space": "preserve",
+                    "@filename": "gdk/wayland/gdksurface-wayland.c",
+                    "@line": "4562",
+                    "#text": "Callback that gets called when the handle for a surface has been\nobtained from the Wayland compositor.\n\nThis callback is used in [method@GdkWayland.WaylandToplevel.export_handle].\n\nThe @handle can be passed to other processes, for the purpose of\nmarking surfaces as transient for out-of-process surfaces."
+                },
+                "source-position": {
+                    "@filename": "gdk/wayland/gdkwaylandsurface.h",
+                    "@line": "65"
+                },
+                "return-value": {
+                    "@transfer-ownership": "none",
+                    "type": {
+                        "@name": "none",
+                        "@c:type": "void"
+                    }
+                },
+                "parameters": {
+                    "parameter": [
+                        {
+                            "@name": "toplevel",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                "@line": "4564",
+                                "#text": "the `GdkToplevel` that is exported"
+                            },
+                            "type": {
+                                "@name": "WaylandToplevel",
+                                "@c:type": "GdkToplevel*"
+                            }
+                        },
+                        {
+                            "@name": "handle",
+                            "@transfer-ownership": "none",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                "@line": "4565",
+                                "#text": "the handle"
+                            },
+                            "type": {
+                                "@name": "utf8",
+                                "@c:type": "const char*"
+                            }
+                        },
+                        {
+                            "@name": "user_data",
+                            "@transfer-ownership": "none",
+                            "@nullable": "1",
+                            "@allow-none": "1",
+                            "@closure": "2",
+                            "doc": {
+                                "@xml:space": "preserve",
+                                "@filename": "gdk/wayland/gdksurface-wayland.c",
+                                "@line": "4566",
+                                "#text": "user data that was passed to [method@GdkWayland.WaylandToplevel.export_handle]"
+                            },
+                            "type": {
+                                "@name": "gpointer",
+                                "@c:type": "gpointer"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,3171 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "namespace": {
+            "@name": "Vulkan",
+            "@version": "1.0",
+            "@c:identifier-prefixes": "VK",
+            "@c:symbol-prefixes": "vk",
+            "record": [
+                {
+                    "@name": "Flags",
+                    "@c:type": "VkFlags"
+                },
+                {
+                    "@name": "Bool32",
+                    "@c:type": "VkBool32"
+                },
+                {
+                    "@name": "DeviceSize",
+                    "@c:type": "VkDeviceSize"
+                },
+                {
+                    "@name": "SampleMask",
+                    "@c:type": "VkSampleMask"
+                },
+                {
+                    "@name": "Instance",
+                    "@c:type": "VkInstance"
+                },
+                {
+                    "@name": "PhysicalDevice",
+                    "@c:type": "VkPhysicalDevice"
+                },
+                {
+                    "@name": "Device",
+                    "@c:type": "VkDevice"
+                },
+                {
+                    "@name": "Queue",
+                    "@c:type": "VkQueue"
+                },
+                {
+                    "@name": "Semaphore",
+                    "@c:type": "VkSemaphore"
+                },
+                {
+                    "@name": "CommandBuffer",
+                    "@c:type": "VkCommandBuffer"
+                },
+                {
+                    "@name": "Fence",
+                    "@c:type": "VkFence"
+                },
+                {
+                    "@name": "DeviceMemory",
+                    "@c:type": "VkDeviceMemory"
+                },
+                {
+                    "@name": "Buffer",
+                    "@c:type": "VkBuffer"
+                },
+                {
+                    "@name": "Image",
+                    "@c:type": "VkImage"
+                },
+                {
+                    "@name": "Event",
+                    "@c:type": "VkEvent"
+                },
+                {
+                    "@name": "QueryPool",
+                    "@c:type": "VkQueryPool"
+                },
+                {
+                    "@name": "BufferView",
+                    "@c:type": "VkBufferView"
+                },
+                {
+                    "@name": "ImageView",
+                    "@c:type": "VkImageView"
+                },
+                {
+                    "@name": "ShaderModule",
+                    "@c:type": "VkShaderModule"
+                },
+                {
+                    "@name": "PipelineCache",
+                    "@c:type": "VkPipelineCache"
+                },
+                {
+                    "@name": "PipelineLayout",
+                    "@c:type": "VkPipelineLayout"
+                },
+                {
+                    "@name": "RenderPass",
+                    "@c:type": "VkRenderPass"
+                },
+                {
+                    "@name": "Pipeline",
+                    "@c:type": "VkPipeline"
+                },
+                {
+                    "@name": "DescriptorSetLayout",
+                    "@c:type": "VkDescriptorSetLayout"
+                },
+                {
+                    "@name": "Sampler",
+                    "@c:type": "VkSampler"
+                },
+                {
+                    "@name": "DescriptorPool",
+                    "@c:type": "VkDescriptorPool"
+                },
+                {
+                    "@name": "DescriptorSet",
+                    "@c:type": "VkDescriptorSet"
+                },
+                {
+                    "@name": "Framebuffer",
+                    "@c:type": "VkFramebuffer"
+                },
+                {
+                    "@name": "CommandPool",
+                    "@c:type": "VkCommandPool"
+                },
+                {
+                    "@name": "PipelineCacheHeaderVersion",
+                    "@c:type": "VkPipelineCacheHeaderVersion"
+                },
+                {
+                    "@name": "Result",
+                    "@c:type": "VkResult"
+                },
+                {
+                    "@name": "StructureType",
+                    "@c:type": "VkStructureType"
+                },
+                {
+                    "@name": "SystemAllocationScope",
+                    "@c:type": "VkSystemAllocationScope"
+                },
+                {
+                    "@name": "InternalAllocationType",
+                    "@c:type": "VkInternalAllocationType"
+                },
+                {
+                    "@name": "Format",
+                    "@c:type": "VkFormat"
+                },
+                {
+                    "@name": "ImageType",
+                    "@c:type": "VkImageType"
+                },
+                {
+                    "@name": "ImageTiling",
+                    "@c:type": "VkImageTiling"
+                },
+                {
+                    "@name": "PhysicalDeviceType",
+                    "@c:type": "VkPhysicalDeviceType"
+                },
+                {
+                    "@name": "QueryType",
+                    "@c:type": "VkQueryType"
+                },
+                {
+                    "@name": "SharingMode",
+                    "@c:type": "VkSharingMode"
+                },
+                {
+                    "@name": "ImageLayout",
+                    "@c:type": "VkImageLayout"
+                },
+                {
+                    "@name": "ImageViewType",
+                    "@c:type": "VkImageViewType"
+                },
+                {
+                    "@name": "ComponentSwizzle",
+                    "@c:type": "VkComponentSwizzle"
+                },
+                {
+                    "@name": "VertexInputRate",
+                    "@c:type": "VkVertexInputRate"
+                },
+                {
+                    "@name": "PrimitiveTopology",
+                    "@c:type": "VkPrimitiveTopology"
+                },
+                {
+                    "@name": "PolygonMode",
+                    "@c:type": "VkPolygonMode"
+                },
+                {
+                    "@name": "FrontFace",
+                    "@c:type": "VkFrontFace"
+                },
+                {
+                    "@name": "CompareOp",
+                    "@c:type": "VkCompareOp"
+                },
+                {
+                    "@name": "StencilOp",
+                    "@c:type": "VkStencilOp"
+                },
+                {
+                    "@name": "LogicOp",
+                    "@c:type": "VkLogicOp"
+                },
+                {
+                    "@name": "BlendFactor",
+                    "@c:type": "VkBlendFactor"
+                },
+                {
+                    "@name": "BlendOp",
+                    "@c:type": "VkBlendOp"
+                },
+                {
+                    "@name": "DynamicState",
+                    "@c:type": "VkDynamicState"
+                },
+                {
+                    "@name": "Filter",
+                    "@c:type": "VkFilter"
+                },
+                {
+                    "@name": "SamplerMipmapMode",
+                    "@c:type": "VkSamplerMipmapMode"
+                },
+                {
+                    "@name": "SamplerAddressMode",
+                    "@c:type": "VkSamplerAddressMode"
+                },
+                {
+                    "@name": "BorderColor",
+                    "@c:type": "VkBorderColor"
+                },
+                {
+                    "@name": "DescriptorType",
+                    "@c:type": "VkDescriptorType"
+                },
+                {
+                    "@name": "AttachmentLoadOp",
+                    "@c:type": "VkAttachmentLoadOp"
+                },
+                {
+                    "@name": "AttachmentStoreOp",
+                    "@c:type": "VkAttachmentStoreOp"
+                },
+                {
+                    "@name": "PipelineBindPoint",
+                    "@c:type": "VkPipelineBindPoint"
+                },
+                {
+                    "@name": "CommandBufferLevel",
+                    "@c:type": "VkCommandBufferLevel"
+                },
+                {
+                    "@name": "IndexType",
+                    "@c:type": "VkIndexType"
+                },
+                {
+                    "@name": "SubpassContents",
+                    "@c:type": "VkSubpassContents"
+                },
+                {
+                    "@name": "ObjectType",
+                    "@c:type": "VkObjectType"
+                },
+                {
+                    "@name": "VendorId",
+                    "@c:type": "VkVendorId"
+                },
+                {
+                    "@name": "InstanceCreateFlags",
+                    "@c:type": "VkInstanceCreateFlags"
+                },
+                {
+                    "@name": "FormatFeatureFlagBits",
+                    "@c:type": "VkFormatFeatureFlagBits"
+                },
+                {
+                    "@name": "FormatFeatureFlags",
+                    "@c:type": "VkFormatFeatureFlags"
+                },
+                {
+                    "@name": "ImageUsageFlagBits",
+                    "@c:type": "VkImageUsageFlagBits"
+                },
+                {
+                    "@name": "ImageUsageFlags",
+                    "@c:type": "VkImageUsageFlags"
+                },
+                {
+                    "@name": "ImageCreateFlagBits",
+                    "@c:type": "VkImageCreateFlagBits"
+                },
+                {
+                    "@name": "ImageCreateFlags",
+                    "@c:type": "VkImageCreateFlags"
+                },
+                {
+                    "@name": "SampleCountFlagBits",
+                    "@c:type": "VkSampleCountFlagBits"
+                },
+                {
+                    "@name": "SampleCountFlags",
+                    "@c:type": "VkSampleCountFlags"
+                },
+                {
+                    "@name": "QueueFlagBits",
+                    "@c:type": "VkQueueFlagBits"
+                },
+                {
+                    "@name": "QueueFlags",
+                    "@c:type": "VkQueueFlags"
+                },
+                {
+                    "@name": "MemoryPropertyFlagBits",
+                    "@c:type": "VkMemoryPropertyFlagBits"
+                },
+                {
+                    "@name": "MemoryPropertyFlags",
+                    "@c:type": "VkMemoryPropertyFlags"
+                },
+                {
+                    "@name": "MemoryHeapFlagBits",
+                    "@c:type": "VkMemoryHeapFlagBits"
+                },
+                {
+                    "@name": "MemoryHeapFlags",
+                    "@c:type": "VkMemoryHeapFlags"
+                },
+                {
+                    "@name": "DeviceCreateFlags",
+                    "@c:type": "VkDeviceCreateFlags"
+                },
+                {
+                    "@name": "DeviceQueueCreateFlagBits",
+                    "@c:type": "VkDeviceQueueCreateFlagBits"
+                },
+                {
+                    "@name": "DeviceQueueCreateFlags",
+                    "@c:type": "VkDeviceQueueCreateFlags"
+                },
+                {
+                    "@name": "PipelineStageFlagBits",
+                    "@c:type": "VkPipelineStageFlagBits"
+                },
+                {
+                    "@name": "PipelineStageFlags",
+                    "@c:type": "VkPipelineStageFlags"
+                },
+                {
+                    "@name": "MemoryMapFlags",
+                    "@c:type": "VkMemoryMapFlags"
+                },
+                {
+                    "@name": "ImageAspectFlagBits",
+                    "@c:type": "VkImageAspectFlagBits"
+                },
+                {
+                    "@name": "ImageAspectFlags",
+                    "@c:type": "VkImageAspectFlags"
+                },
+                {
+                    "@name": "SparseImageFormatFlagBits",
+                    "@c:type": "VkSparseImageFormatFlagBits"
+                },
+                {
+                    "@name": "SparseImageFormatFlags",
+                    "@c:type": "VkSparseImageFormatFlags"
+                },
+                {
+                    "@name": "SparseMemoryBindFlagBits",
+                    "@c:type": "VkSparseMemoryBindFlagBits"
+                },
+                {
+                    "@name": "SparseMemoryBindFlags",
+                    "@c:type": "VkSparseMemoryBindFlags"
+                },
+                {
+                    "@name": "FenceCreateFlagBits",
+                    "@c:type": "VkFenceCreateFlagBits"
+                },
+                {
+                    "@name": "FenceCreateFlags",
+                    "@c:type": "VkFenceCreateFlags"
+                },
+                {
+                    "@name": "SemaphoreCreateFlags",
+                    "@c:type": "VkSemaphoreCreateFlags"
+                },
+                {
+                    "@name": "EventCreateFlags",
+                    "@c:type": "VkEventCreateFlags"
+                },
+                {
+                    "@name": "QueryPoolCreateFlags",
+                    "@c:type": "VkQueryPoolCreateFlags"
+                },
+                {
+                    "@name": "QueryPipelineStatisticFlagBits",
+                    "@c:type": "VkQueryPipelineStatisticFlagBits"
+                },
+                {
+                    "@name": "QueryPipelineStatisticFlags",
+                    "@c:type": "VkQueryPipelineStatisticFlags"
+                },
+                {
+                    "@name": "QueryResultFlagBits",
+                    "@c:type": "VkQueryResultFlagBits"
+                },
+                {
+                    "@name": "QueryResultFlags",
+                    "@c:type": "VkQueryResultFlags"
+                },
+                {
+                    "@name": "BufferCreateFlagBits",
+                    "@c:type": "VkBufferCreateFlagBits"
+                },
+                {
+                    "@name": "BufferCreateFlags",
+                    "@c:type": "VkBufferCreateFlags"
+                },
+                {
+                    "@name": "BufferUsageFlagBits",
+                    "@c:type": "VkBufferUsageFlagBits"
+                },
+                {
+                    "@name": "BufferUsageFlags",
+                    "@c:type": "VkBufferUsageFlags"
+                },
+                {
+                    "@name": "BufferViewCreateFlags",
+                    "@c:type": "VkBufferViewCreateFlags"
+                },
+                {
+                    "@name": "ImageViewCreateFlagBits",
+                    "@c:type": "VkImageViewCreateFlagBits"
+                },
+                {
+                    "@name": "ImageViewCreateFlags",
+                    "@c:type": "VkImageViewCreateFlags"
+                },
+                {
+                    "@name": "ShaderModuleCreateFlags",
+                    "@c:type": "VkShaderModuleCreateFlags"
+                },
+                {
+                    "@name": "PipelineCacheCreateFlags",
+                    "@c:type": "VkPipelineCacheCreateFlags"
+                },
+                {
+                    "@name": "PipelineCreateFlagBits",
+                    "@c:type": "VkPipelineCreateFlagBits"
+                },
+                {
+                    "@name": "PipelineCreateFlags",
+                    "@c:type": "VkPipelineCreateFlags"
+                },
+                {
+                    "@name": "PipelineShaderStageCreateFlags",
+                    "@c:type": "VkPipelineShaderStageCreateFlags"
+                },
+                {
+                    "@name": "ShaderStageFlagBits",
+                    "@c:type": "VkShaderStageFlagBits"
+                },
+                {
+                    "@name": "PipelineVertexInputStateCreateFlags",
+                    "@c:type": "VkPipelineVertexInputStateCreateFlags"
+                },
+                {
+                    "@name": "PipelineInputAssemblyStateCreateFlags",
+                    "@c:type": "VkPipelineInputAssemblyStateCreateFlags"
+                },
+                {
+                    "@name": "PipelineTessellationStateCreateFlags",
+                    "@c:type": "VkPipelineTessellationStateCreateFlags"
+                },
+                {
+                    "@name": "PipelineViewportStateCreateFlags",
+                    "@c:type": "VkPipelineViewportStateCreateFlags"
+                },
+                {
+                    "@name": "PipelineRasterizationStateCreateFlags",
+                    "@c:type": "VkPipelineRasterizationStateCreateFlags"
+                },
+                {
+                    "@name": "CullModeFlagBits",
+                    "@c:type": "VkCullModeFlagBits"
+                },
+                {
+                    "@name": "CullModeFlags",
+                    "@c:type": "VkCullModeFlags"
+                },
+                {
+                    "@name": "PipelineMultisampleStateCreateFlags",
+                    "@c:type": "VkPipelineMultisampleStateCreateFlags"
+                },
+                {
+                    "@name": "PipelineDepthStencilStateCreateFlags",
+                    "@c:type": "VkPipelineDepthStencilStateCreateFlags"
+                },
+                {
+                    "@name": "PipelineColorBlendStateCreateFlags",
+                    "@c:type": "VkPipelineColorBlendStateCreateFlags"
+                },
+                {
+                    "@name": "ColorComponentFlagBits",
+                    "@c:type": "VkColorComponentFlagBits"
+                },
+                {
+                    "@name": "ColorComponentFlags",
+                    "@c:type": "VkColorComponentFlags"
+                },
+                {
+                    "@name": "PipelineDynamicStateCreateFlags",
+                    "@c:type": "VkPipelineDynamicStateCreateFlags"
+                },
+                {
+                    "@name": "PipelineLayoutCreateFlags",
+                    "@c:type": "VkPipelineLayoutCreateFlags"
+                },
+                {
+                    "@name": "ShaderStageFlags",
+                    "@c:type": "VkShaderStageFlags"
+                },
+                {
+                    "@name": "SamplerCreateFlagBits",
+                    "@c:type": "VkSamplerCreateFlagBits"
+                },
+                {
+                    "@name": "SamplerCreateFlags",
+                    "@c:type": "VkSamplerCreateFlags"
+                },
+                {
+                    "@name": "DescriptorSetLayoutCreateFlagBits",
+                    "@c:type": "VkDescriptorSetLayoutCreateFlagBits"
+                },
+                {
+                    "@name": "DescriptorSetLayoutCreateFlags",
+                    "@c:type": "VkDescriptorSetLayoutCreateFlags"
+                },
+                {
+                    "@name": "DescriptorPoolCreateFlagBits",
+                    "@c:type": "VkDescriptorPoolCreateFlagBits"
+                },
+                {
+                    "@name": "DescriptorPoolCreateFlags",
+                    "@c:type": "VkDescriptorPoolCreateFlags"
+                },
+                {
+                    "@name": "DescriptorPoolResetFlags",
+                    "@c:type": "VkDescriptorPoolResetFlags"
+                },
+                {
+                    "@name": "FramebufferCreateFlags",
+                    "@c:type": "VkFramebufferCreateFlags"
+                },
+                {
+                    "@name": "RenderPassCreateFlags",
+                    "@c:type": "VkRenderPassCreateFlags"
+                },
+                {
+                    "@name": "AttachmentDescriptionFlagBits",
+                    "@c:type": "VkAttachmentDescriptionFlagBits"
+                },
+                {
+                    "@name": "AttachmentDescriptionFlags",
+                    "@c:type": "VkAttachmentDescriptionFlags"
+                },
+                {
+                    "@name": "SubpassDescriptionFlagBits",
+                    "@c:type": "VkSubpassDescriptionFlagBits"
+                },
+                {
+                    "@name": "SubpassDescriptionFlags",
+                    "@c:type": "VkSubpassDescriptionFlags"
+                },
+                {
+                    "@name": "AccessFlagBits",
+                    "@c:type": "VkAccessFlagBits"
+                },
+                {
+                    "@name": "AccessFlags",
+                    "@c:type": "VkAccessFlags"
+                },
+                {
+                    "@name": "DependencyFlagBits",
+                    "@c:type": "VkDependencyFlagBits"
+                },
+                {
+                    "@name": "DependencyFlags",
+                    "@c:type": "VkDependencyFlags"
+                },
+                {
+                    "@name": "CommandPoolCreateFlagBits",
+                    "@c:type": "VkCommandPoolCreateFlagBits"
+                },
+                {
+                    "@name": "CommandPoolCreateFlags",
+                    "@c:type": "VkCommandPoolCreateFlags"
+                },
+                {
+                    "@name": "CommandPoolResetFlagBits",
+                    "@c:type": "VkCommandPoolResetFlagBits"
+                },
+                {
+                    "@name": "CommandPoolResetFlags",
+                    "@c:type": "VkCommandPoolResetFlags"
+                },
+                {
+                    "@name": "CommandBufferUsageFlagBits",
+                    "@c:type": "VkCommandBufferUsageFlagBits"
+                },
+                {
+                    "@name": "CommandBufferUsageFlags",
+                    "@c:type": "VkCommandBufferUsageFlags"
+                },
+                {
+                    "@name": "QueryControlFlagBits",
+                    "@c:type": "VkQueryControlFlagBits"
+                },
+                {
+                    "@name": "QueryControlFlags",
+                    "@c:type": "VkQueryControlFlags"
+                },
+                {
+                    "@name": "CommandBufferResetFlagBits",
+                    "@c:type": "VkCommandBufferResetFlagBits"
+                },
+                {
+                    "@name": "CommandBufferResetFlags",
+                    "@c:type": "VkCommandBufferResetFlags"
+                },
+                {
+                    "@name": "StencilFaceFlagBits",
+                    "@c:type": "VkStencilFaceFlagBits"
+                },
+                {
+                    "@name": "StencilFaceFlags",
+                    "@c:type": "VkStencilFaceFlags"
+                },
+                {
+                    "@name": "ApplicationInfo",
+                    "@c:type": "VkApplicationInfo"
+                },
+                {
+                    "@name": "InstanceCreateInfo",
+                    "@c:type": "VkInstanceCreateInfo"
+                },
+                {
+                    "@name": "AllocationCallbacks",
+                    "@c:type": "VkAllocationCallbacks"
+                },
+                {
+                    "@name": "PhysicalDeviceFeatures",
+                    "@c:type": "VkPhysicalDeviceFeatures"
+                },
+                {
+                    "@name": "FormatProperties",
+                    "@c:type": "VkFormatProperties"
+                },
+                {
+                    "@name": "Extent3D",
+                    "@c:type": "VkExtent3D"
+                },
+                {
+                    "@name": "ImageFormatProperties",
+                    "@c:type": "VkImageFormatProperties"
+                },
+                {
+                    "@name": "PhysicalDeviceLimits",
+                    "@c:type": "VkPhysicalDeviceLimits"
+                },
+                {
+                    "@name": "PhysicalDeviceSparseProperties",
+                    "@c:type": "VkPhysicalDeviceSparseProperties"
+                },
+                {
+                    "@name": "PhysicalDeviceProperties",
+                    "@c:type": "VkPhysicalDeviceProperties"
+                },
+                {
+                    "@name": "QueueFamilyProperties",
+                    "@c:type": "VkQueueFamilyProperties"
+                },
+                {
+                    "@name": "MemoryType",
+                    "@c:type": "VkMemoryType"
+                },
+                {
+                    "@name": "MemoryHeap",
+                    "@c:type": "VkMemoryHeap"
+                },
+                {
+                    "@name": "PhysicalDeviceMemoryProperties",
+                    "@c:type": "VkPhysicalDeviceMemoryProperties"
+                },
+                {
+                    "@name": "DeviceQueueCreateInfo",
+                    "@c:type": "VkDeviceQueueCreateInfo"
+                },
+                {
+                    "@name": "DeviceCreateInfo",
+                    "@c:type": "VkDeviceCreateInfo"
+                },
+                {
+                    "@name": "ExtensionProperties",
+                    "@c:type": "VkExtensionProperties"
+                },
+                {
+                    "@name": "LayerProperties",
+                    "@c:type": "VkLayerProperties"
+                },
+                {
+                    "@name": "SubmitInfo",
+                    "@c:type": "VkSubmitInfo"
+                },
+                {
+                    "@name": "MemoryAllocateInfo",
+                    "@c:type": "VkMemoryAllocateInfo"
+                },
+                {
+                    "@name": "MappedMemoryRange",
+                    "@c:type": "VkMappedMemoryRange"
+                },
+                {
+                    "@name": "MemoryRequirements",
+                    "@c:type": "VkMemoryRequirements"
+                },
+                {
+                    "@name": "SparseImageFormatProperties",
+                    "@c:type": "VkSparseImageFormatProperties"
+                },
+                {
+                    "@name": "SparseImageMemoryRequirements",
+                    "@c:type": "VkSparseImageMemoryRequirements"
+                },
+                {
+                    "@name": "SparseMemoryBind",
+                    "@c:type": "VkSparseMemoryBind"
+                },
+                {
+                    "@name": "SparseBufferMemoryBindInfo",
+                    "@c:type": "VkSparseBufferMemoryBindInfo"
+                },
+                {
+                    "@name": "SparseImageOpaqueMemoryBindInfo",
+                    "@c:type": "VkSparseImageOpaqueMemoryBindInfo"
+                },
+                {
+                    "@name": "ImageSubresource",
+                    "@c:type": "VkImageSubresource"
+                },
+                {
+                    "@name": "Offset3D",
+                    "@c:type": "VkOffset3D"
+                },
+                {
+                    "@name": "SparseImageMemoryBind",
+                    "@c:type": "VkSparseImageMemoryBind"
+                },
+                {
+                    "@name": "SparseImageMemoryBindInfo",
+                    "@c:type": "VkSparseImageMemoryBindInfo"
+                },
+                {
+                    "@name": "BindSparseInfo",
+                    "@c:type": "VkBindSparseInfo"
+                },
+                {
+                    "@name": "FenceCreateInfo",
+                    "@c:type": "VkFenceCreateInfo"
+                },
+                {
+                    "@name": "SemaphoreCreateInfo",
+                    "@c:type": "VkSemaphoreCreateInfo"
+                },
+                {
+                    "@name": "EventCreateInfo",
+                    "@c:type": "VkEventCreateInfo"
+                },
+                {
+                    "@name": "QueryPoolCreateInfo",
+                    "@c:type": "VkQueryPoolCreateInfo"
+                },
+                {
+                    "@name": "BufferCreateInfo",
+                    "@c:type": "VkBufferCreateInfo"
+                },
+                {
+                    "@name": "BufferViewCreateInfo",
+                    "@c:type": "VkBufferViewCreateInfo"
+                },
+                {
+                    "@name": "ImageCreateInfo",
+                    "@c:type": "VkImageCreateInfo"
+                },
+                {
+                    "@name": "SubresourceLayout",
+                    "@c:type": "VkSubresourceLayout"
+                },
+                {
+                    "@name": "ComponentMapping",
+                    "@c:type": "VkComponentMapping"
+                },
+                {
+                    "@name": "ImageSubresourceRange",
+                    "@c:type": "VkImageSubresourceRange"
+                },
+                {
+                    "@name": "ImageViewCreateInfo",
+                    "@c:type": "VkImageViewCreateInfo"
+                },
+                {
+                    "@name": "ShaderModuleCreateInfo",
+                    "@c:type": "VkShaderModuleCreateInfo"
+                },
+                {
+                    "@name": "PipelineCacheCreateInfo",
+                    "@c:type": "VkPipelineCacheCreateInfo"
+                },
+                {
+                    "@name": "SpecializationMapEntry",
+                    "@c:type": "VkSpecializationMapEntry"
+                },
+                {
+                    "@name": "SpecializationInfo",
+                    "@c:type": "VkSpecializationInfo"
+                },
+                {
+                    "@name": "PipelineShaderStageCreateInfo",
+                    "@c:type": "VkPipelineShaderStageCreateInfo"
+                },
+                {
+                    "@name": "VertexInputBindingDescription",
+                    "@c:type": "VkVertexInputBindingDescription"
+                },
+                {
+                    "@name": "VertexInputAttributeDescription",
+                    "@c:type": "VkVertexInputAttributeDescription"
+                },
+                {
+                    "@name": "PipelineVertexInputStateCreateInfo",
+                    "@c:type": "VkPipelineVertexInputStateCreateInfo"
+                },
+                {
+                    "@name": "PipelineInputAssemblyStateCreateInfo",
+                    "@c:type": "VkPipelineInputAssemblyStateCreateInfo"
+                },
+                {
+                    "@name": "PipelineTessellationStateCreateInfo",
+                    "@c:type": "VkPipelineTessellationStateCreateInfo"
+                },
+                {
+                    "@name": "Viewport",
+                    "@c:type": "VkViewport"
+                },
+                {
+                    "@name": "Offset2D",
+                    "@c:type": "VkOffset2D"
+                },
+                {
+                    "@name": "Extent2D",
+                    "@c:type": "VkExtent2D"
+                },
+                {
+                    "@name": "Rect2D",
+                    "@c:type": "VkRect2D"
+                },
+                {
+                    "@name": "PipelineViewportStateCreateInfo",
+                    "@c:type": "VkPipelineViewportStateCreateInfo"
+                },
+                {
+                    "@name": "PipelineRasterizationStateCreateInfo",
+                    "@c:type": "VkPipelineRasterizationStateCreateInfo"
+                },
+                {
+                    "@name": "PipelineMultisampleStateCreateInfo",
+                    "@c:type": "VkPipelineMultisampleStateCreateInfo"
+                },
+                {
+                    "@name": "StencilOpState",
+                    "@c:type": "VkStencilOpState"
+                },
+                {
+                    "@name": "PipelineDepthStencilStateCreateInfo",
+                    "@c:type": "VkPipelineDepthStencilStateCreateInfo"
+                },
+                {
+                    "@name": "PipelineColorBlendAttachmentState",
+                    "@c:type": "VkPipelineColorBlendAttachmentState"
+                },
+                {
+                    "@name": "PipelineColorBlendStateCreateInfo",
+                    "@c:type": "VkPipelineColorBlendStateCreateInfo"
+                },
+                {
+                    "@name": "PipelineDynamicStateCreateInfo",
+                    "@c:type": "VkPipelineDynamicStateCreateInfo"
+                },
+                {
+                    "@name": "GraphicsPipelineCreateInfo",
+                    "@c:type": "VkGraphicsPipelineCreateInfo"
+                },
+                {
+                    "@name": "ComputePipelineCreateInfo",
+                    "@c:type": "VkComputePipelineCreateInfo"
+                },
+                {
+                    "@name": "PushConstantRange",
+                    "@c:type": "VkPushConstantRange"
+                },
+                {
+                    "@name": "PipelineLayoutCreateInfo",
+                    "@c:type": "VkPipelineLayoutCreateInfo"
+                },
+                {
+                    "@name": "SamplerCreateInfo",
+                    "@c:type": "VkSamplerCreateInfo"
+                },
+                {
+                    "@name": "DescriptorSetLayoutBinding",
+                    "@c:type": "VkDescriptorSetLayoutBinding"
+                },
+                {
+                    "@name": "DescriptorSetLayoutCreateInfo",
+                    "@c:type": "VkDescriptorSetLayoutCreateInfo"
+                },
+                {
+                    "@name": "DescriptorPoolSize",
+                    "@c:type": "VkDescriptorPoolSize"
+                },
+                {
+                    "@name": "DescriptorPoolCreateInfo",
+                    "@c:type": "VkDescriptorPoolCreateInfo"
+                },
+                {
+                    "@name": "DescriptorSetAllocateInfo",
+                    "@c:type": "VkDescriptorSetAllocateInfo"
+                },
+                {
+                    "@name": "DescriptorImageInfo",
+                    "@c:type": "VkDescriptorImageInfo"
+                },
+                {
+                    "@name": "DescriptorBufferInfo",
+                    "@c:type": "VkDescriptorBufferInfo"
+                },
+                {
+                    "@name": "WriteDescriptorSet",
+                    "@c:type": "VkWriteDescriptorSet"
+                },
+                {
+                    "@name": "CopyDescriptorSet",
+                    "@c:type": "VkCopyDescriptorSet"
+                },
+                {
+                    "@name": "FramebufferCreateInfo",
+                    "@c:type": "VkFramebufferCreateInfo"
+                },
+                {
+                    "@name": "AttachmentDescription",
+                    "@c:type": "VkAttachmentDescription"
+                },
+                {
+                    "@name": "AttachmentReference",
+                    "@c:type": "VkAttachmentReference"
+                },
+                {
+                    "@name": "SubpassDescription",
+                    "@c:type": "VkSubpassDescription"
+                },
+                {
+                    "@name": "SubpassDependency",
+                    "@c:type": "VkSubpassDependency"
+                },
+                {
+                    "@name": "RenderPassCreateInfo",
+                    "@c:type": "VkRenderPassCreateInfo"
+                },
+                {
+                    "@name": "CommandPoolCreateInfo",
+                    "@c:type": "VkCommandPoolCreateInfo"
+                },
+                {
+                    "@name": "CommandBufferAllocateInfo",
+                    "@c:type": "VkCommandBufferAllocateInfo"
+                },
+                {
+                    "@name": "CommandBufferInheritanceInfo",
+                    "@c:type": "VkCommandBufferInheritanceInfo"
+                },
+                {
+                    "@name": "CommandBufferBeginInfo",
+                    "@c:type": "VkCommandBufferBeginInfo"
+                },
+                {
+                    "@name": "BufferCopy",
+                    "@c:type": "VkBufferCopy"
+                },
+                {
+                    "@name": "ImageSubresourceLayers",
+                    "@c:type": "VkImageSubresourceLayers"
+                },
+                {
+                    "@name": "ImageCopy",
+                    "@c:type": "VkImageCopy"
+                },
+                {
+                    "@name": "ImageBlit",
+                    "@c:type": "VkImageBlit"
+                },
+                {
+                    "@name": "BufferImageCopy",
+                    "@c:type": "VkBufferImageCopy"
+                },
+                {
+                    "@name": "ClearColorValue",
+                    "@c:type": "VkClearColorValue"
+                },
+                {
+                    "@name": "ClearDepthStencilValue",
+                    "@c:type": "VkClearDepthStencilValue"
+                },
+                {
+                    "@name": "ClearValue",
+                    "@c:type": "VkClearValue"
+                },
+                {
+                    "@name": "ClearAttachment",
+                    "@c:type": "VkClearAttachment"
+                },
+                {
+                    "@name": "ClearRect",
+                    "@c:type": "VkClearRect"
+                },
+                {
+                    "@name": "ImageResolve",
+                    "@c:type": "VkImageResolve"
+                },
+                {
+                    "@name": "MemoryBarrier",
+                    "@c:type": "VkMemoryBarrier"
+                },
+                {
+                    "@name": "BufferMemoryBarrier",
+                    "@c:type": "VkBufferMemoryBarrier"
+                },
+                {
+                    "@name": "ImageMemoryBarrier",
+                    "@c:type": "VkImageMemoryBarrier"
+                },
+                {
+                    "@name": "RenderPassBeginInfo",
+                    "@c:type": "VkRenderPassBeginInfo"
+                },
+                {
+                    "@name": "DispatchIndirectCommand",
+                    "@c:type": "VkDispatchIndirectCommand"
+                },
+                {
+                    "@name": "DrawIndexedIndirectCommand",
+                    "@c:type": "VkDrawIndexedIndirectCommand"
+                },
+                {
+                    "@name": "DrawIndirectCommand",
+                    "@c:type": "VkDrawIndirectCommand"
+                },
+                {
+                    "@name": "BaseOutStructure",
+                    "@c:type": "VkBaseOutStructure"
+                },
+                {
+                    "@name": "BaseInStructure",
+                    "@c:type": "VkBaseInStructure"
+                },
+                {
+                    "@name": "SamplerYcbcrConversion",
+                    "@c:type": "VkSamplerYcbcrConversion"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplate",
+                    "@c:type": "VkDescriptorUpdateTemplate"
+                },
+                {
+                    "@name": "PointClippingBehavior",
+                    "@c:type": "VkPointClippingBehavior"
+                },
+                {
+                    "@name": "TessellationDomainOrigin",
+                    "@c:type": "VkTessellationDomainOrigin"
+                },
+                {
+                    "@name": "SamplerYcbcrModelConversion",
+                    "@c:type": "VkSamplerYcbcrModelConversion"
+                },
+                {
+                    "@name": "SamplerYcbcrRange",
+                    "@c:type": "VkSamplerYcbcrRange"
+                },
+                {
+                    "@name": "ChromaLocation",
+                    "@c:type": "VkChromaLocation"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateType",
+                    "@c:type": "VkDescriptorUpdateTemplateType"
+                },
+                {
+                    "@name": "SubgroupFeatureFlagBits",
+                    "@c:type": "VkSubgroupFeatureFlagBits"
+                },
+                {
+                    "@name": "SubgroupFeatureFlags",
+                    "@c:type": "VkSubgroupFeatureFlags"
+                },
+                {
+                    "@name": "PeerMemoryFeatureFlagBits",
+                    "@c:type": "VkPeerMemoryFeatureFlagBits"
+                },
+                {
+                    "@name": "PeerMemoryFeatureFlags",
+                    "@c:type": "VkPeerMemoryFeatureFlags"
+                },
+                {
+                    "@name": "MemoryAllocateFlagBits",
+                    "@c:type": "VkMemoryAllocateFlagBits"
+                },
+                {
+                    "@name": "MemoryAllocateFlags",
+                    "@c:type": "VkMemoryAllocateFlags"
+                },
+                {
+                    "@name": "CommandPoolTrimFlags",
+                    "@c:type": "VkCommandPoolTrimFlags"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateCreateFlags",
+                    "@c:type": "VkDescriptorUpdateTemplateCreateFlags"
+                },
+                {
+                    "@name": "ExternalMemoryHandleTypeFlagBits",
+                    "@c:type": "VkExternalMemoryHandleTypeFlagBits"
+                },
+                {
+                    "@name": "ExternalMemoryHandleTypeFlags",
+                    "@c:type": "VkExternalMemoryHandleTypeFlags"
+                },
+                {
+                    "@name": "ExternalMemoryFeatureFlagBits",
+                    "@c:type": "VkExternalMemoryFeatureFlagBits"
+                },
+                {
+                    "@name": "ExternalMemoryFeatureFlags",
+                    "@c:type": "VkExternalMemoryFeatureFlags"
+                },
+                {
+                    "@name": "ExternalFenceHandleTypeFlagBits",
+                    "@c:type": "VkExternalFenceHandleTypeFlagBits"
+                },
+                {
+                    "@name": "ExternalFenceHandleTypeFlags",
+                    "@c:type": "VkExternalFenceHandleTypeFlags"
+                },
+                {
+                    "@name": "ExternalFenceFeatureFlagBits",
+                    "@c:type": "VkExternalFenceFeatureFlagBits"
+                },
+                {
+                    "@name": "ExternalFenceFeatureFlags",
+                    "@c:type": "VkExternalFenceFeatureFlags"
+                },
+                {
+                    "@name": "FenceImportFlagBits",
+                    "@c:type": "VkFenceImportFlagBits"
+                },
+                {
+                    "@name": "FenceImportFlags",
+                    "@c:type": "VkFenceImportFlags"
+                },
+                {
+                    "@name": "SemaphoreImportFlagBits",
+                    "@c:type": "VkSemaphoreImportFlagBits"
+                },
+                {
+                    "@name": "SemaphoreImportFlags",
+                    "@c:type": "VkSemaphoreImportFlags"
+                },
+                {
+                    "@name": "ExternalSemaphoreHandleTypeFlagBits",
+                    "@c:type": "VkExternalSemaphoreHandleTypeFlagBits"
+                },
+                {
+                    "@name": "ExternalSemaphoreHandleTypeFlags",
+                    "@c:type": "VkExternalSemaphoreHandleTypeFlags"
+                },
+                {
+                    "@name": "ExternalSemaphoreFeatureFlagBits",
+                    "@c:type": "VkExternalSemaphoreFeatureFlagBits"
+                },
+                {
+                    "@name": "ExternalSemaphoreFeatureFlags",
+                    "@c:type": "VkExternalSemaphoreFeatureFlags"
+                },
+                {
+                    "@name": "PhysicalDeviceSubgroupProperties",
+                    "@c:type": "VkPhysicalDeviceSubgroupProperties"
+                },
+                {
+                    "@name": "BindBufferMemoryInfo",
+                    "@c:type": "VkBindBufferMemoryInfo"
+                },
+                {
+                    "@name": "BindImageMemoryInfo",
+                    "@c:type": "VkBindImageMemoryInfo"
+                },
+                {
+                    "@name": "PhysicalDevice16BitStorageFeatures",
+                    "@c:type": "VkPhysicalDevice16BitStorageFeatures"
+                },
+                {
+                    "@name": "MemoryDedicatedRequirements",
+                    "@c:type": "VkMemoryDedicatedRequirements"
+                },
+                {
+                    "@name": "MemoryDedicatedAllocateInfo",
+                    "@c:type": "VkMemoryDedicatedAllocateInfo"
+                },
+                {
+                    "@name": "MemoryAllocateFlagsInfo",
+                    "@c:type": "VkMemoryAllocateFlagsInfo"
+                },
+                {
+                    "@name": "DeviceGroupRenderPassBeginInfo",
+                    "@c:type": "VkDeviceGroupRenderPassBeginInfo"
+                },
+                {
+                    "@name": "DeviceGroupCommandBufferBeginInfo",
+                    "@c:type": "VkDeviceGroupCommandBufferBeginInfo"
+                },
+                {
+                    "@name": "DeviceGroupSubmitInfo",
+                    "@c:type": "VkDeviceGroupSubmitInfo"
+                },
+                {
+                    "@name": "DeviceGroupBindSparseInfo",
+                    "@c:type": "VkDeviceGroupBindSparseInfo"
+                },
+                {
+                    "@name": "BindBufferMemoryDeviceGroupInfo",
+                    "@c:type": "VkBindBufferMemoryDeviceGroupInfo"
+                },
+                {
+                    "@name": "BindImageMemoryDeviceGroupInfo",
+                    "@c:type": "VkBindImageMemoryDeviceGroupInfo"
+                },
+                {
+                    "@name": "PhysicalDeviceGroupProperties",
+                    "@c:type": "VkPhysicalDeviceGroupProperties"
+                },
+                {
+                    "@name": "DeviceGroupDeviceCreateInfo",
+                    "@c:type": "VkDeviceGroupDeviceCreateInfo"
+                },
+                {
+                    "@name": "BufferMemoryRequirementsInfo2",
+                    "@c:type": "VkBufferMemoryRequirementsInfo2"
+                },
+                {
+                    "@name": "ImageMemoryRequirementsInfo2",
+                    "@c:type": "VkImageMemoryRequirementsInfo2"
+                },
+                {
+                    "@name": "ImageSparseMemoryRequirementsInfo2",
+                    "@c:type": "VkImageSparseMemoryRequirementsInfo2"
+                },
+                {
+                    "@name": "MemoryRequirements2",
+                    "@c:type": "VkMemoryRequirements2"
+                },
+                {
+                    "@name": "MemoryRequirements2KHR",
+                    "@c:type": "VkMemoryRequirements2KHR"
+                },
+                {
+                    "@name": "SparseImageMemoryRequirements2",
+                    "@c:type": "VkSparseImageMemoryRequirements2"
+                },
+                {
+                    "@name": "PhysicalDeviceFeatures2",
+                    "@c:type": "VkPhysicalDeviceFeatures2"
+                },
+                {
+                    "@name": "PhysicalDeviceProperties2",
+                    "@c:type": "VkPhysicalDeviceProperties2"
+                },
+                {
+                    "@name": "FormatProperties2",
+                    "@c:type": "VkFormatProperties2"
+                },
+                {
+                    "@name": "ImageFormatProperties2",
+                    "@c:type": "VkImageFormatProperties2"
+                },
+                {
+                    "@name": "PhysicalDeviceImageFormatInfo2",
+                    "@c:type": "VkPhysicalDeviceImageFormatInfo2"
+                },
+                {
+                    "@name": "QueueFamilyProperties2",
+                    "@c:type": "VkQueueFamilyProperties2"
+                },
+                {
+                    "@name": "PhysicalDeviceMemoryProperties2",
+                    "@c:type": "VkPhysicalDeviceMemoryProperties2"
+                },
+                {
+                    "@name": "SparseImageFormatProperties2",
+                    "@c:type": "VkSparseImageFormatProperties2"
+                },
+                {
+                    "@name": "PhysicalDeviceSparseImageFormatInfo2",
+                    "@c:type": "VkPhysicalDeviceSparseImageFormatInfo2"
+                },
+                {
+                    "@name": "PhysicalDevicePointClippingProperties",
+                    "@c:type": "VkPhysicalDevicePointClippingProperties"
+                },
+                {
+                    "@name": "InputAttachmentAspectReference",
+                    "@c:type": "VkInputAttachmentAspectReference"
+                },
+                {
+                    "@name": "RenderPassInputAttachmentAspectCreateInfo",
+                    "@c:type": "VkRenderPassInputAttachmentAspectCreateInfo"
+                },
+                {
+                    "@name": "ImageViewUsageCreateInfo",
+                    "@c:type": "VkImageViewUsageCreateInfo"
+                },
+                {
+                    "@name": "PipelineTessellationDomainOriginStateCreateInfo",
+                    "@c:type": "VkPipelineTessellationDomainOriginStateCreateInfo"
+                },
+                {
+                    "@name": "RenderPassMultiviewCreateInfo",
+                    "@c:type": "VkRenderPassMultiviewCreateInfo"
+                },
+                {
+                    "@name": "PhysicalDeviceMultiviewFeatures",
+                    "@c:type": "VkPhysicalDeviceMultiviewFeatures"
+                },
+                {
+                    "@name": "PhysicalDeviceMultiviewProperties",
+                    "@c:type": "VkPhysicalDeviceMultiviewProperties"
+                },
+                {
+                    "@name": "PhysicalDeviceVariablePointersFeatures",
+                    "@c:type": "VkPhysicalDeviceVariablePointersFeatures"
+                },
+                {
+                    "@name": "PhysicalDeviceVariablePointerFeatures",
+                    "@c:type": "VkPhysicalDeviceVariablePointerFeatures"
+                },
+                {
+                    "@name": "PhysicalDeviceProtectedMemoryFeatures",
+                    "@c:type": "VkPhysicalDeviceProtectedMemoryFeatures"
+                },
+                {
+                    "@name": "PhysicalDeviceProtectedMemoryProperties",
+                    "@c:type": "VkPhysicalDeviceProtectedMemoryProperties"
+                },
+                {
+                    "@name": "DeviceQueueInfo2",
+                    "@c:type": "VkDeviceQueueInfo2"
+                },
+                {
+                    "@name": "ProtectedSubmitInfo",
+                    "@c:type": "VkProtectedSubmitInfo"
+                },
+                {
+                    "@name": "SamplerYcbcrConversionCreateInfo",
+                    "@c:type": "VkSamplerYcbcrConversionCreateInfo"
+                },
+                {
+                    "@name": "SamplerYcbcrConversionInfo",
+                    "@c:type": "VkSamplerYcbcrConversionInfo"
+                },
+                {
+                    "@name": "BindImagePlaneMemoryInfo",
+                    "@c:type": "VkBindImagePlaneMemoryInfo"
+                },
+                {
+                    "@name": "ImagePlaneMemoryRequirementsInfo",
+                    "@c:type": "VkImagePlaneMemoryRequirementsInfo"
+                },
+                {
+                    "@name": "PhysicalDeviceSamplerYcbcrConversionFeatures",
+                    "@c:type": "VkPhysicalDeviceSamplerYcbcrConversionFeatures"
+                },
+                {
+                    "@name": "SamplerYcbcrConversionImageFormatProperties",
+                    "@c:type": "VkSamplerYcbcrConversionImageFormatProperties"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateEntry",
+                    "@c:type": "VkDescriptorUpdateTemplateEntry"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateCreateInfo",
+                    "@c:type": "VkDescriptorUpdateTemplateCreateInfo"
+                },
+                {
+                    "@name": "ExternalMemoryProperties",
+                    "@c:type": "VkExternalMemoryProperties"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalImageFormatInfo",
+                    "@c:type": "VkPhysicalDeviceExternalImageFormatInfo"
+                },
+                {
+                    "@name": "ExternalImageFormatProperties",
+                    "@c:type": "VkExternalImageFormatProperties"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalBufferInfo",
+                    "@c:type": "VkPhysicalDeviceExternalBufferInfo"
+                },
+                {
+                    "@name": "ExternalBufferProperties",
+                    "@c:type": "VkExternalBufferProperties"
+                },
+                {
+                    "@name": "PhysicalDeviceIDProperties",
+                    "@c:type": "VkPhysicalDeviceIDProperties"
+                },
+                {
+                    "@name": "ExternalMemoryImageCreateInfo",
+                    "@c:type": "VkExternalMemoryImageCreateInfo"
+                },
+                {
+                    "@name": "ExternalMemoryBufferCreateInfo",
+                    "@c:type": "VkExternalMemoryBufferCreateInfo"
+                },
+                {
+                    "@name": "ExportMemoryAllocateInfo",
+                    "@c:type": "VkExportMemoryAllocateInfo"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalFenceInfo",
+                    "@c:type": "VkPhysicalDeviceExternalFenceInfo"
+                },
+                {
+                    "@name": "ExternalFenceProperties",
+                    "@c:type": "VkExternalFenceProperties"
+                },
+                {
+                    "@name": "ExportFenceCreateInfo",
+                    "@c:type": "VkExportFenceCreateInfo"
+                },
+                {
+                    "@name": "ExportSemaphoreCreateInfo",
+                    "@c:type": "VkExportSemaphoreCreateInfo"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalSemaphoreInfo",
+                    "@c:type": "VkPhysicalDeviceExternalSemaphoreInfo"
+                },
+                {
+                    "@name": "ExternalSemaphoreProperties",
+                    "@c:type": "VkExternalSemaphoreProperties"
+                },
+                {
+                    "@name": "PhysicalDeviceMaintenance3Properties",
+                    "@c:type": "VkPhysicalDeviceMaintenance3Properties"
+                },
+                {
+                    "@name": "DescriptorSetLayoutSupport",
+                    "@c:type": "VkDescriptorSetLayoutSupport"
+                },
+                {
+                    "@name": "PhysicalDeviceShaderDrawParametersFeatures",
+                    "@c:type": "VkPhysicalDeviceShaderDrawParametersFeatures"
+                },
+                {
+                    "@name": "PhysicalDeviceShaderDrawParameterFeatures",
+                    "@c:type": "VkPhysicalDeviceShaderDrawParameterFeatures"
+                },
+                {
+                    "@name": "SurfaceKHR",
+                    "@c:type": "VkSurfaceKHR"
+                },
+                {
+                    "@name": "ColorSpaceKHR",
+                    "@c:type": "VkColorSpaceKHR"
+                },
+                {
+                    "@name": "PresentModeKHR",
+                    "@c:type": "VkPresentModeKHR"
+                },
+                {
+                    "@name": "SurfaceTransformFlagBitsKHR",
+                    "@c:type": "VkSurfaceTransformFlagBitsKHR"
+                },
+                {
+                    "@name": "SurfaceTransformFlagsKHR",
+                    "@c:type": "VkSurfaceTransformFlagsKHR"
+                },
+                {
+                    "@name": "CompositeAlphaFlagBitsKHR",
+                    "@c:type": "VkCompositeAlphaFlagBitsKHR"
+                },
+                {
+                    "@name": "CompositeAlphaFlagsKHR",
+                    "@c:type": "VkCompositeAlphaFlagsKHR"
+                },
+                {
+                    "@name": "SurfaceCapabilitiesKHR",
+                    "@c:type": "VkSurfaceCapabilitiesKHR"
+                },
+                {
+                    "@name": "SurfaceFormatKHR",
+                    "@c:type": "VkSurfaceFormatKHR"
+                },
+                {
+                    "@name": "SwapchainKHR",
+                    "@c:type": "VkSwapchainKHR"
+                },
+                {
+                    "@name": "SwapchainCreateFlagBitsKHR",
+                    "@c:type": "VkSwapchainCreateFlagBitsKHR"
+                },
+                {
+                    "@name": "SwapchainCreateFlagsKHR",
+                    "@c:type": "VkSwapchainCreateFlagsKHR"
+                },
+                {
+                    "@name": "DeviceGroupPresentModeFlagBitsKHR",
+                    "@c:type": "VkDeviceGroupPresentModeFlagBitsKHR"
+                },
+                {
+                    "@name": "DeviceGroupPresentModeFlagsKHR",
+                    "@c:type": "VkDeviceGroupPresentModeFlagsKHR"
+                },
+                {
+                    "@name": "SwapchainCreateInfoKHR",
+                    "@c:type": "VkSwapchainCreateInfoKHR"
+                },
+                {
+                    "@name": "PresentInfoKHR",
+                    "@c:type": "VkPresentInfoKHR"
+                },
+                {
+                    "@name": "ImageSwapchainCreateInfoKHR",
+                    "@c:type": "VkImageSwapchainCreateInfoKHR"
+                },
+                {
+                    "@name": "BindImageMemorySwapchainInfoKHR",
+                    "@c:type": "VkBindImageMemorySwapchainInfoKHR"
+                },
+                {
+                    "@name": "AcquireNextImageInfoKHR",
+                    "@c:type": "VkAcquireNextImageInfoKHR"
+                },
+                {
+                    "@name": "DeviceGroupPresentCapabilitiesKHR",
+                    "@c:type": "VkDeviceGroupPresentCapabilitiesKHR"
+                },
+                {
+                    "@name": "DeviceGroupPresentInfoKHR",
+                    "@c:type": "VkDeviceGroupPresentInfoKHR"
+                },
+                {
+                    "@name": "DeviceGroupSwapchainCreateInfoKHR",
+                    "@c:type": "VkDeviceGroupSwapchainCreateInfoKHR"
+                },
+                {
+                    "@name": "DisplayKHR",
+                    "@c:type": "VkDisplayKHR"
+                },
+                {
+                    "@name": "DisplayModeKHR",
+                    "@c:type": "VkDisplayModeKHR"
+                },
+                {
+                    "@name": "DisplayPlaneAlphaFlagBitsKHR",
+                    "@c:type": "VkDisplayPlaneAlphaFlagBitsKHR"
+                },
+                {
+                    "@name": "DisplayPlaneAlphaFlagsKHR",
+                    "@c:type": "VkDisplayPlaneAlphaFlagsKHR"
+                },
+                {
+                    "@name": "DisplayModeCreateFlagsKHR",
+                    "@c:type": "VkDisplayModeCreateFlagsKHR"
+                },
+                {
+                    "@name": "DisplaySurfaceCreateFlagsKHR",
+                    "@c:type": "VkDisplaySurfaceCreateFlagsKHR"
+                },
+                {
+                    "@name": "DisplayPropertiesKHR",
+                    "@c:type": "VkDisplayPropertiesKHR"
+                },
+                {
+                    "@name": "DisplayModeParametersKHR",
+                    "@c:type": "VkDisplayModeParametersKHR"
+                },
+                {
+                    "@name": "DisplayModePropertiesKHR",
+                    "@c:type": "VkDisplayModePropertiesKHR"
+                },
+                {
+                    "@name": "DisplayModeCreateInfoKHR",
+                    "@c:type": "VkDisplayModeCreateInfoKHR"
+                },
+                {
+                    "@name": "DisplayPlaneCapabilitiesKHR",
+                    "@c:type": "VkDisplayPlaneCapabilitiesKHR"
+                },
+                {
+                    "@name": "DisplayPlanePropertiesKHR",
+                    "@c:type": "VkDisplayPlanePropertiesKHR"
+                },
+                {
+                    "@name": "DisplaySurfaceCreateInfoKHR",
+                    "@c:type": "VkDisplaySurfaceCreateInfoKHR"
+                },
+                {
+                    "@name": "DisplayPresentInfoKHR",
+                    "@c:type": "VkDisplayPresentInfoKHR"
+                },
+                {
+                    "@name": "RenderPassMultiviewCreateInfoKHR",
+                    "@c:type": "VkRenderPassMultiviewCreateInfoKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceMultiviewFeaturesKHR",
+                    "@c:type": "VkPhysicalDeviceMultiviewFeaturesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceMultiviewPropertiesKHR",
+                    "@c:type": "VkPhysicalDeviceMultiviewPropertiesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceFeatures2KHR",
+                    "@c:type": "VkPhysicalDeviceFeatures2KHR"
+                },
+                {
+                    "@name": "PhysicalDeviceProperties2KHR",
+                    "@c:type": "VkPhysicalDeviceProperties2KHR"
+                },
+                {
+                    "@name": "FormatProperties2KHR",
+                    "@c:type": "VkFormatProperties2KHR"
+                },
+                {
+                    "@name": "ImageFormatProperties2KHR",
+                    "@c:type": "VkImageFormatProperties2KHR"
+                },
+                {
+                    "@name": "PhysicalDeviceImageFormatInfo2KHR",
+                    "@c:type": "VkPhysicalDeviceImageFormatInfo2KHR"
+                },
+                {
+                    "@name": "QueueFamilyProperties2KHR",
+                    "@c:type": "VkQueueFamilyProperties2KHR"
+                },
+                {
+                    "@name": "PhysicalDeviceMemoryProperties2KHR",
+                    "@c:type": "VkPhysicalDeviceMemoryProperties2KHR"
+                },
+                {
+                    "@name": "SparseImageFormatProperties2KHR",
+                    "@c:type": "VkSparseImageFormatProperties2KHR"
+                },
+                {
+                    "@name": "PhysicalDeviceSparseImageFormatInfo2KHR",
+                    "@c:type": "VkPhysicalDeviceSparseImageFormatInfo2KHR"
+                },
+                {
+                    "@name": "PeerMemoryFeatureFlagsKHR",
+                    "@c:type": "VkPeerMemoryFeatureFlagsKHR"
+                },
+                {
+                    "@name": "PeerMemoryFeatureFlagBitsKHR",
+                    "@c:type": "VkPeerMemoryFeatureFlagBitsKHR"
+                },
+                {
+                    "@name": "MemoryAllocateFlagsKHR",
+                    "@c:type": "VkMemoryAllocateFlagsKHR"
+                },
+                {
+                    "@name": "MemoryAllocateFlagBitsKHR",
+                    "@c:type": "VkMemoryAllocateFlagBitsKHR"
+                },
+                {
+                    "@name": "MemoryAllocateFlagsInfoKHR",
+                    "@c:type": "VkMemoryAllocateFlagsInfoKHR"
+                },
+                {
+                    "@name": "DeviceGroupRenderPassBeginInfoKHR",
+                    "@c:type": "VkDeviceGroupRenderPassBeginInfoKHR"
+                },
+                {
+                    "@name": "DeviceGroupCommandBufferBeginInfoKHR",
+                    "@c:type": "VkDeviceGroupCommandBufferBeginInfoKHR"
+                },
+                {
+                    "@name": "DeviceGroupSubmitInfoKHR",
+                    "@c:type": "VkDeviceGroupSubmitInfoKHR"
+                },
+                {
+                    "@name": "DeviceGroupBindSparseInfoKHR",
+                    "@c:type": "VkDeviceGroupBindSparseInfoKHR"
+                },
+                {
+                    "@name": "BindBufferMemoryDeviceGroupInfoKHR",
+                    "@c:type": "VkBindBufferMemoryDeviceGroupInfoKHR"
+                },
+                {
+                    "@name": "BindImageMemoryDeviceGroupInfoKHR",
+                    "@c:type": "VkBindImageMemoryDeviceGroupInfoKHR"
+                },
+                {
+                    "@name": "CommandPoolTrimFlagsKHR",
+                    "@c:type": "VkCommandPoolTrimFlagsKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceGroupPropertiesKHR",
+                    "@c:type": "VkPhysicalDeviceGroupPropertiesKHR"
+                },
+                {
+                    "@name": "DeviceGroupDeviceCreateInfoKHR",
+                    "@c:type": "VkDeviceGroupDeviceCreateInfoKHR"
+                },
+                {
+                    "@name": "ExternalMemoryHandleTypeFlagsKHR",
+                    "@c:type": "VkExternalMemoryHandleTypeFlagsKHR"
+                },
+                {
+                    "@name": "ExternalMemoryHandleTypeFlagBitsKHR",
+                    "@c:type": "VkExternalMemoryHandleTypeFlagBitsKHR"
+                },
+                {
+                    "@name": "ExternalMemoryFeatureFlagsKHR",
+                    "@c:type": "VkExternalMemoryFeatureFlagsKHR"
+                },
+                {
+                    "@name": "ExternalMemoryFeatureFlagBitsKHR",
+                    "@c:type": "VkExternalMemoryFeatureFlagBitsKHR"
+                },
+                {
+                    "@name": "ExternalMemoryPropertiesKHR",
+                    "@c:type": "VkExternalMemoryPropertiesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalImageFormatInfoKHR",
+                    "@c:type": "VkPhysicalDeviceExternalImageFormatInfoKHR"
+                },
+                {
+                    "@name": "ExternalImageFormatPropertiesKHR",
+                    "@c:type": "VkExternalImageFormatPropertiesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalBufferInfoKHR",
+                    "@c:type": "VkPhysicalDeviceExternalBufferInfoKHR"
+                },
+                {
+                    "@name": "ExternalBufferPropertiesKHR",
+                    "@c:type": "VkExternalBufferPropertiesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceIDPropertiesKHR",
+                    "@c:type": "VkPhysicalDeviceIDPropertiesKHR"
+                },
+                {
+                    "@name": "ExternalMemoryImageCreateInfoKHR",
+                    "@c:type": "VkExternalMemoryImageCreateInfoKHR"
+                },
+                {
+                    "@name": "ExternalMemoryBufferCreateInfoKHR",
+                    "@c:type": "VkExternalMemoryBufferCreateInfoKHR"
+                },
+                {
+                    "@name": "ExportMemoryAllocateInfoKHR",
+                    "@c:type": "VkExportMemoryAllocateInfoKHR"
+                },
+                {
+                    "@name": "ImportMemoryFdInfoKHR",
+                    "@c:type": "VkImportMemoryFdInfoKHR"
+                },
+                {
+                    "@name": "MemoryFdPropertiesKHR",
+                    "@c:type": "VkMemoryFdPropertiesKHR"
+                },
+                {
+                    "@name": "MemoryGetFdInfoKHR",
+                    "@c:type": "VkMemoryGetFdInfoKHR"
+                },
+                {
+                    "@name": "ExternalSemaphoreHandleTypeFlagsKHR",
+                    "@c:type": "VkExternalSemaphoreHandleTypeFlagsKHR"
+                },
+                {
+                    "@name": "ExternalSemaphoreHandleTypeFlagBitsKHR",
+                    "@c:type": "VkExternalSemaphoreHandleTypeFlagBitsKHR"
+                },
+                {
+                    "@name": "ExternalSemaphoreFeatureFlagsKHR",
+                    "@c:type": "VkExternalSemaphoreFeatureFlagsKHR"
+                },
+                {
+                    "@name": "ExternalSemaphoreFeatureFlagBitsKHR",
+                    "@c:type": "VkExternalSemaphoreFeatureFlagBitsKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalSemaphoreInfoKHR",
+                    "@c:type": "VkPhysicalDeviceExternalSemaphoreInfoKHR"
+                },
+                {
+                    "@name": "ExternalSemaphorePropertiesKHR",
+                    "@c:type": "VkExternalSemaphorePropertiesKHR"
+                },
+                {
+                    "@name": "SemaphoreImportFlagsKHR",
+                    "@c:type": "VkSemaphoreImportFlagsKHR"
+                },
+                {
+                    "@name": "SemaphoreImportFlagBitsKHR",
+                    "@c:type": "VkSemaphoreImportFlagBitsKHR"
+                },
+                {
+                    "@name": "ExportSemaphoreCreateInfoKHR",
+                    "@c:type": "VkExportSemaphoreCreateInfoKHR"
+                },
+                {
+                    "@name": "ImportSemaphoreFdInfoKHR",
+                    "@c:type": "VkImportSemaphoreFdInfoKHR"
+                },
+                {
+                    "@name": "SemaphoreGetFdInfoKHR",
+                    "@c:type": "VkSemaphoreGetFdInfoKHR"
+                },
+                {
+                    "@name": "PhysicalDevicePushDescriptorPropertiesKHR",
+                    "@c:type": "VkPhysicalDevicePushDescriptorPropertiesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceFloat16Int8FeaturesKHR",
+                    "@c:type": "VkPhysicalDeviceFloat16Int8FeaturesKHR"
+                },
+                {
+                    "@name": "PhysicalDevice16BitStorageFeaturesKHR",
+                    "@c:type": "VkPhysicalDevice16BitStorageFeaturesKHR"
+                },
+                {
+                    "@name": "RectLayerKHR",
+                    "@c:type": "VkRectLayerKHR"
+                },
+                {
+                    "@name": "PresentRegionKHR",
+                    "@c:type": "VkPresentRegionKHR"
+                },
+                {
+                    "@name": "PresentRegionsKHR",
+                    "@c:type": "VkPresentRegionsKHR"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateKHR",
+                    "@c:type": "VkDescriptorUpdateTemplateKHR"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateTypeKHR",
+                    "@c:type": "VkDescriptorUpdateTemplateTypeKHR"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateCreateFlagsKHR",
+                    "@c:type": "VkDescriptorUpdateTemplateCreateFlagsKHR"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateEntryKHR",
+                    "@c:type": "VkDescriptorUpdateTemplateEntryKHR"
+                },
+                {
+                    "@name": "DescriptorUpdateTemplateCreateInfoKHR",
+                    "@c:type": "VkDescriptorUpdateTemplateCreateInfoKHR"
+                },
+                {
+                    "@name": "AttachmentDescription2KHR",
+                    "@c:type": "VkAttachmentDescription2KHR"
+                },
+                {
+                    "@name": "AttachmentReference2KHR",
+                    "@c:type": "VkAttachmentReference2KHR"
+                },
+                {
+                    "@name": "SubpassDescription2KHR",
+                    "@c:type": "VkSubpassDescription2KHR"
+                },
+                {
+                    "@name": "SubpassDependency2KHR",
+                    "@c:type": "VkSubpassDependency2KHR"
+                },
+                {
+                    "@name": "RenderPassCreateInfo2KHR",
+                    "@c:type": "VkRenderPassCreateInfo2KHR"
+                },
+                {
+                    "@name": "SubpassBeginInfoKHR",
+                    "@c:type": "VkSubpassBeginInfoKHR"
+                },
+                {
+                    "@name": "SubpassEndInfoKHR",
+                    "@c:type": "VkSubpassEndInfoKHR"
+                },
+                {
+                    "@name": "SharedPresentSurfaceCapabilitiesKHR",
+                    "@c:type": "VkSharedPresentSurfaceCapabilitiesKHR"
+                },
+                {
+                    "@name": "ExternalFenceHandleTypeFlagsKHR",
+                    "@c:type": "VkExternalFenceHandleTypeFlagsKHR"
+                },
+                {
+                    "@name": "ExternalFenceHandleTypeFlagBitsKHR",
+                    "@c:type": "VkExternalFenceHandleTypeFlagBitsKHR"
+                },
+                {
+                    "@name": "ExternalFenceFeatureFlagsKHR",
+                    "@c:type": "VkExternalFenceFeatureFlagsKHR"
+                },
+                {
+                    "@name": "ExternalFenceFeatureFlagBitsKHR",
+                    "@c:type": "VkExternalFenceFeatureFlagBitsKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalFenceInfoKHR",
+                    "@c:type": "VkPhysicalDeviceExternalFenceInfoKHR"
+                },
+                {
+                    "@name": "ExternalFencePropertiesKHR",
+                    "@c:type": "VkExternalFencePropertiesKHR"
+                },
+                {
+                    "@name": "FenceImportFlagsKHR",
+                    "@c:type": "VkFenceImportFlagsKHR"
+                },
+                {
+                    "@name": "FenceImportFlagBitsKHR",
+                    "@c:type": "VkFenceImportFlagBitsKHR"
+                },
+                {
+                    "@name": "ExportFenceCreateInfoKHR",
+                    "@c:type": "VkExportFenceCreateInfoKHR"
+                },
+                {
+                    "@name": "ImportFenceFdInfoKHR",
+                    "@c:type": "VkImportFenceFdInfoKHR"
+                },
+                {
+                    "@name": "FenceGetFdInfoKHR",
+                    "@c:type": "VkFenceGetFdInfoKHR"
+                },
+                {
+                    "@name": "PointClippingBehaviorKHR",
+                    "@c:type": "VkPointClippingBehaviorKHR"
+                },
+                {
+                    "@name": "TessellationDomainOriginKHR",
+                    "@c:type": "VkTessellationDomainOriginKHR"
+                },
+                {
+                    "@name": "PhysicalDevicePointClippingPropertiesKHR",
+                    "@c:type": "VkPhysicalDevicePointClippingPropertiesKHR"
+                },
+                {
+                    "@name": "RenderPassInputAttachmentAspectCreateInfoKHR",
+                    "@c:type": "VkRenderPassInputAttachmentAspectCreateInfoKHR"
+                },
+                {
+                    "@name": "InputAttachmentAspectReferenceKHR",
+                    "@c:type": "VkInputAttachmentAspectReferenceKHR"
+                },
+                {
+                    "@name": "ImageViewUsageCreateInfoKHR",
+                    "@c:type": "VkImageViewUsageCreateInfoKHR"
+                },
+                {
+                    "@name": "PipelineTessellationDomainOriginStateCreateInfoKHR",
+                    "@c:type": "VkPipelineTessellationDomainOriginStateCreateInfoKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceSurfaceInfo2KHR",
+                    "@c:type": "VkPhysicalDeviceSurfaceInfo2KHR"
+                },
+                {
+                    "@name": "SurfaceCapabilities2KHR",
+                    "@c:type": "VkSurfaceCapabilities2KHR"
+                },
+                {
+                    "@name": "SurfaceFormat2KHR",
+                    "@c:type": "VkSurfaceFormat2KHR"
+                },
+                {
+                    "@name": "PhysicalDeviceVariablePointerFeaturesKHR",
+                    "@c:type": "VkPhysicalDeviceVariablePointerFeaturesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceVariablePointersFeaturesKHR",
+                    "@c:type": "VkPhysicalDeviceVariablePointersFeaturesKHR"
+                },
+                {
+                    "@name": "DisplayProperties2KHR",
+                    "@c:type": "VkDisplayProperties2KHR"
+                },
+                {
+                    "@name": "DisplayPlaneProperties2KHR",
+                    "@c:type": "VkDisplayPlaneProperties2KHR"
+                },
+                {
+                    "@name": "DisplayModeProperties2KHR",
+                    "@c:type": "VkDisplayModeProperties2KHR"
+                },
+                {
+                    "@name": "DisplayPlaneInfo2KHR",
+                    "@c:type": "VkDisplayPlaneInfo2KHR"
+                },
+                {
+                    "@name": "DisplayPlaneCapabilities2KHR",
+                    "@c:type": "VkDisplayPlaneCapabilities2KHR"
+                },
+                {
+                    "@name": "MemoryDedicatedRequirementsKHR",
+                    "@c:type": "VkMemoryDedicatedRequirementsKHR"
+                },
+                {
+                    "@name": "MemoryDedicatedAllocateInfoKHR",
+                    "@c:type": "VkMemoryDedicatedAllocateInfoKHR"
+                },
+                {
+                    "@name": "BufferMemoryRequirementsInfo2KHR",
+                    "@c:type": "VkBufferMemoryRequirementsInfo2KHR"
+                },
+                {
+                    "@name": "ImageMemoryRequirementsInfo2KHR",
+                    "@c:type": "VkImageMemoryRequirementsInfo2KHR"
+                },
+                {
+                    "@name": "ImageSparseMemoryRequirementsInfo2KHR",
+                    "@c:type": "VkImageSparseMemoryRequirementsInfo2KHR"
+                },
+                {
+                    "@name": "SparseImageMemoryRequirements2KHR",
+                    "@c:type": "VkSparseImageMemoryRequirements2KHR"
+                },
+                {
+                    "@name": "ImageFormatListCreateInfoKHR",
+                    "@c:type": "VkImageFormatListCreateInfoKHR"
+                },
+                {
+                    "@name": "SamplerYcbcrConversionKHR",
+                    "@c:type": "VkSamplerYcbcrConversionKHR"
+                },
+                {
+                    "@name": "SamplerYcbcrModelConversionKHR",
+                    "@c:type": "VkSamplerYcbcrModelConversionKHR"
+                },
+                {
+                    "@name": "SamplerYcbcrRangeKHR",
+                    "@c:type": "VkSamplerYcbcrRangeKHR"
+                },
+                {
+                    "@name": "ChromaLocationKHR",
+                    "@c:type": "VkChromaLocationKHR"
+                },
+                {
+                    "@name": "SamplerYcbcrConversionCreateInfoKHR",
+                    "@c:type": "VkSamplerYcbcrConversionCreateInfoKHR"
+                },
+                {
+                    "@name": "SamplerYcbcrConversionInfoKHR",
+                    "@c:type": "VkSamplerYcbcrConversionInfoKHR"
+                },
+                {
+                    "@name": "BindImagePlaneMemoryInfoKHR",
+                    "@c:type": "VkBindImagePlaneMemoryInfoKHR"
+                },
+                {
+                    "@name": "ImagePlaneMemoryRequirementsInfoKHR",
+                    "@c:type": "VkImagePlaneMemoryRequirementsInfoKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceSamplerYcbcrConversionFeaturesKHR",
+                    "@c:type": "VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR"
+                },
+                {
+                    "@name": "SamplerYcbcrConversionImageFormatPropertiesKHR",
+                    "@c:type": "VkSamplerYcbcrConversionImageFormatPropertiesKHR"
+                },
+                {
+                    "@name": "BindBufferMemoryInfoKHR",
+                    "@c:type": "VkBindBufferMemoryInfoKHR"
+                },
+                {
+                    "@name": "BindImageMemoryInfoKHR",
+                    "@c:type": "VkBindImageMemoryInfoKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceMaintenance3PropertiesKHR",
+                    "@c:type": "VkPhysicalDeviceMaintenance3PropertiesKHR"
+                },
+                {
+                    "@name": "DescriptorSetLayoutSupportKHR",
+                    "@c:type": "VkDescriptorSetLayoutSupportKHR"
+                },
+                {
+                    "@name": "PhysicalDevice8BitStorageFeaturesKHR",
+                    "@c:type": "VkPhysicalDevice8BitStorageFeaturesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceShaderAtomicInt64FeaturesKHR",
+                    "@c:type": "VkPhysicalDeviceShaderAtomicInt64FeaturesKHR"
+                },
+                {
+                    "@name": "DriverIdKHR",
+                    "@c:type": "VkDriverIdKHR"
+                },
+                {
+                    "@name": "ConformanceVersionKHR",
+                    "@c:type": "VkConformanceVersionKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceDriverPropertiesKHR",
+                    "@c:type": "VkPhysicalDeviceDriverPropertiesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceFloatControlsPropertiesKHR",
+                    "@c:type": "VkPhysicalDeviceFloatControlsPropertiesKHR"
+                },
+                {
+                    "@name": "ResolveModeFlagBitsKHR",
+                    "@c:type": "VkResolveModeFlagBitsKHR"
+                },
+                {
+                    "@name": "ResolveModeFlagsKHR",
+                    "@c:type": "VkResolveModeFlagsKHR"
+                },
+                {
+                    "@name": "SubpassDescriptionDepthStencilResolveKHR",
+                    "@c:type": "VkSubpassDescriptionDepthStencilResolveKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceDepthStencilResolvePropertiesKHR",
+                    "@c:type": "VkPhysicalDeviceDepthStencilResolvePropertiesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceVulkanMemoryModelFeaturesKHR",
+                    "@c:type": "VkPhysicalDeviceVulkanMemoryModelFeaturesKHR"
+                },
+                {
+                    "@name": "SurfaceProtectedCapabilitiesKHR",
+                    "@c:type": "VkSurfaceProtectedCapabilitiesKHR"
+                },
+                {
+                    "@name": "PhysicalDeviceUniformBufferStandardLayoutFeaturesKHR",
+                    "@c:type": "VkPhysicalDeviceUniformBufferStandardLayoutFeaturesKHR"
+                },
+                {
+                    "@name": "DebugReportCallbackEXT",
+                    "@c:type": "VkDebugReportCallbackEXT"
+                },
+                {
+                    "@name": "DebugReportObjectTypeEXT",
+                    "@c:type": "VkDebugReportObjectTypeEXT"
+                },
+                {
+                    "@name": "DebugReportFlagBitsEXT",
+                    "@c:type": "VkDebugReportFlagBitsEXT"
+                },
+                {
+                    "@name": "DebugReportFlagsEXT",
+                    "@c:type": "VkDebugReportFlagsEXT"
+                },
+                {
+                    "@name": "DebugReportCallbackCreateInfoEXT",
+                    "@c:type": "VkDebugReportCallbackCreateInfoEXT"
+                },
+                {
+                    "@name": "RasterizationOrderAMD",
+                    "@c:type": "VkRasterizationOrderAMD"
+                },
+                {
+                    "@name": "PipelineRasterizationStateRasterizationOrderAMD",
+                    "@c:type": "VkPipelineRasterizationStateRasterizationOrderAMD"
+                },
+                {
+                    "@name": "DebugMarkerObjectNameInfoEXT",
+                    "@c:type": "VkDebugMarkerObjectNameInfoEXT"
+                },
+                {
+                    "@name": "DebugMarkerObjectTagInfoEXT",
+                    "@c:type": "VkDebugMarkerObjectTagInfoEXT"
+                },
+                {
+                    "@name": "DebugMarkerMarkerInfoEXT",
+                    "@c:type": "VkDebugMarkerMarkerInfoEXT"
+                },
+                {
+                    "@name": "DedicatedAllocationImageCreateInfoNV",
+                    "@c:type": "VkDedicatedAllocationImageCreateInfoNV"
+                },
+                {
+                    "@name": "DedicatedAllocationBufferCreateInfoNV",
+                    "@c:type": "VkDedicatedAllocationBufferCreateInfoNV"
+                },
+                {
+                    "@name": "DedicatedAllocationMemoryAllocateInfoNV",
+                    "@c:type": "VkDedicatedAllocationMemoryAllocateInfoNV"
+                },
+                {
+                    "@name": "PipelineRasterizationStateStreamCreateFlagsEXT",
+                    "@c:type": "VkPipelineRasterizationStateStreamCreateFlagsEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceTransformFeedbackFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceTransformFeedbackFeaturesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceTransformFeedbackPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceTransformFeedbackPropertiesEXT"
+                },
+                {
+                    "@name": "PipelineRasterizationStateStreamCreateInfoEXT",
+                    "@c:type": "VkPipelineRasterizationStateStreamCreateInfoEXT"
+                },
+                {
+                    "@name": "ImageViewHandleInfoNVX",
+                    "@c:type": "VkImageViewHandleInfoNVX"
+                },
+                {
+                    "@name": "TextureLODGatherFormatPropertiesAMD",
+                    "@c:type": "VkTextureLODGatherFormatPropertiesAMD"
+                },
+                {
+                    "@name": "ShaderInfoTypeAMD",
+                    "@c:type": "VkShaderInfoTypeAMD"
+                },
+                {
+                    "@name": "ShaderResourceUsageAMD",
+                    "@c:type": "VkShaderResourceUsageAMD"
+                },
+                {
+                    "@name": "ShaderStatisticsInfoAMD",
+                    "@c:type": "VkShaderStatisticsInfoAMD"
+                },
+                {
+                    "@name": "PhysicalDeviceCornerSampledImageFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceCornerSampledImageFeaturesNV"
+                },
+                {
+                    "@name": "ExternalMemoryHandleTypeFlagBitsNV",
+                    "@c:type": "VkExternalMemoryHandleTypeFlagBitsNV"
+                },
+                {
+                    "@name": "ExternalMemoryHandleTypeFlagsNV",
+                    "@c:type": "VkExternalMemoryHandleTypeFlagsNV"
+                },
+                {
+                    "@name": "ExternalMemoryFeatureFlagBitsNV",
+                    "@c:type": "VkExternalMemoryFeatureFlagBitsNV"
+                },
+                {
+                    "@name": "ExternalMemoryFeatureFlagsNV",
+                    "@c:type": "VkExternalMemoryFeatureFlagsNV"
+                },
+                {
+                    "@name": "ExternalImageFormatPropertiesNV",
+                    "@c:type": "VkExternalImageFormatPropertiesNV"
+                },
+                {
+                    "@name": "ExternalMemoryImageCreateInfoNV",
+                    "@c:type": "VkExternalMemoryImageCreateInfoNV"
+                },
+                {
+                    "@name": "ExportMemoryAllocateInfoNV",
+                    "@c:type": "VkExportMemoryAllocateInfoNV"
+                },
+                {
+                    "@name": "ValidationCheckEXT",
+                    "@c:type": "VkValidationCheckEXT"
+                },
+                {
+                    "@name": "ValidationFlagsEXT",
+                    "@c:type": "VkValidationFlagsEXT"
+                },
+                {
+                    "@name": "ImageViewASTCDecodeModeEXT",
+                    "@c:type": "VkImageViewASTCDecodeModeEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceASTCDecodeFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceASTCDecodeFeaturesEXT"
+                },
+                {
+                    "@name": "ConditionalRenderingFlagBitsEXT",
+                    "@c:type": "VkConditionalRenderingFlagBitsEXT"
+                },
+                {
+                    "@name": "ConditionalRenderingFlagsEXT",
+                    "@c:type": "VkConditionalRenderingFlagsEXT"
+                },
+                {
+                    "@name": "ConditionalRenderingBeginInfoEXT",
+                    "@c:type": "VkConditionalRenderingBeginInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceConditionalRenderingFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceConditionalRenderingFeaturesEXT"
+                },
+                {
+                    "@name": "CommandBufferInheritanceConditionalRenderingInfoEXT",
+                    "@c:type": "VkCommandBufferInheritanceConditionalRenderingInfoEXT"
+                },
+                {
+                    "@name": "ObjectTableNVX",
+                    "@c:type": "VkObjectTableNVX"
+                },
+                {
+                    "@name": "IndirectCommandsLayoutNVX",
+                    "@c:type": "VkIndirectCommandsLayoutNVX"
+                },
+                {
+                    "@name": "IndirectCommandsTokenTypeNVX",
+                    "@c:type": "VkIndirectCommandsTokenTypeNVX"
+                },
+                {
+                    "@name": "ObjectEntryTypeNVX",
+                    "@c:type": "VkObjectEntryTypeNVX"
+                },
+                {
+                    "@name": "IndirectCommandsLayoutUsageFlagBitsNVX",
+                    "@c:type": "VkIndirectCommandsLayoutUsageFlagBitsNVX"
+                },
+                {
+                    "@name": "IndirectCommandsLayoutUsageFlagsNVX",
+                    "@c:type": "VkIndirectCommandsLayoutUsageFlagsNVX"
+                },
+                {
+                    "@name": "ObjectEntryUsageFlagBitsNVX",
+                    "@c:type": "VkObjectEntryUsageFlagBitsNVX"
+                },
+                {
+                    "@name": "ObjectEntryUsageFlagsNVX",
+                    "@c:type": "VkObjectEntryUsageFlagsNVX"
+                },
+                {
+                    "@name": "DeviceGeneratedCommandsFeaturesNVX",
+                    "@c:type": "VkDeviceGeneratedCommandsFeaturesNVX"
+                },
+                {
+                    "@name": "DeviceGeneratedCommandsLimitsNVX",
+                    "@c:type": "VkDeviceGeneratedCommandsLimitsNVX"
+                },
+                {
+                    "@name": "IndirectCommandsTokenNVX",
+                    "@c:type": "VkIndirectCommandsTokenNVX"
+                },
+                {
+                    "@name": "IndirectCommandsLayoutTokenNVX",
+                    "@c:type": "VkIndirectCommandsLayoutTokenNVX"
+                },
+                {
+                    "@name": "IndirectCommandsLayoutCreateInfoNVX",
+                    "@c:type": "VkIndirectCommandsLayoutCreateInfoNVX"
+                },
+                {
+                    "@name": "CmdProcessCommandsInfoNVX",
+                    "@c:type": "VkCmdProcessCommandsInfoNVX"
+                },
+                {
+                    "@name": "CmdReserveSpaceForCommandsInfoNVX",
+                    "@c:type": "VkCmdReserveSpaceForCommandsInfoNVX"
+                },
+                {
+                    "@name": "ObjectTableCreateInfoNVX",
+                    "@c:type": "VkObjectTableCreateInfoNVX"
+                },
+                {
+                    "@name": "ObjectTableEntryNVX",
+                    "@c:type": "VkObjectTableEntryNVX"
+                },
+                {
+                    "@name": "ObjectTablePipelineEntryNVX",
+                    "@c:type": "VkObjectTablePipelineEntryNVX"
+                },
+                {
+                    "@name": "ObjectTableDescriptorSetEntryNVX",
+                    "@c:type": "VkObjectTableDescriptorSetEntryNVX"
+                },
+                {
+                    "@name": "ObjectTableVertexBufferEntryNVX",
+                    "@c:type": "VkObjectTableVertexBufferEntryNVX"
+                },
+                {
+                    "@name": "ObjectTableIndexBufferEntryNVX",
+                    "@c:type": "VkObjectTableIndexBufferEntryNVX"
+                },
+                {
+                    "@name": "ObjectTablePushConstantEntryNVX",
+                    "@c:type": "VkObjectTablePushConstantEntryNVX"
+                },
+                {
+                    "@name": "ViewportWScalingNV",
+                    "@c:type": "VkViewportWScalingNV"
+                },
+                {
+                    "@name": "PipelineViewportWScalingStateCreateInfoNV",
+                    "@c:type": "VkPipelineViewportWScalingStateCreateInfoNV"
+                },
+                {
+                    "@name": "SurfaceCounterFlagBitsEXT",
+                    "@c:type": "VkSurfaceCounterFlagBitsEXT"
+                },
+                {
+                    "@name": "SurfaceCounterFlagsEXT",
+                    "@c:type": "VkSurfaceCounterFlagsEXT"
+                },
+                {
+                    "@name": "SurfaceCapabilities2EXT",
+                    "@c:type": "VkSurfaceCapabilities2EXT"
+                },
+                {
+                    "@name": "DisplayPowerStateEXT",
+                    "@c:type": "VkDisplayPowerStateEXT"
+                },
+                {
+                    "@name": "DeviceEventTypeEXT",
+                    "@c:type": "VkDeviceEventTypeEXT"
+                },
+                {
+                    "@name": "DisplayEventTypeEXT",
+                    "@c:type": "VkDisplayEventTypeEXT"
+                },
+                {
+                    "@name": "DisplayPowerInfoEXT",
+                    "@c:type": "VkDisplayPowerInfoEXT"
+                },
+                {
+                    "@name": "DeviceEventInfoEXT",
+                    "@c:type": "VkDeviceEventInfoEXT"
+                },
+                {
+                    "@name": "DisplayEventInfoEXT",
+                    "@c:type": "VkDisplayEventInfoEXT"
+                },
+                {
+                    "@name": "SwapchainCounterCreateInfoEXT",
+                    "@c:type": "VkSwapchainCounterCreateInfoEXT"
+                },
+                {
+                    "@name": "RefreshCycleDurationGOOGLE",
+                    "@c:type": "VkRefreshCycleDurationGOOGLE"
+                },
+                {
+                    "@name": "PastPresentationTimingGOOGLE",
+                    "@c:type": "VkPastPresentationTimingGOOGLE"
+                },
+                {
+                    "@name": "PresentTimeGOOGLE",
+                    "@c:type": "VkPresentTimeGOOGLE"
+                },
+                {
+                    "@name": "PresentTimesInfoGOOGLE",
+                    "@c:type": "VkPresentTimesInfoGOOGLE"
+                },
+                {
+                    "@name": "PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX",
+                    "@c:type": "VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX"
+                },
+                {
+                    "@name": "ViewportCoordinateSwizzleNV",
+                    "@c:type": "VkViewportCoordinateSwizzleNV"
+                },
+                {
+                    "@name": "PipelineViewportSwizzleStateCreateFlagsNV",
+                    "@c:type": "VkPipelineViewportSwizzleStateCreateFlagsNV"
+                },
+                {
+                    "@name": "ViewportSwizzleNV",
+                    "@c:type": "VkViewportSwizzleNV"
+                },
+                {
+                    "@name": "PipelineViewportSwizzleStateCreateInfoNV",
+                    "@c:type": "VkPipelineViewportSwizzleStateCreateInfoNV"
+                },
+                {
+                    "@name": "DiscardRectangleModeEXT",
+                    "@c:type": "VkDiscardRectangleModeEXT"
+                },
+                {
+                    "@name": "PipelineDiscardRectangleStateCreateFlagsEXT",
+                    "@c:type": "VkPipelineDiscardRectangleStateCreateFlagsEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceDiscardRectanglePropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceDiscardRectanglePropertiesEXT"
+                },
+                {
+                    "@name": "PipelineDiscardRectangleStateCreateInfoEXT",
+                    "@c:type": "VkPipelineDiscardRectangleStateCreateInfoEXT"
+                },
+                {
+                    "@name": "ConservativeRasterizationModeEXT",
+                    "@c:type": "VkConservativeRasterizationModeEXT"
+                },
+                {
+                    "@name": "PipelineRasterizationConservativeStateCreateFlagsEXT",
+                    "@c:type": "VkPipelineRasterizationConservativeStateCreateFlagsEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceConservativeRasterizationPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceConservativeRasterizationPropertiesEXT"
+                },
+                {
+                    "@name": "PipelineRasterizationConservativeStateCreateInfoEXT",
+                    "@c:type": "VkPipelineRasterizationConservativeStateCreateInfoEXT"
+                },
+                {
+                    "@name": "PipelineRasterizationDepthClipStateCreateFlagsEXT",
+                    "@c:type": "VkPipelineRasterizationDepthClipStateCreateFlagsEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceDepthClipEnableFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceDepthClipEnableFeaturesEXT"
+                },
+                {
+                    "@name": "PipelineRasterizationDepthClipStateCreateInfoEXT",
+                    "@c:type": "VkPipelineRasterizationDepthClipStateCreateInfoEXT"
+                },
+                {
+                    "@name": "XYColorEXT",
+                    "@c:type": "VkXYColorEXT"
+                },
+                {
+                    "@name": "HdrMetadataEXT",
+                    "@c:type": "VkHdrMetadataEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessengerEXT",
+                    "@c:type": "VkDebugUtilsMessengerEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessengerCallbackDataFlagsEXT",
+                    "@c:type": "VkDebugUtilsMessengerCallbackDataFlagsEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessengerCreateFlagsEXT",
+                    "@c:type": "VkDebugUtilsMessengerCreateFlagsEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessageSeverityFlagBitsEXT",
+                    "@c:type": "VkDebugUtilsMessageSeverityFlagBitsEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessageSeverityFlagsEXT",
+                    "@c:type": "VkDebugUtilsMessageSeverityFlagsEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessageTypeFlagBitsEXT",
+                    "@c:type": "VkDebugUtilsMessageTypeFlagBitsEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessageTypeFlagsEXT",
+                    "@c:type": "VkDebugUtilsMessageTypeFlagsEXT"
+                },
+                {
+                    "@name": "DebugUtilsObjectNameInfoEXT",
+                    "@c:type": "VkDebugUtilsObjectNameInfoEXT"
+                },
+                {
+                    "@name": "DebugUtilsObjectTagInfoEXT",
+                    "@c:type": "VkDebugUtilsObjectTagInfoEXT"
+                },
+                {
+                    "@name": "DebugUtilsLabelEXT",
+                    "@c:type": "VkDebugUtilsLabelEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessengerCallbackDataEXT",
+                    "@c:type": "VkDebugUtilsMessengerCallbackDataEXT"
+                },
+                {
+                    "@name": "DebugUtilsMessengerCreateInfoEXT",
+                    "@c:type": "VkDebugUtilsMessengerCreateInfoEXT"
+                },
+                {
+                    "@name": "SamplerReductionModeEXT",
+                    "@c:type": "VkSamplerReductionModeEXT"
+                },
+                {
+                    "@name": "SamplerReductionModeCreateInfoEXT",
+                    "@c:type": "VkSamplerReductionModeCreateInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceSamplerFilterMinmaxPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceInlineUniformBlockFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceInlineUniformBlockFeaturesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceInlineUniformBlockPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceInlineUniformBlockPropertiesEXT"
+                },
+                {
+                    "@name": "WriteDescriptorSetInlineUniformBlockEXT",
+                    "@c:type": "VkWriteDescriptorSetInlineUniformBlockEXT"
+                },
+                {
+                    "@name": "DescriptorPoolInlineUniformBlockCreateInfoEXT",
+                    "@c:type": "VkDescriptorPoolInlineUniformBlockCreateInfoEXT"
+                },
+                {
+                    "@name": "SampleLocationEXT",
+                    "@c:type": "VkSampleLocationEXT"
+                },
+                {
+                    "@name": "SampleLocationsInfoEXT",
+                    "@c:type": "VkSampleLocationsInfoEXT"
+                },
+                {
+                    "@name": "AttachmentSampleLocationsEXT",
+                    "@c:type": "VkAttachmentSampleLocationsEXT"
+                },
+                {
+                    "@name": "SubpassSampleLocationsEXT",
+                    "@c:type": "VkSubpassSampleLocationsEXT"
+                },
+                {
+                    "@name": "RenderPassSampleLocationsBeginInfoEXT",
+                    "@c:type": "VkRenderPassSampleLocationsBeginInfoEXT"
+                },
+                {
+                    "@name": "PipelineSampleLocationsStateCreateInfoEXT",
+                    "@c:type": "VkPipelineSampleLocationsStateCreateInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceSampleLocationsPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceSampleLocationsPropertiesEXT"
+                },
+                {
+                    "@name": "MultisamplePropertiesEXT",
+                    "@c:type": "VkMultisamplePropertiesEXT"
+                },
+                {
+                    "@name": "BlendOverlapEXT",
+                    "@c:type": "VkBlendOverlapEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceBlendOperationAdvancedFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceBlendOperationAdvancedPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT"
+                },
+                {
+                    "@name": "PipelineColorBlendAdvancedStateCreateInfoEXT",
+                    "@c:type": "VkPipelineColorBlendAdvancedStateCreateInfoEXT"
+                },
+                {
+                    "@name": "PipelineCoverageToColorStateCreateFlagsNV",
+                    "@c:type": "VkPipelineCoverageToColorStateCreateFlagsNV"
+                },
+                {
+                    "@name": "PipelineCoverageToColorStateCreateInfoNV",
+                    "@c:type": "VkPipelineCoverageToColorStateCreateInfoNV"
+                },
+                {
+                    "@name": "CoverageModulationModeNV",
+                    "@c:type": "VkCoverageModulationModeNV"
+                },
+                {
+                    "@name": "PipelineCoverageModulationStateCreateFlagsNV",
+                    "@c:type": "VkPipelineCoverageModulationStateCreateFlagsNV"
+                },
+                {
+                    "@name": "PipelineCoverageModulationStateCreateInfoNV",
+                    "@c:type": "VkPipelineCoverageModulationStateCreateInfoNV"
+                },
+                {
+                    "@name": "DrmFormatModifierPropertiesEXT",
+                    "@c:type": "VkDrmFormatModifierPropertiesEXT"
+                },
+                {
+                    "@name": "DrmFormatModifierPropertiesListEXT",
+                    "@c:type": "VkDrmFormatModifierPropertiesListEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceImageDrmFormatModifierInfoEXT",
+                    "@c:type": "VkPhysicalDeviceImageDrmFormatModifierInfoEXT"
+                },
+                {
+                    "@name": "ImageDrmFormatModifierListCreateInfoEXT",
+                    "@c:type": "VkImageDrmFormatModifierListCreateInfoEXT"
+                },
+                {
+                    "@name": "ImageDrmFormatModifierExplicitCreateInfoEXT",
+                    "@c:type": "VkImageDrmFormatModifierExplicitCreateInfoEXT"
+                },
+                {
+                    "@name": "ImageDrmFormatModifierPropertiesEXT",
+                    "@c:type": "VkImageDrmFormatModifierPropertiesEXT"
+                },
+                {
+                    "@name": "ValidationCacheEXT",
+                    "@c:type": "VkValidationCacheEXT"
+                },
+                {
+                    "@name": "ValidationCacheHeaderVersionEXT",
+                    "@c:type": "VkValidationCacheHeaderVersionEXT"
+                },
+                {
+                    "@name": "ValidationCacheCreateFlagsEXT",
+                    "@c:type": "VkValidationCacheCreateFlagsEXT"
+                },
+                {
+                    "@name": "ValidationCacheCreateInfoEXT",
+                    "@c:type": "VkValidationCacheCreateInfoEXT"
+                },
+                {
+                    "@name": "ShaderModuleValidationCacheCreateInfoEXT",
+                    "@c:type": "VkShaderModuleValidationCacheCreateInfoEXT"
+                },
+                {
+                    "@name": "DescriptorBindingFlagBitsEXT",
+                    "@c:type": "VkDescriptorBindingFlagBitsEXT"
+                },
+                {
+                    "@name": "DescriptorBindingFlagsEXT",
+                    "@c:type": "VkDescriptorBindingFlagsEXT"
+                },
+                {
+                    "@name": "DescriptorSetLayoutBindingFlagsCreateInfoEXT",
+                    "@c:type": "VkDescriptorSetLayoutBindingFlagsCreateInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceDescriptorIndexingFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceDescriptorIndexingFeaturesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceDescriptorIndexingPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceDescriptorIndexingPropertiesEXT"
+                },
+                {
+                    "@name": "DescriptorSetVariableDescriptorCountAllocateInfoEXT",
+                    "@c:type": "VkDescriptorSetVariableDescriptorCountAllocateInfoEXT"
+                },
+                {
+                    "@name": "DescriptorSetVariableDescriptorCountLayoutSupportEXT",
+                    "@c:type": "VkDescriptorSetVariableDescriptorCountLayoutSupportEXT"
+                },
+                {
+                    "@name": "ShadingRatePaletteEntryNV",
+                    "@c:type": "VkShadingRatePaletteEntryNV"
+                },
+                {
+                    "@name": "CoarseSampleOrderTypeNV",
+                    "@c:type": "VkCoarseSampleOrderTypeNV"
+                },
+                {
+                    "@name": "ShadingRatePaletteNV",
+                    "@c:type": "VkShadingRatePaletteNV"
+                },
+                {
+                    "@name": "PipelineViewportShadingRateImageStateCreateInfoNV",
+                    "@c:type": "VkPipelineViewportShadingRateImageStateCreateInfoNV"
+                },
+                {
+                    "@name": "PhysicalDeviceShadingRateImageFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceShadingRateImageFeaturesNV"
+                },
+                {
+                    "@name": "PhysicalDeviceShadingRateImagePropertiesNV",
+                    "@c:type": "VkPhysicalDeviceShadingRateImagePropertiesNV"
+                },
+                {
+                    "@name": "CoarseSampleLocationNV",
+                    "@c:type": "VkCoarseSampleLocationNV"
+                },
+                {
+                    "@name": "CoarseSampleOrderCustomNV",
+                    "@c:type": "VkCoarseSampleOrderCustomNV"
+                },
+                {
+                    "@name": "PipelineViewportCoarseSampleOrderStateCreateInfoNV",
+                    "@c:type": "VkPipelineViewportCoarseSampleOrderStateCreateInfoNV"
+                },
+                {
+                    "@name": "AccelerationStructureNV",
+                    "@c:type": "VkAccelerationStructureNV"
+                },
+                {
+                    "@name": "RayTracingShaderGroupTypeNV",
+                    "@c:type": "VkRayTracingShaderGroupTypeNV"
+                },
+                {
+                    "@name": "GeometryTypeNV",
+                    "@c:type": "VkGeometryTypeNV"
+                },
+                {
+                    "@name": "AccelerationStructureTypeNV",
+                    "@c:type": "VkAccelerationStructureTypeNV"
+                },
+                {
+                    "@name": "CopyAccelerationStructureModeNV",
+                    "@c:type": "VkCopyAccelerationStructureModeNV"
+                },
+                {
+                    "@name": "AccelerationStructureMemoryRequirementsTypeNV",
+                    "@c:type": "VkAccelerationStructureMemoryRequirementsTypeNV"
+                },
+                {
+                    "@name": "GeometryFlagBitsNV",
+                    "@c:type": "VkGeometryFlagBitsNV"
+                },
+                {
+                    "@name": "GeometryFlagsNV",
+                    "@c:type": "VkGeometryFlagsNV"
+                },
+                {
+                    "@name": "GeometryInstanceFlagBitsNV",
+                    "@c:type": "VkGeometryInstanceFlagBitsNV"
+                },
+                {
+                    "@name": "GeometryInstanceFlagsNV",
+                    "@c:type": "VkGeometryInstanceFlagsNV"
+                },
+                {
+                    "@name": "BuildAccelerationStructureFlagBitsNV",
+                    "@c:type": "VkBuildAccelerationStructureFlagBitsNV"
+                },
+                {
+                    "@name": "BuildAccelerationStructureFlagsNV",
+                    "@c:type": "VkBuildAccelerationStructureFlagsNV"
+                },
+                {
+                    "@name": "RayTracingShaderGroupCreateInfoNV",
+                    "@c:type": "VkRayTracingShaderGroupCreateInfoNV"
+                },
+                {
+                    "@name": "RayTracingPipelineCreateInfoNV",
+                    "@c:type": "VkRayTracingPipelineCreateInfoNV"
+                },
+                {
+                    "@name": "GeometryTrianglesNV",
+                    "@c:type": "VkGeometryTrianglesNV"
+                },
+                {
+                    "@name": "GeometryAABBNV",
+                    "@c:type": "VkGeometryAABBNV"
+                },
+                {
+                    "@name": "GeometryDataNV",
+                    "@c:type": "VkGeometryDataNV"
+                },
+                {
+                    "@name": "GeometryNV",
+                    "@c:type": "VkGeometryNV"
+                },
+                {
+                    "@name": "AccelerationStructureInfoNV",
+                    "@c:type": "VkAccelerationStructureInfoNV"
+                },
+                {
+                    "@name": "AccelerationStructureCreateInfoNV",
+                    "@c:type": "VkAccelerationStructureCreateInfoNV"
+                },
+                {
+                    "@name": "BindAccelerationStructureMemoryInfoNV",
+                    "@c:type": "VkBindAccelerationStructureMemoryInfoNV"
+                },
+                {
+                    "@name": "WriteDescriptorSetAccelerationStructureNV",
+                    "@c:type": "VkWriteDescriptorSetAccelerationStructureNV"
+                },
+                {
+                    "@name": "AccelerationStructureMemoryRequirementsInfoNV",
+                    "@c:type": "VkAccelerationStructureMemoryRequirementsInfoNV"
+                },
+                {
+                    "@name": "PhysicalDeviceRayTracingPropertiesNV",
+                    "@c:type": "VkPhysicalDeviceRayTracingPropertiesNV"
+                },
+                {
+                    "@name": "PhysicalDeviceRepresentativeFragmentTestFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV"
+                },
+                {
+                    "@name": "PipelineRepresentativeFragmentTestStateCreateInfoNV",
+                    "@c:type": "VkPipelineRepresentativeFragmentTestStateCreateInfoNV"
+                },
+                {
+                    "@name": "PhysicalDeviceImageViewImageFormatInfoEXT",
+                    "@c:type": "VkPhysicalDeviceImageViewImageFormatInfoEXT"
+                },
+                {
+                    "@name": "FilterCubicImageViewImageFormatPropertiesEXT",
+                    "@c:type": "VkFilterCubicImageViewImageFormatPropertiesEXT"
+                },
+                {
+                    "@name": "QueueGlobalPriorityEXT",
+                    "@c:type": "VkQueueGlobalPriorityEXT"
+                },
+                {
+                    "@name": "DeviceQueueGlobalPriorityCreateInfoEXT",
+                    "@c:type": "VkDeviceQueueGlobalPriorityCreateInfoEXT"
+                },
+                {
+                    "@name": "ImportMemoryHostPointerInfoEXT",
+                    "@c:type": "VkImportMemoryHostPointerInfoEXT"
+                },
+                {
+                    "@name": "MemoryHostPointerPropertiesEXT",
+                    "@c:type": "VkMemoryHostPointerPropertiesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceExternalMemoryHostPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceExternalMemoryHostPropertiesEXT"
+                },
+                {
+                    "@name": "TimeDomainEXT",
+                    "@c:type": "VkTimeDomainEXT"
+                },
+                {
+                    "@name": "CalibratedTimestampInfoEXT",
+                    "@c:type": "VkCalibratedTimestampInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceShaderCorePropertiesAMD",
+                    "@c:type": "VkPhysicalDeviceShaderCorePropertiesAMD"
+                },
+                {
+                    "@name": "MemoryOverallocationBehaviorAMD",
+                    "@c:type": "VkMemoryOverallocationBehaviorAMD"
+                },
+                {
+                    "@name": "DeviceMemoryOverallocationCreateInfoAMD",
+                    "@c:type": "VkDeviceMemoryOverallocationCreateInfoAMD"
+                },
+                {
+                    "@name": "PhysicalDeviceVertexAttributeDivisorPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT"
+                },
+                {
+                    "@name": "VertexInputBindingDivisorDescriptionEXT",
+                    "@c:type": "VkVertexInputBindingDivisorDescriptionEXT"
+                },
+                {
+                    "@name": "PipelineVertexInputDivisorStateCreateInfoEXT",
+                    "@c:type": "VkPipelineVertexInputDivisorStateCreateInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceVertexAttributeDivisorFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT"
+                },
+                {
+                    "@name": "PipelineCreationFeedbackFlagBitsEXT",
+                    "@c:type": "VkPipelineCreationFeedbackFlagBitsEXT"
+                },
+                {
+                    "@name": "PipelineCreationFeedbackFlagsEXT",
+                    "@c:type": "VkPipelineCreationFeedbackFlagsEXT"
+                },
+                {
+                    "@name": "PipelineCreationFeedbackEXT",
+                    "@c:type": "VkPipelineCreationFeedbackEXT"
+                },
+                {
+                    "@name": "PipelineCreationFeedbackCreateInfoEXT",
+                    "@c:type": "VkPipelineCreationFeedbackCreateInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceComputeShaderDerivativesFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceComputeShaderDerivativesFeaturesNV"
+                },
+                {
+                    "@name": "PhysicalDeviceMeshShaderFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceMeshShaderFeaturesNV"
+                },
+                {
+                    "@name": "PhysicalDeviceMeshShaderPropertiesNV",
+                    "@c:type": "VkPhysicalDeviceMeshShaderPropertiesNV"
+                },
+                {
+                    "@name": "DrawMeshTasksIndirectCommandNV",
+                    "@c:type": "VkDrawMeshTasksIndirectCommandNV"
+                },
+                {
+                    "@name": "PhysicalDeviceFragmentShaderBarycentricFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV"
+                },
+                {
+                    "@name": "PhysicalDeviceShaderImageFootprintFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceShaderImageFootprintFeaturesNV"
+                },
+                {
+                    "@name": "PipelineViewportExclusiveScissorStateCreateInfoNV",
+                    "@c:type": "VkPipelineViewportExclusiveScissorStateCreateInfoNV"
+                },
+                {
+                    "@name": "PhysicalDeviceExclusiveScissorFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceExclusiveScissorFeaturesNV"
+                },
+                {
+                    "@name": "QueueFamilyCheckpointPropertiesNV",
+                    "@c:type": "VkQueueFamilyCheckpointPropertiesNV"
+                },
+                {
+                    "@name": "CheckpointDataNV",
+                    "@c:type": "VkCheckpointDataNV"
+                },
+                {
+                    "@name": "PhysicalDevicePCIBusInfoPropertiesEXT",
+                    "@c:type": "VkPhysicalDevicePCIBusInfoPropertiesEXT"
+                },
+                {
+                    "@name": "DisplayNativeHdrSurfaceCapabilitiesAMD",
+                    "@c:type": "VkDisplayNativeHdrSurfaceCapabilitiesAMD"
+                },
+                {
+                    "@name": "SwapchainDisplayNativeHdrCreateInfoAMD",
+                    "@c:type": "VkSwapchainDisplayNativeHdrCreateInfoAMD"
+                },
+                {
+                    "@name": "PhysicalDeviceFragmentDensityMapFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceFragmentDensityMapFeaturesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceFragmentDensityMapPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceFragmentDensityMapPropertiesEXT"
+                },
+                {
+                    "@name": "RenderPassFragmentDensityMapCreateInfoEXT",
+                    "@c:type": "VkRenderPassFragmentDensityMapCreateInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceScalarBlockLayoutFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceScalarBlockLayoutFeaturesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceMemoryBudgetPropertiesEXT",
+                    "@c:type": "VkPhysicalDeviceMemoryBudgetPropertiesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceMemoryPriorityFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceMemoryPriorityFeaturesEXT"
+                },
+                {
+                    "@name": "MemoryPriorityAllocateInfoEXT",
+                    "@c:type": "VkMemoryPriorityAllocateInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV"
+                },
+                {
+                    "@name": "DeviceAddress",
+                    "@c:type": "VkDeviceAddress"
+                },
+                {
+                    "@name": "PhysicalDeviceBufferDeviceAddressFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceBufferDeviceAddressFeaturesEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceBufferAddressFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceBufferAddressFeaturesEXT"
+                },
+                {
+                    "@name": "BufferDeviceAddressInfoEXT",
+                    "@c:type": "VkBufferDeviceAddressInfoEXT"
+                },
+                {
+                    "@name": "BufferDeviceAddressCreateInfoEXT",
+                    "@c:type": "VkBufferDeviceAddressCreateInfoEXT"
+                },
+                {
+                    "@name": "ImageStencilUsageCreateInfoEXT",
+                    "@c:type": "VkImageStencilUsageCreateInfoEXT"
+                },
+                {
+                    "@name": "ValidationFeatureEnableEXT",
+                    "@c:type": "VkValidationFeatureEnableEXT"
+                },
+                {
+                    "@name": "ValidationFeatureDisableEXT",
+                    "@c:type": "VkValidationFeatureDisableEXT"
+                },
+                {
+                    "@name": "ValidationFeaturesEXT",
+                    "@c:type": "VkValidationFeaturesEXT"
+                },
+                {
+                    "@name": "ComponentTypeNV",
+                    "@c:type": "VkComponentTypeNV"
+                },
+                {
+                    "@name": "ScopeNV",
+                    "@c:type": "VkScopeNV"
+                },
+                {
+                    "@name": "CooperativeMatrixPropertiesNV",
+                    "@c:type": "VkCooperativeMatrixPropertiesNV"
+                },
+                {
+                    "@name": "PhysicalDeviceCooperativeMatrixFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceCooperativeMatrixFeaturesNV"
+                },
+                {
+                    "@name": "PhysicalDeviceCooperativeMatrixPropertiesNV",
+                    "@c:type": "VkPhysicalDeviceCooperativeMatrixPropertiesNV"
+                },
+                {
+                    "@name": "CoverageReductionModeNV",
+                    "@c:type": "VkCoverageReductionModeNV"
+                },
+                {
+                    "@name": "PipelineCoverageReductionStateCreateFlagsNV",
+                    "@c:type": "VkPipelineCoverageReductionStateCreateFlagsNV"
+                },
+                {
+                    "@name": "PhysicalDeviceCoverageReductionModeFeaturesNV",
+                    "@c:type": "VkPhysicalDeviceCoverageReductionModeFeaturesNV"
+                },
+                {
+                    "@name": "PipelineCoverageReductionStateCreateInfoNV",
+                    "@c:type": "VkPipelineCoverageReductionStateCreateInfoNV"
+                },
+                {
+                    "@name": "FramebufferMixedSamplesCombinationNV",
+                    "@c:type": "VkFramebufferMixedSamplesCombinationNV"
+                },
+                {
+                    "@name": "PhysicalDeviceYcbcrImageArraysFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceYcbcrImageArraysFeaturesEXT"
+                },
+                {
+                    "@name": "HeadlessSurfaceCreateFlagsEXT",
+                    "@c:type": "VkHeadlessSurfaceCreateFlagsEXT"
+                },
+                {
+                    "@name": "HeadlessSurfaceCreateInfoEXT",
+                    "@c:type": "VkHeadlessSurfaceCreateInfoEXT"
+                },
+                {
+                    "@name": "PhysicalDeviceHostQueryResetFeaturesEXT",
+                    "@c:type": "VkPhysicalDeviceHostQueryResetFeaturesEXT"
+                }
+            ]
+        }
+    }
+}

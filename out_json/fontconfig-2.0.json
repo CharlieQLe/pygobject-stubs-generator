@@ -1,0 +1,39 @@
+{
+    "repository": {
+        "@version": "1.2",
+        "@xmlns": "http://www.gtk.org/introspection/core/1.0",
+        "@xmlns:c": "http://www.gtk.org/introspection/c/1.0",
+        "namespace": {
+            "@name": "fontconfig",
+            "@version": "2.0",
+            "@c:identifier-prefixes": "Fc",
+            "@c:symbol-prefixes": "fc",
+            "record": [
+                {
+                    "@name": "Pattern",
+                    "@c:type": "FcPattern"
+                },
+                {
+                    "@name": "CharSet",
+                    "@c:type": "FcCharSet"
+                },
+                {
+                    "@name": "Config",
+                    "@c:type": "FcConfig"
+                }
+            ],
+            "function": {
+                "@name": "init",
+                "@c:identifier": "FcInit",
+                "return-value": {
+                    "@transfer-ownership": "none",
+                    "type": {
+                        "@name": "none",
+                        "@c:type": "void"
+                    }
+                },
+                "parameters": null
+            }
+        }
+    }
+}
